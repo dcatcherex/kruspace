@@ -23,7 +23,7 @@ import {
   import { useForm, SubmitHandler } from "react-hook-form"
 
 import { zodResolver } from '@hookform/resolvers/zod'
-import * as z from 'zod'
+import * as z from 'zod';
 
 const formSchema = z.object({
   topic: z.string().min(2,{
@@ -34,15 +34,18 @@ const formSchema = z.object({
 })
 
 export function GenerateForm(){
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      topic: "",
-    }
-  })
+  
 }
 
 const AiGenerate = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: zodResolver(formSchema),
+  });
+  
   return (
     <Tabs defaultValue="lessonplan" className="w-[400px]">
   <TabsList>
