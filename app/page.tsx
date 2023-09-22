@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
 import { TimerIcon, PresentationIcon, SparklesIcon  } from "lucide-react"
 import AiGenerate from "@/components/ai-generate"
+import Ai from "@/components/ai"
 
 
 export default function IndexPage() {
@@ -40,7 +41,8 @@ export default function IndexPage() {
               GitHub
             </Link>
           </div> */}
-        <AiGenerate />
+          {/* <Ai /> */}
+        <AiGenerate/>
         </div>
       </section>
       <section
