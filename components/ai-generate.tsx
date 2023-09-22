@@ -68,7 +68,7 @@ const AiGenerate = () => {
         <Card>
           <CardHeader>
             <CardTitle>Lesson Plan</CardTitle>
-            <CardDescription>Base on "Teaching with AI" by OpenAI in collaboration with Ethan Mollick and Lilach Mollick</CardDescription>
+            <CardDescription>Base on &quot;Teaching with AI&quot; by OpenAI in collaboration with Ethan Mollick and Lilach Mollick</CardDescription>
           </CardHeader>
           <CardContent className="text-left">
           <Form {...form}>
@@ -81,7 +81,7 @@ const AiGenerate = () => {
                   <FormLabel>1. Input a topic, or term.</FormLabel>
                   <FormControl>
                     <Input
-                      placeholder='Enter topic here (e.g."photosynthesis")'
+                      placeholder='Enter topic here (e.g.&quot;photosynthesis&quot;)'
                       {...field}
                     />
                   </FormControl>
