@@ -57,7 +57,7 @@ const AiGenerate = () => {
         <form onSubmit={handleSubmit(onSubmit)}>
           Input a topic, or term.
           <Input placeholder='Enter topic here (e.g."photosynthesis")' {...register('topic')} />
-          <Button type="submit">Generate Lesson Plan</Button>
+          <Button type="submit">Generate Lesson Plan1</Button>
         </form>
       </TabsContent>
       <TabsContent value="activity">Change your password here.</TabsContent>
