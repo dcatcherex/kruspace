@@ -20,7 +20,7 @@ import {
     SelectTrigger,
     SelectValue,
   } from "@/components/ui/select"
-  import { useForm, SubmitHandler } from "react-hook-form"
+  import { useForm, SubmitHandler, FieldValues } from "react-hook-form"
 
 import { zodResolver } from '@hookform/resolvers/zod'
 import * as z from 'zod';
@@ -43,7 +43,7 @@ const AiGenerate = () => {
     resolver: zodResolver(formSchema),
   });
 
-  const onSubmit = (data:string) => {
+  const onSubmit = (data:FieldValues) => {
     console.log(data);
   }
 
