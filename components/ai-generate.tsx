@@ -43,7 +43,7 @@ const AiGenerate = () => {
     resolver: zodResolver(formSchema),
   });
 
-  const onSubmit = (data) => {
+  const onSubmit = (data:string) => {
     console.log(data);
   }
 
