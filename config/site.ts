@@ -9,18 +9,18 @@ export const siteConfig = {
       title: "Home",
       href: "/",
     },
-    {
-      title: "Resources",
-      href: "/",
-    },
-    {
-      title: "AI for Education",
-      href: "/",
-    },
-    {
-      title: "Kru Buddy",
-      href: "/",
-    },
+    // {
+    //   title: "Resources",
+    //   href: "/",
+    // },
+    // {
+    //   title: "AI for Education",
+    //   href: "/",
+    // },
+    // {
+    //   title: "Kru Buddy",
+    //   href: "/",
+    // },
   ],
   links: {
     twitter: "https://twitter.com/shadcn",

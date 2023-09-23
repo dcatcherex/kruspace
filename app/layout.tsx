@@ -1,3 +1,4 @@
+
 import './globals.css'
 
 import type { Metadata } from 'next'
@@ -8,6 +9,7 @@ import { cn } from "@/lib/utils"
 import { SiteHeader } from "@/components/site-header"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
+// import { Toast } from '@/components/ui/toast'
 
 export const metadata: Metadata = {
   title: {
