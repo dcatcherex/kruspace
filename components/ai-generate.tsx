@@ -94,91 +94,94 @@ const AiGenerate = () => {
 
 
   return (
-    <Tabs defaultValue="lessonplan" className="w-[400px]">
-      <TabsList>
-        <TabsTrigger value="lessonplan">Lesson Plan</TabsTrigger>
-        <TabsTrigger value="activity">Activity</TabsTrigger>
-      </TabsList>
-      <TabsContent value="lessonplan">
-        <Card>
-          <CardHeader>
-            <CardTitle>Lesson Plan</CardTitle>
-            <CardDescription>Base on &quot;Teaching with AI&quot; by OpenAI in collaboration with Ethan Mollick and Lilach Mollick</CardDescription>
-          </CardHeader>
-          <CardContent className="text-left">
-          <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-            <FormField
-              control={form.control}
-              name="topic"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>1. Input a topic, or term.</FormLabel>
-                  <FormControl>
-                    <Input
-                      placeholder='Enter topic here (e.g.&quot;photosynthesis&quot;)'
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormDescription>
-                    
-                  </FormDescription>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            <FormField
-              control={form.control}
-              name="grade"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>2. Choose a learning level:</FormLabel>
-                  <Select
-                    onValueChange={field.onChange}
-                    defaultValue={"2nd grade"}
-                  >
-                    <FormControl>
-                      <SelectTrigger>
-                        <SelectValue placeholder="Select Grade" />
-                      </SelectTrigger>
-                    </FormControl>
-                    <SelectContent>
-                      {[
-                        "1st grade",
-                        "2nd grade",
-                        "3rd grade",
-                        "4th grade",
-                        "5th grade",
-                        "6th grade",
-                      ].map((grade) => {
-                        return (
-                          <SelectItem value={grade} key={grade}>
-                            {grade}
-                          </SelectItem>
-                        );
-                      })}
-                    </SelectContent>
-                  </Select>
-                  <FormDescription></FormDescription>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <Button className="w-full" type="submit" disabled={isLoading}>Generate Lesson Plan</Button>
-            <div className="flex justify-center">
-              <p className="-mt-4 text-sm text-slate-500">Already generated: {time}</p>
-            </div>
-          </form>
-        </Form>
-          </CardContent>
-          <CardFooter>
-          </CardFooter>
-        </Card>
+    <section className="space-y-6 pb-8  md:pb-12 md: lg:">
+      <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center">
+        <Tabs defaultValue="lessonplan" className="w-[400px]">
+          <TabsList>
+            <TabsTrigger value="lessonplan">Lesson Plan</TabsTrigger>
+            <TabsTrigger value="activity">Activity</TabsTrigger>
+          </TabsList>
+          <TabsContent value="lessonplan">
+            <Card>
+              <CardHeader>
+                <CardTitle>Lesson Plan</CardTitle>
+                <CardDescription>Base on &quot;Teaching with AI&quot; by OpenAI in collaboration with Ethan Mollick and Lilach Mollick</CardDescription>
+              </CardHeader>
+              <CardContent className="text-left">
+              <Form {...form}>
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+                <FormField
+                  control={form.control}
+                  name="topic"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>1. Input a topic, or term.</FormLabel>
+                      <FormControl>
+                        <Input
+                          placeholder='Enter topic here (e.g.&quot;photosynthesis&quot;)'
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormDescription>
         
-      </TabsContent>
-      <TabsContent value="activity">Coming Soon</TabsContent>
-    </Tabs>
+                      </FormDescription>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="grade"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>2. Choose a learning level:</FormLabel>
+                      <Select
+                        onValueChange={field.onChange}
+                        defaultValue={"2nd grade"}
+                      >
+                        <FormControl>
+                          <SelectTrigger>
+                            <SelectValue placeholder="Select Grade" />
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent>
+                          {[
+                            "1st grade",
+                            "2nd grade",
+                            "3rd grade",
+                            "4th grade",
+                            "5th grade",
+                            "6th grade",
+                          ].map((grade) => {
+                            return (
+                              <SelectItem value={grade} key={grade}>
+                                {grade}
+                              </SelectItem>
+                            );
+                          })}
+                        </SelectContent>
+                      </Select>
+                      <FormDescription></FormDescription>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <Button className="w-full" type="submit" disabled={isLoading}>Generate Lesson Plan</Button>
+                <div className="flex justify-center">
+                  <p className="-mt-4 text-sm text-slate-500">Already generated: {time}</p>
+                </div>
+              </form>
+            </Form>
+              </CardContent>
+              <CardFooter>
+              </CardFooter>
+            </Card>
+        
+          </TabsContent>
+          <TabsContent value="activity">Coming Soon</TabsContent>
+        </Tabs>
+      </div>
+    </section>
   );
 };
 export default AiGenerate;
