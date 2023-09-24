@@ -1,12 +1,6 @@
 "use client";
 
-import React from "react";
 import {useCompletion} from 'ai/react'
-import { useDebouncedCallback } from 'use-debounce'
-
-
-import { useToast } from "@/components/ui/use-toast"
-
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
@@ -48,25 +42,28 @@ import { useState } from "react";
 type Input = z.infer<typeof topicSchema>;
 
 const AiGenerate = () => {
-  const {toast} = useToast()
   const {completion,input,stop,isLoading,handleInputChange,handleSubmit} = useCompletion({
     api: '/api/completion',
     onResponse: res => {
       // trigger something when the response starts streaming in
       // e.g. if the user is rate limited, you can show a toast
       if (res.status === 429) {
-        toast({
-          title: "Error",
-          description: "You are being rate limited. Please try again later.",
-        })
+        // toast({
+        //   title: "Error",
+        //   description: "You are being rate limited. Please try again later.",
+        // })
+        console.log('error')
+      
       }
     },
     onFinish: () => {
       // do something with the completion result
-      toast({
-        title: "Successfull",
-        description: "Successfully generated lesson plan!",
-      })
+      // toast({
+      //   title: "Successfull",
+      //   description: "Successfully generated lesson plan!",
+      // })
+      console.log('finish')
+    
     },
   })
 
@@ -75,6 +72,8 @@ const AiGenerate = () => {
   // }, 500);
 
   const [time, setTime] = useState(0);
+
+ 
 
   const form = useForm<Input>({
     resolver: zodResolver(topicSchema),
@@ -86,11 +85,13 @@ const AiGenerate = () => {
   });
 
   function onSubmit(values: z.infer<typeof topicSchema>) {
-    setTime(time + 1)
-    console.log(values);
-    
-    
+    // Do something with the form values.
+    // ✅ This will be type-safe and validated.
+    console.log(values)
   }
+ 
+    
+  // }
 
 
   return (
@@ -166,7 +167,7 @@ const AiGenerate = () => {
                     </FormItem>
                   )}
                 />
-                <Button className="w-full" type="submit" disabled={isLoading}>Generate Lesson Plan</Button>
+                <Button className="w-full" type="submit" >Generate Lesson Plan</Button>
                 <div className="flex justify-center">
                   <p className="-mt-4 text-sm text-slate-500">Already generated: {time}</p>
                 </div>

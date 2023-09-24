@@ -2,6 +2,11 @@
 import SectionHero from "@/components/section/section-hero"
 import SectionFeature from "@/components/section/section-feature"
 import AiGenerate from "@/components/ai-generate"
+import AiChat from "@/components/ai-chat"
+import AiCompletion from "@/components/ai-completion"
+import Formcontainer from "@/components/formcontainer"
+import { FormSubmit } from "@/components/formsubmit"
+import { Form } from "react-hook-form"
 
 
 export default function IndexPage() {
@@ -10,7 +15,10 @@ export default function IndexPage() {
     <>
       
           <SectionHero />
-          <AiGenerate />
+          {/* <AiGenerate /> */}
+          {/* <AiChat /> */}
+          {/* <AiCompletion /> */}
+          <Formcontainer />
           <SectionFeature />
     
       
