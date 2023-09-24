@@ -47,7 +47,18 @@ export async function POST(req: Request) {
     model: 'gpt-3.5-turbo',
     stream: true,
     // messages: newPrompt(prompt),
-    messages: buildPrompt(prompt),
+    // messages: buildPrompt(prompt),
+    messages: [
+      {
+        role: 'user',
+        content: prompt
+      },
+      { role: 'system',
+        // content: 'understand the user prompt?'
+      
+        content: 'Given all of this information, create a customized lesson plan that includes a variety of teaching techniques and modalities including direct instruction, checking for understanding (including gathering evidence of understanding from a wide sampling of students), discussion, an engaging in-class activity, and an assignment. Explain why you are specifically choosing each. '
+      }
+      ],
     max_tokens: 100,
     temperature: 0.7,
     top_p: 1,
