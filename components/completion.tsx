@@ -14,7 +14,7 @@ export default function Completion() {
 
   return (
     <div className=''>
-      <p className={completion ? 'border-2 border-sky-500 font-semibold p-2 rounded-md bg-sky-100 dark:bg-slate-900 h-[300px] overflow-y-auto' : ''} >{completion}</p>
+      <p className={completion ? 'border-2 border-sky-500 font-semibold p-2 mb-4 rounded-md bg-sky-100 dark:bg-slate-900 h-[300px] overflow-y-auto' : ''} >{completion}</p>
       <form
       className='space-y-4' onSubmit={handleSubmit}>
         <Label htmlFor="input">

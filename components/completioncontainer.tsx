@@ -16,7 +16,7 @@ const CompletionContainer = () => {
   return (
     <section className="space-y-6 pb-8  md:pb-12 md: lg:">
       <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center">
-        <Tabs defaultValue="lessonplan" className="w-[400px]">
+        <Tabs defaultValue="lessonplan" className="max-w-[800px]">
           <TabsList>
             <TabsTrigger value="lessonplan">Lesson Plan</TabsTrigger>
             <TabsTrigger value="activity">Activity</TabsTrigger>
