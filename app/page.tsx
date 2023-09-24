@@ -7,6 +7,8 @@ import AiCompletion from "@/components/ai-completion"
 import Formcontainer from "@/components/formcontainer"
 import { FormSubmit } from "@/components/formsubmit"
 import { Form } from "react-hook-form"
+import Completion from "@/components/completion"
+import CompletionContainer from "@/components/completioncontainer"
 
 
 export default function IndexPage() {
@@ -18,7 +20,7 @@ export default function IndexPage() {
           {/* <AiGenerate /> */}
           {/* <AiChat /> */}
           {/* <AiCompletion /> */}
-          <Formcontainer />
+          <CompletionContainer />
           <SectionFeature />
     
       
