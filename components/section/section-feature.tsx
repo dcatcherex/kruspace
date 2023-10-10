@@ -4,19 +4,27 @@ import { TimerIcon, PresentationIcon, SparklesIcon } from "lucide-react";
 const features = [
   {
     icon: PresentationIcon,
-    title: "Automated Lesson Preparation",
-    description: "Get ready-to-use teaching materials generated in an instant.",
+    title: " ช่วยสร้างสื่อเตรียมการสอน",
+    title_en: "Automated Lesson Preparation",
+    description: "สร้างสื่อที่พร้อมปรับใช้เพียงไม่นาน ได้สื่อและตัวช่วยในการสอนที่หลากหลาย",
+    description_en: "Get ready-to-use teaching materials generated in an instant.",
   },
   {
     icon: TimerIcon,
-    title: "Time Saver",
+    title: "ประหยัดเวลาเตรียมสอน",
+    title_en: "Time Saver",
     description:
+      "ลดเวลาได้หลายชั่วโมง ทำให้ครูมุ่งเน้นสิ่งที่สำคัญที่สุด นั่นคือการสอน",
+    description_en:
       "Shave countless hours off. So you can focus on what matters most - teaching.",
   },
   {
     icon: SparklesIcon,
-    title: "Improved Lesson Quality",
+    title: "ได้สื่อการเรียนการสอนที่มีคุณภาพ",
+    title_en: "Improved Lesson Quality",
     description:
+      "สื่อที่ได้มีคุณภาพ เหมาะต่อการนำไปสอน ให้ครูเหนื่อยกับงานออกแบบน้อยที่สุด",
+    description_en:
       "With professionally designed materials, elevate the standard of your lessons.",
   },
 ];
@@ -43,8 +51,8 @@ const SectionFeature = () => {
             className="relative overflow-hidden rounded-lg border bg-background p-2"
             key={index}
           >
-            <div className="flex h-[180px] flex-col justify-between rounded-md p-6">
-              <feature.icon />
+            <div className="flex md:flex-col items-start justify-between rounded-md p-2 md:p-6">
+              <feature.icon className="mb-4 mr-3 w-8 h-8" />
               <div className="space-y-2">
                 <h3 className="font-bold">{feature.title}</h3>
                 <p className="text-sm text-muted-foreground">

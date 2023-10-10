@@ -9,6 +9,7 @@ import { FormSubmit } from "@/components/formsubmit"
 import { Form } from "react-hook-form"
 import Completion from "@/components/completion"
 import CompletionContainer from "@/components/completioncontainer"
+import SectionStat from "@/components/section/section-stat"
 
 
 export default function IndexPage() {
@@ -22,6 +23,7 @@ export default function IndexPage() {
           {/* <AiCompletion /> */}
           <CompletionContainer />
           <SectionFeature />
+          <SectionStat />
     
       
 

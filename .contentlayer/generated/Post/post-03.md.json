@@ -1,0 +1,18 @@
+{
+  "title": "Click me!",
+  "date": "2022-02-27T17:00:00.000Z",
+  "body": {
+    "raw": "\r\nBlog posts have their own pages. The content source is a markdown file, parsed to HTML by Contentlayer.",
+    "html": "<p>Blog posts have their own pages. The content source is a markdown file, parsed to HTML by Contentlayer.</p>"
+  },
+  "_id": "post-03.md",
+  "_raw": {
+    "sourceFilePath": "post-03.md",
+    "sourceFileName": "post-03.md",
+    "sourceFileDir": ".",
+    "contentType": "markdown",
+    "flattenedPath": "post-03"
+  },
+  "type": "Post",
+  "url": "/posts/post-03"
+}

@@ -9,18 +9,22 @@ export const siteConfig = {
       title: "Home",
       href: "/",
     },
-    // {
-    //   title: "Resources",
-    //   href: "/",
-    // },
-    // {
-    //   title: "AI for Education",
-    //   href: "/",
-    // },
-    // {
-    //   title: "Kru Buddy",
-    //   href: "/",
-    // },
+    {
+      title: "บทความ",
+      href: "/blog",
+    },
+    {
+      title: "คลังความรู้",
+      href: "/library",
+    },
+    {
+      title: "AI เพื่อการศึกษา",
+      href: "/ai",
+    },
+    {
+      title: "เพื่อนครู",
+      href: "/krubuddy",
+    },
   ],
   links: {
     twitter: "https://twitter.com/shadcn",
