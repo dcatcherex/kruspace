@@ -1,6 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+li:hover .hover\:text-black { opacity: 1;}
+
+li:hover .opacity-0 { opacity: 1;}
  
 @layer base {
   :root {

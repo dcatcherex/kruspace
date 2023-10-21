@@ -1,12 +1,11 @@
-"use client";
+'use client'
 
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm, SubmitHandler, FieldValues } from "react-hook-form";
-import * as z from "zod";
+import { zodResolver } from "@hookform/resolvers/zod"
+import { useForm } from "react-hook-form"
+import * as z from "zod"
 
-import { toast } from "sonner";
+import { toast } from 'sonner'
 
-import { useChat } from "ai/react";
 
 import {
   Dialog,
@@ -23,26 +22,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-
-import {
-  ContextMenu,
-  ContextMenuContent,
-  ContextMenuItem,
-  ContextMenuTrigger,
-} from "@/components/ui/context-menu"
-
-import { ScrollArea } from "@/components/ui/scroll-area"
-
-
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
 
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -69,43 +48,26 @@ const FormSchema = z.object({
   prompt: z.string().min(2, {
     message: "ต้องใส่อย่างน้อย 2 ตัวอักษร",
   }),
-});
+})
+
 
 const TeachingCard: React.FC<TeachingCardProps> = ({ data }) => {
+
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
-  });
-
-  const { messages, input, handleInputChange, handleSubmit, setMessages, setInput } = useChat({
-    api: "/api/chat",
-    initialInput: "You are a friendly and helpful instructional coach helping teachers plan a lesson.",
-    initialMessages: [{
-      id:"0",
-      role: "system",
-      content:"You are a friendly and helpful instructional coach helping teachers plan a lesson.",
-    }]
-  });
+  })
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
-    toast(
-      <div>
-        You submitted the following values:
-        <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
+   
+    toast(<div>You submitted the following values:
+      <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
           <code className="text-white">{JSON.stringify(data, null, 2)}</code>
         </pre>
-      </div>
-    );
-    useChat.handleSubmit(data)
+    </div>)
+
   }
 
-  function handleDelete(index) {
 
-    console.log(messages)
-    // Create a new array without the message at the specified index
-    const updatedMessages = messages.filter((_, i) => i !== index);
-    // Set the state or update the messages array with the updatedMessages
-    console.log("after" + messages)
-  }
 
   return (
     <ul
@@ -224,30 +186,19 @@ const TeachingCard: React.FC<TeachingCardProps> = ({ data }) => {
                         </div>
                       </div>
                     </li>
+                    
+                    {/* form */}
 
+                    
                     <div className="flex flex-col justify-between p-4 border-[1px] rounded-md w-full">
-                      {/* ai output */}
-                      <ScrollArea className="h-[300px] w-full pr-4">
-  
-                      <ul>
-                        {messages.map((m, index) => (
-                          <li key={index} className={`mb-2 p-2 rounded-md ${
-                            m.role === "user" ? "bg-blue-200" : "bg-gray-200"
-                          }`}>
-                            <div className="flex gap-2 justify-between items-center">
-                              <div className="flex gap-2">
-                                {m.role === "user" ? <Icons.smile /> : <Icons.bot className="flex-none w-6 min-w-6" />}
-                                {m.content}
-                              </div>
-                              <Icons.copy className="text-muted-foreground w-4 h-4 hover:cursor-pointer" />
-                            </div>
-                          </li>
-                        ))}
-
-                      </ul>
-                      </ScrollArea>
+                      <div className="full-h">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Id odit sit, exercitationem pariatur velit debitis
+                        quaerat iure autem obcaecati repudiandae.
+                      </div>
                       <div>
                         <div className="flex gap-2 text-muted-foreground mb-2">
+                          
                           <Button variant="outline">อธิบายเพิ่มเติม</Button>
                           <Select>
                             <SelectTrigger className="w-[180px]">
@@ -257,16 +208,12 @@ const TeachingCard: React.FC<TeachingCardProps> = ({ data }) => {
                               <SelectItem value="thai">ภาษาไทย</SelectItem>
                               <SelectItem value="math">คณิตศาสตร์</SelectItem>
                               <SelectItem value="tech">เทคโนโลยี</SelectItem>
-                              <SelectItem value="science">
-                                วิทยาศาสตร์
-                              </SelectItem>
+                              <SelectItem value="science">วิทยาศาสตร์</SelectItem>
                               <SelectItem value="social">สังคมศึกษา</SelectItem>
                               <SelectItem value="physic">สุขศึกษา</SelectItem>
                               <SelectItem value="art">ศิลปะ</SelectItem>
                               <SelectItem value="job">การงานอาชีพ</SelectItem>
-                              <SelectItem value="language">
-                                ภาษาต่างประเทศ
-                              </SelectItem>
+                              <SelectItem value="language">ภาษาต่างประเทศ</SelectItem>
                             </SelectContent>
                           </Select>
                           <Select>
@@ -274,66 +221,27 @@ const TeachingCard: React.FC<TeachingCardProps> = ({ data }) => {
                               <SelectValue placeholder="เด็กพิเศษ..." />
                             </SelectTrigger>
                             <SelectContent side="top">
-                              <SelectItem value="brain">
-                                บกพร่องทางสติปัญญา
-                              </SelectItem>
-                              <SelectItem value="hear">
-                                บกพร่องทางการได้ยิน
-                              </SelectItem>
-                              <SelectItem value="see">
-                                บกพร่องทางการเห็น
-                              </SelectItem>
-                              <SelectItem value="body">
-                                บกพร่องทางร่างกายและสุขภาพ
-                              </SelectItem>
-                              <SelectItem value="say">
-                                บกพร่องทางการพูดและภาษา
-                              </SelectItem>
-                              <SelectItem value="mind">
-                                มีปัญหาทางพฤติกรรมและอารมณ์
-                              </SelectItem>
-                              <SelectItem value="learn">
-                                มีปัญหาทางการเรียนรู้
-                              </SelectItem>
-                              <SelectItem value="complex">
-                                พิการซ้ำซ้อน
-                              </SelectItem>
+                              <SelectItem value="brain">บกพร่องทางสติปัญญา</SelectItem>
+                              <SelectItem value="hear">บกพร่องทางการได้ยิน</SelectItem>
+                              <SelectItem value="see">บกพร่องทางการเห็น</SelectItem>
+                              <SelectItem value="body">บกพร่องทางร่างกายและสุขภาพ</SelectItem>
+                              <SelectItem value="say">บกพร่องทางการพูดและภาษา</SelectItem>
+                              <SelectItem value="mind">มีปัญหาทางพฤติกรรมและอารมณ์</SelectItem>
+                              <SelectItem value="learn">มีปัญหาทางการเรียนรู้</SelectItem>
+                              <SelectItem value="complex">พิการซ้ำซ้อน</SelectItem>
                               <SelectItem value="autism">ออทิสติก</SelectItem>
                             </SelectContent>
                           </Select>
+
+                         
                         </div>
-                        {/* form */}
-                        <Form {...form}>
-                          <form onSubmit={handleSubmit}>
-                            <div className="flex justify-between gap-2">
-                              <FormField
-                                control={form.control}
-                                name="prompt"
-                                render={({ field }) => (
-                                  <FormItem className=" w-full">
-                                    <FormControl>
-                                      <Input
-                                        placeholder="พิมพ์ตรงนี้"
-                                        {...field}
-                                        value={input}
-                                        onChange={handleInputChange}
-                                      />
-                                    </FormControl>
-                                    <FormMessage />
-                                  </FormItem>
-                                )}
-                              />
-                              <Button
-                                className="bg-slate-500 font-light text-lg"
-                                type="submit"
-                              >
-                                <Icons.send className="mr-2 h-4 w-4" />
-                                ส่ง
-                              </Button>
-                            </div>
-                          </form>
-                        </Form>
+
                         <div className="relative flex gap-2">
+                          <Input placeholder="พิมพ์ตรงนี้" />
+                          <Button className="bg-slate-500 font-light text-lg">
+                            <Icons.send className="mr-2 h-4 w-4" />
+                            ส่ง
+                          </Button>
                           {/* <Button className="absolute bottom-1 right-1 bg-slate-500 font-light text-lg"><Icons.send className="mr-2 h-4 w-4" />ส่ง</Button> */}
                         </div>
                       </div>

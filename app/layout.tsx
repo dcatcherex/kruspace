@@ -9,7 +9,8 @@ import { cn } from "@/lib/utils"
 import { SiteHeader } from "@/components/site-header"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
-// import { Toast } from '@/components/ui/toast'
+import { Toaster, toast } from 'sonner'
+
 
 const noto = Noto_Sans_Thai({
   subsets: ['latin'],
@@ -52,10 +53,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <div className="relative flex min-h-screen flex-col">
               <SiteHeader />
+              <Toaster />
               <div className="flex-1">{children}</div>
             </div>
             <TailwindIndicator />
           </ThemeProvider>
+
         </body>
       </html>
     </>

@@ -1,10 +1,13 @@
 import SimpleCard from '@/components/simplecard'
+import {TestForm} from '@/components/testform'
 import React from 'react'
 
 const Ai = () => {
   return (
     <div>Ai
-        <SimpleCard />
+        {/* <SimpleCard /> */}
+        ddd
+        <TestForm />
     </div>
   )
 }

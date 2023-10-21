@@ -4,7 +4,6 @@ import { useCompletion } from "ai/react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Badge } from "@/components/ui/badge";
 import { Toggle } from "@/components/ui/toggle";
 import {
   Select,
@@ -31,6 +30,8 @@ export default function Completion() {
   const { completion, input, handleInputChange, handleSubmit } = useCompletion({
     api: "/api/completion",
   });
+
+  
 
   return (
     <div className="">
