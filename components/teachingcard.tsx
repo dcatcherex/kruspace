@@ -53,8 +53,11 @@ import Image from "next/image";
 
 type TeachingData = {
   method: string;
+  method_en: string;
   title: string;
+  title_en: string;
   content: string;
+  content_en: string;
   time_recommend: string;
   use: string;
   min_time: number;
@@ -78,7 +81,6 @@ const TeachingCard: React.FC<TeachingCardProps> = ({ data }) => {
 
   const { messages, input, handleInputChange, handleSubmit, setMessages, setInput } = useChat({
     api: "/api/chat",
-    initialInput: "You are a friendly and helpful instructional coach helping teachers plan a lesson.",
     initialMessages: [{
       id:"0",
       role: "system",
@@ -87,26 +89,10 @@ const TeachingCard: React.FC<TeachingCardProps> = ({ data }) => {
   });
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
-    toast(
-      <div>
-        You submitted the following values:
-        <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-          <code className="text-white">{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      </div>
-    );
-    useChat.handleSubmit(data)
+   
   }
 
-  function handleDelete(index) {
-
-    console.log(messages)
-    // Create a new array without the message at the specified index
-    const updatedMessages = messages.filter((_, i) => i !== index);
-    // Set the state or update the messages array with the updatedMessages
-    console.log("after" + messages)
-  }
-
+  
   return (
     <ul
       role="list"
@@ -147,7 +133,7 @@ const TeachingCard: React.FC<TeachingCardProps> = ({ data }) => {
               }`}
             >
               <div className="flex justify-between">
-                <h3 className="font-semibold">{item.method}</h3>
+                <h3 className="font-semibold">{item.method_en}</h3>
                 <div className="flex gap-2">
                   <Icons.share className="hover:text-black text-white hover:cursor-pointer  opacity-0" />
                   <Icons.plus className="hover:text-black text-white hover:cursor-pointer opacity-0" />
@@ -193,7 +179,7 @@ const TeachingCard: React.FC<TeachingCardProps> = ({ data }) => {
                               : ""
                           }`}
                         >
-                          <h3 className="font-semibold">{item.method}</h3>
+                          <h3 className="font-semibold">{item.method_en}</h3>
                         </div>
                         <div className="hidden md:block">
                           <Image
@@ -205,10 +191,10 @@ const TeachingCard: React.FC<TeachingCardProps> = ({ data }) => {
                         </div>
                         <div className="p-4">
                           <h1 className="text-2xl font-semibold mb-3">
-                            {item.title}
+                            {item.title_en}
                           </h1>
                           <p className=" text-muted-foreground ">
-                            {item.content}
+                            {item.content_en}
                           </p>
                         </div>
                       </div>
@@ -344,10 +330,10 @@ const TeachingCard: React.FC<TeachingCardProps> = ({ data }) => {
             </div>
             <div className="p-2 md:p-4">
               <h1 className="text-2xl font-semibold mb-3 line-clamp-1">
-                {item.title}
+                {item.title_en}
               </h1>
               <p className="line-clamp-3 text-muted-foreground ">
-                {item.content}
+                {item.content_en}
               </p>
             </div>
           </div>

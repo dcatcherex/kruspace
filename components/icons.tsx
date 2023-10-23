@@ -13,6 +13,7 @@ import {
     BotIcon,
     SmileIcon,
     CopyIcon,
+    SubtitlesIcon,
     Twitter,
     LightbulbIcon,HeartIcon,HandIcon,AlarmClockIcon
     ,AtomIcon,OrbitIcon,RocketIcon,SatelliteIcon,
@@ -37,6 +38,7 @@ import {
     bot: BotIcon,
     smile: SmileIcon,
     copy: CopyIcon,
+    subtitle: SubtitlesIcon,
     twitter: Twitter,
     logo: OrbitIcon,
     light: LightbulbIcon,

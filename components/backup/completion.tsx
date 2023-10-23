@@ -3,15 +3,17 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { useForm } from "react-hook-form";
-import { useEffect } from 'react';
+import { useEffect, useState, useRef } from "react";
 
-import { useCompletion } from "ai/react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
-import { toast } from 'sonner'
+import { Icons } from "../icons";
 
+import { useChat } from "ai/react";
+
+import { toast } from "sonner";
 
 import {
   Select,
@@ -30,8 +32,6 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 
-import { SubtitlesIcon } from "lucide-react";
-
 const formSchema = z.object({
   topic: z.string().min(2, {
     message: "หัวข้อควรมีตัวอักษรตั้งแต่ 2 ตัวขึ้นไป",
@@ -49,34 +49,73 @@ const formSchema = z.object({
     }),
 });
 
-const onSubmit = async (values: z.infer<typeof formSchema>) => {
-  const submitValues = {
-    heading: values.heading
-  };
+// const onSubmit = async (values: z.infer<typeof formSchema>) => {
+//   const submitValues = {
+//     heading: values.heading
+//   };
 
-  handleSubmit(submitValues)
-  console.log(submitValues);
-  console.log(JSON.stringify(submitValues));
 
-  // const response = await fetch("/api/completion", {
-  //   method: "POST",
-  //   body: JSON.stringify(submitValues),
-  //   headers: {
-  //     "Content-Type": "application/json",
-  //   },
-  // });
-  // const responseData = await response.json();
-
-  // if (!response.ok) {
-  //   alert("Submitting failed");
-  //   return;
-  // }
-};
+const data = { "topic": "พืช", "grade_level": "ประถมศึกษาชั้นปีที่ 3", "key_concepts": [ "การรู้จักพืชต่างๆ", "กระบวนการเจริญเติบโตของพืช", "ผลกระทบของสิ่งแวดล้อมต่อพืช" ], "standards_and_indicators": [ "- เข้าใจความหมายของคำศัพท์ที่เกี่ยวข้องกับพืช\n- สามารถอธิบายกระบวนการเจริญเติบโตของพืชได้\n- สามารถวิเคราะห์ผลกระทบของสิ่งแวดล้อมต่อพืชได้" ], "learner_characteristics": [ "- เด็กชั้นป.3\n- มีความสนใจในธรรมชาติและพืช" ], "learning_objectives" : { "knowledge" : ["K: เข้าใจความหมายของคำศัพท์เกี่ยวกับพืช"], "skill" : ["P: อธิบายกระบวนการเจริญเติบโตของพืชได้"], "attitude" : ["A: วิเคราะห์ผลกระทบของสิ่งแวดล้อมต่อพืชได้"] }, "learning_steps": [ "1. ศึกษาเนื้อหาที่เกี่ยวข้องกับพืช", "2. สำรวจและสังเกตพืชในสิ่งแวดล้อม", "3. อธิบายกระบวนการเจริญเติบโตของพืช", "4. วิเคราะห์ผลกระทบของสิ่งแวดล้อมต่อพืช" ], "teaching_methods": [ "- ใช้หนังสือเรียน\n- ใช้ภาพถ่ายของพืช\n- ใช้โมเดลจำลองของกระบวนการเจริญเติบโตของพืช" ], "tasks_and_assignments": [ "- ทำแบบทดสอบความเข้าใจเกี่ยวกับพืช\n- เขียนรายงานการสำรวจและสังเกตพืชในสิ่งแวดล้อม\n- เขียนคำอธิบายกระบวนการเจริญเติบโตของพืช\n- เขียนรายงานการวิเคราะห์ผลกระทบของสิ่งแวดล้อมต่อพืช" ], "assessment": [ "- แบบทดสอบความรู้\n- การสังเกตการกระทำของผู้เรียนในขั้นตอนการเรียนรู้\n- เกรด/การประเมินความสำเร็จในภาระงาน/ชิ้นงา" ] }
 
 export default function Completion() {
-  const { completion, input, handleInputChange, handleSubmit } = useCompletion({
-    api: "/api/completion",
-  });
+  const [topic, setTopic] = useState("");
+  const [grade, setGrade] = useState("");
+  const lessonPlanRef = useRef<null | HTMLDivElement>(null);
+
+  // const scrollToLessonPlan = () => {
+  //   if (lessonPlanRef.current !== null) {
+  //     lessonPlanRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // };
+    const dataToRender = (messages) => {
+      <div className="container mx-auto">
+      {Object.entries(data).map(([key, value]) => (
+        <div key={key} className="mb-4">
+          <h3 className="text-lg font-bold">{key}</h3>
+          {Array.isArray(value) ? (
+            <ul className="list-disc pl-6">
+              {value.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          ) : (
+            typeof value === "object" ? (
+              <ul className="list-disc pl-6">
+                {Object.entries(value).map(([subKey, subValue]) => (
+                  <li key={subKey}>{subKey}: {subValue}</li>
+                ))}
+              </ul>
+            ) : (
+              <p className="pl-6">{value}</p>
+            )
+          )}
+        </div>
+      ))}
+    </div>
+    }
+
+    useChat({
+      api: "/api/completion",
+      body: {
+        topic,
+        grade,
+      },
+      onFinish(){},
+      onResponse() {
+        scrollToLessonPlan();
+      },
+    });
+
+  const onSubmit = (e: any) => {
+    toast.success("สร้างแผนการสอน");
+    setTopic(input);
+    console.log("topic:" + topic);
+    handleSubmit(e);
+  };
+
+  const lastMessage = messages[messages.length - 1];
+  const generatedLessonPlan =
+    lastMessage?.role === "assistant" ? lastMessage.content : null;
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -87,19 +126,41 @@ export default function Completion() {
     },
   });
 
-  
-
-
   const watchedTopic = form.watch("topic", "การสังเคราะห์แสง");
   const watchedGrade = form.watch("grade", "ประถมปีที่2");
 
   useEffect(() => {
-    form.setValue('heading', `สร้างแผนการสอนเรื่อง [${watchedTopic}] สำหรับชั้น [${watchedGrade} ]\nที่ผสมผสานเทคนิคการสอน และวิธีการที่หลากหลาย โดยมีหัวข้อต่อไปนี้\n\nสาระสำคัญ\nมาตรฐานและตัวชี้วัด\nลักษณะผู้เรียน\nจุดประสงค์การเรียนรู้ (K,P,A)\nขั้นตอนการเรียนรู้\nสื่อการเรียนรู้\nภาระงาน/ชิ้นงาน\nการวัดและประเมินผล`);
+    form.setValue(
+      "heading",
+      `สร้างแผนการสอนเรื่อง [${watchedTopic}] สำหรับชั้น [${watchedGrade} ]\nที่ผสมผสานเทคนิคการสอน และวิธีการที่หลากหลาย โดยมีหัวข้อต่อไปนี้\n\nสาระสำคัญ\nมาตรฐานและตัวชี้วัด\nลักษณะผู้เรียน\nจุดประสงค์การเรียนรู้ (K,P,A)\nขั้นตอนการเรียนรู้\nสื่อการเรียนรู้\nภาระงาน/ชิ้นงาน\nการวัดและประเมินผล`
+    );
   }, [watchedTopic, watchedGrade, form]);
 
   return (
     <div className="">
-      <p
+      <ul>
+        {messages.map((m, index) => (
+          <li
+            key={index}
+            className={`mb-2 p-2 rounded-md ${
+              m.role === "user" ? "bg-blue-200" : "bg-gray-200"
+            }`}
+          >
+            <div className="flex gap-2 justify-between items-center">
+              <div className="flex gap-2">
+                {m.role === "user" ? (
+                  <Icons.smile />
+                ) : (
+                  <Icons.bot className="flex-none w-6 min-w-6" />
+                )}
+                {m.content}
+              </div>
+              <Icons.copy className="text-muted-foreground w-4 h-4 hover:cursor-pointer" />
+            </div>
+          </li>
+        ))}
+      </ul>
+      {/* <p
         className={
           completion
             ? "border-2 border-sky-500 font-semibold p-2 mb-4 rounded-md bg-sky-100 dark:bg-slate-900 h-[300px] overflow-y-auto"
@@ -107,13 +168,11 @@ export default function Completion() {
         }
       >
         {completion}
-      </p>
-      <button onClick={() => toast.success('Event has been created')}>
-        Give me a toast
-      </button>
+      </p> */}
+     
       <Form {...form}>
-        <form className="space-y-4" onSubmit={form.handleSubmit(onSubmit)}>
-        {/* <form className="space-y-4" onSubmit={form.handleSubmit(onSubmit)}> */}
+        <form className="space-y-4" onSubmit={onSubmit}>
+          {/* <form className="space-y-4" onSubmit={form.handleSubmit(onSubmit)}> */}
           <FormField
             control={form.control}
             name="topic"
@@ -130,7 +189,13 @@ export default function Completion() {
                   </div>
                 </FormLabel>
                 <FormControl>
-                  <Input placeholder="การสังเคราะห์แสง" {...field} />
+                  <Input
+                    placeholder="การสังเคราะห์แสง"
+                    {...field}
+                    value={input}
+                    onChange={handleInputChange}
+
+                  />
                 </FormControl>
 
                 <FormMessage />
@@ -143,10 +208,7 @@ export default function Completion() {
             render={({ field }) => (
               <FormItem>
                 <FormLabel>เลือกระดับชั้น</FormLabel>
-                <Select
-                  onValueChange={field.onChange}
-                  defaultValue={field.value}
-                >
+                <Select onValueChange={setGrade} defaultValue={field.value}>
                   <FormControl>
                     <SelectTrigger className="w-[180px]">
                       <SelectValue placeholder="ระดับชั้น" />
@@ -169,7 +231,7 @@ export default function Completion() {
             )}
           />
 
-          <FormField
+          {/* <FormField
             control={form.control}
             name="heading"
             render={({ field }) => (
@@ -188,13 +250,43 @@ export default function Completion() {
                 <FormMessage />
               </FormItem>
             )}
-          />
-
+          /> */}
+          <div>
+            {"topic"} {topic}
+            {"grade"} {grade}
+            {/* {"value"} {value} */}
+            {"input"} {input}
+          </div>
           <Button className="w-full text-lg font-light space-x-2" type="submit">
-            <SubtitlesIcon className="stroke-1" /> <p>สร้างแผนการสอน</p>
+            <Icons.subtitle className="stroke-1" /> <p>สร้างแผนการสอน</p>
           </Button>
         </form>
       </Form>
+
+      <div className="container mx-auto">
+      {Object.entries(data).map(([key, value]) => (
+        <div key={key} className="mb-4">
+          <h3 className="text-lg font-bold">{key}</h3>
+          {Array.isArray(value) ? (
+            <ul className="list-disc pl-6">
+              {value.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          ) : (
+            typeof value === "object" ? (
+              <ul className="list-disc pl-6">
+                {Object.entries(value).map(([subKey, subValue]) => (
+                  <li key={subKey}>{subKey}: {subValue}</li>
+                ))}
+              </ul>
+            ) : (
+              <p className="pl-6">{value}</p>
+            )
+          )}
+        </div>
+      ))}
+    </div>
     </div>
   );
 }
