@@ -13,7 +13,7 @@ const openai = new OpenAIApi(config);
 export async function POST(req: Request) {
   const body = await req.json();
   // const { messages } = body;
-  const {subject, grade} = body;
+  // const {subject, grade} = body;
 
   // ask openai for the streaming chat completion
   // const response = await openai.createChatCompletion({

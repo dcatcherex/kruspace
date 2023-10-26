@@ -3,11 +3,10 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { useForm } from "react-hook-form";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 
 import { Icons } from "../icons";
 
@@ -54,21 +53,46 @@ const formSchema = z.object({
 //     heading: values.heading
 //   };
 
-
-const data = { "topic": "พืช", "grade_level": "ประถมศึกษาชั้นปีที่ 3", "key_concepts": [ "การรู้จักพืชต่างๆ", "กระบวนการเจริญเติบโตของพืช", "ผลกระทบของสิ่งแวดล้อมต่อพืช" ], "standards_and_indicators": [ "- เข้าใจความหมายของคำศัพท์ที่เกี่ยวข้องกับพืช\n- สามารถอธิบายกระบวนการเจริญเติบโตของพืชได้\n- สามารถวิเคราะห์ผลกระทบของสิ่งแวดล้อมต่อพืชได้" ], "learner_characteristics": [ "- เด็กชั้นป.3\n- มีความสนใจในธรรมชาติและพืช" ], "learning_objectives" : { "knowledge" : ["K: เข้าใจความหมายของคำศัพท์เกี่ยวกับพืช"], "skill" : ["P: อธิบายกระบวนการเจริญเติบโตของพืชได้"], "attitude" : ["A: วิเคราะห์ผลกระทบของสิ่งแวดล้อมต่อพืชได้"] }, "learning_steps": [ "1. ศึกษาเนื้อหาที่เกี่ยวข้องกับพืช", "2. สำรวจและสังเกตพืชในสิ่งแวดล้อม", "3. อธิบายกระบวนการเจริญเติบโตของพืช", "4. วิเคราะห์ผลกระทบของสิ่งแวดล้อมต่อพืช" ], "teaching_methods": [ "- ใช้หนังสือเรียน\n- ใช้ภาพถ่ายของพืช\n- ใช้โมเดลจำลองของกระบวนการเจริญเติบโตของพืช" ], "tasks_and_assignments": [ "- ทำแบบทดสอบความเข้าใจเกี่ยวกับพืช\n- เขียนรายงานการสำรวจและสังเกตพืชในสิ่งแวดล้อม\n- เขียนคำอธิบายกระบวนการเจริญเติบโตของพืช\n- เขียนรายงานการวิเคราะห์ผลกระทบของสิ่งแวดล้อมต่อพืช" ], "assessment": [ "- แบบทดสอบความรู้\n- การสังเกตการกระทำของผู้เรียนในขั้นตอนการเรียนรู้\n- เกรด/การประเมินความสำเร็จในภาระงาน/ชิ้นงา" ] }
+const data = {
+  topic: "พืช",
+  grade_level: "ประถมศึกษาชั้นปีที่ 3",
+  key_concepts: [
+    "การรู้จักพืชต่างๆ",
+    "กระบวนการเจริญเติบโตของพืช",
+    "ผลกระทบของสิ่งแวดล้อมต่อพืช",
+  ],
+  standards_and_indicators: [
+    "- เข้าใจความหมายของคำศัพท์ที่เกี่ยวข้องกับพืช\n- สามารถอธิบายกระบวนการเจริญเติบโตของพืชได้\n- สามารถวิเคราะห์ผลกระทบของสิ่งแวดล้อมต่อพืชได้",
+  ],
+  learner_characteristics: ["- เด็กชั้นป.3\n- มีความสนใจในธรรมชาติและพืช"],
+  learning_objectives: {
+    knowledge: ["K: เข้าใจความหมายของคำศัพท์เกี่ยวกับพืช"],
+    skill: ["P: อธิบายกระบวนการเจริญเติบโตของพืชได้"],
+    attitude: ["A: วิเคราะห์ผลกระทบของสิ่งแวดล้อมต่อพืชได้"],
+  },
+  learning_steps: [
+    "1. ศึกษาเนื้อหาที่เกี่ยวข้องกับพืช",
+    "2. สำรวจและสังเกตพืชในสิ่งแวดล้อม",
+    "3. อธิบายกระบวนการเจริญเติบโตของพืช",
+    "4. วิเคราะห์ผลกระทบของสิ่งแวดล้อมต่อพืช",
+  ],
+  teaching_methods: [
+    "- ใช้หนังสือเรียน\n- ใช้ภาพถ่ายของพืช\n- ใช้โมเดลจำลองของกระบวนการเจริญเติบโตของพืช",
+  ],
+  tasks_and_assignments: [
+    "- ทำแบบทดสอบความเข้าใจเกี่ยวกับพืช\n- เขียนรายงานการสำรวจและสังเกตพืชในสิ่งแวดล้อม\n- เขียนคำอธิบายกระบวนการเจริญเติบโตของพืช\n- เขียนรายงานการวิเคราะห์ผลกระทบของสิ่งแวดล้อมต่อพืช",
+  ],
+  assessment: [
+    "- แบบทดสอบความรู้\n- การสังเกตการกระทำของผู้เรียนในขั้นตอนการเรียนรู้\n- เกรด/การประเมินความสำเร็จในภาระงาน/ชิ้นงา",
+  ],
+};
 
 export default function Completion() {
   const [topic, setTopic] = useState("");
   const [grade, setGrade] = useState("");
-  const lessonPlanRef = useRef<null | HTMLDivElement>(null);
 
-  // const scrollToLessonPlan = () => {
-  //   if (lessonPlanRef.current !== null) {
-  //     lessonPlanRef.current.scrollIntoView({ behavior: "smooth" });
-  //   }
-  // };
-    const dataToRender = (messages) => {
-      <div className="container mx-auto">
+  const dataToRender = (messages) => {
+    <div className="container mx-auto">
       {Object.entries(data).map(([key, value]) => (
         <div key={key} className="mb-4">
           <h3 className="text-lg font-bold">{key}</h3>
@@ -78,39 +102,37 @@ export default function Completion() {
                 <li key={index}>{item}</li>
               ))}
             </ul>
+          ) : typeof value === "object" ? (
+            <ul className="list-disc pl-6">
+              {Object.entries(value).map(([subKey, subValue]) => (
+                <li key={subKey}>
+                  {subKey}: {subValue}
+                </li>
+              ))}
+            </ul>
           ) : (
-            typeof value === "object" ? (
-              <ul className="list-disc pl-6">
-                {Object.entries(value).map(([subKey, subValue]) => (
-                  <li key={subKey}>{subKey}: {subValue}</li>
-                ))}
-              </ul>
-            ) : (
-              <p className="pl-6">{value}</p>
-            )
+            <p className="pl-6">{value}</p>
           )}
         </div>
       ))}
-    </div>
-    }
+    </div>;
+  };
 
-    useChat({
-      api: "/api/completion",
-      body: {
-        topic,
-        grade,
-      },
-      onFinish(){},
-      onResponse() {
-        scrollToLessonPlan();
-      },
-    });
+  useChat({
+    api: "/api/completion",
+    body: {
+      topic,
+      grade,
+    },
+    onFinish() {},
+    onResponse() {
+    },
+  });
 
   const onSubmit = (e: any) => {
     toast.success("สร้างแผนการสอน");
     setTopic(input);
     console.log("topic:" + topic);
-    handleSubmit(e);
   };
 
   const lastMessage = messages[messages.length - 1];
@@ -142,20 +164,20 @@ export default function Completion() {
         {messages.map((m, index) => (
           <li
             key={index}
-            className={`mb-2 p-2 rounded-md ${
+            className={`mb-2 rounded-md p-2 ${
               m.role === "user" ? "bg-blue-200" : "bg-gray-200"
             }`}
           >
-            <div className="flex gap-2 justify-between items-center">
+            <div className="flex items-center justify-between gap-2">
               <div className="flex gap-2">
                 {m.role === "user" ? (
                   <Icons.smile />
                 ) : (
-                  <Icons.bot className="flex-none w-6 min-w-6" />
+                  <Icons.bot className="min-w-6 w-6 flex-none" />
                 )}
                 {m.content}
               </div>
-              <Icons.copy className="text-muted-foreground w-4 h-4 hover:cursor-pointer" />
+              <Icons.copy className="h-4 w-4 text-muted-foreground hover:cursor-pointer" />
             </div>
           </li>
         ))}
@@ -169,7 +191,7 @@ export default function Completion() {
       >
         {completion}
       </p> */}
-     
+
       <Form {...form}>
         <form className="space-y-4" onSubmit={onSubmit}>
           {/* <form className="space-y-4" onSubmit={form.handleSubmit(onSubmit)}> */}
@@ -179,11 +201,11 @@ export default function Completion() {
             render={({ field }) => (
               <FormItem>
                 <FormLabel>
-                  <div className="flex items-center gap-2 mt-2">
-                    <span className="px-3 py-2 bg-black text-white rounded-full">
+                  <div className="mt-2 flex items-center gap-2">
+                    <span className="rounded-full bg-black px-3 py-2 text-white">
                       1
                     </span>
-                    <div className="font-medium text-base ">
+                    <div className="text-base font-medium ">
                       ป้อนเรื่อง หรือข้อความ
                     </div>
                   </div>
@@ -194,7 +216,6 @@ export default function Completion() {
                     {...field}
                     value={input}
                     onChange={handleInputChange}
-
                   />
                 </FormControl>
 
@@ -257,36 +278,36 @@ export default function Completion() {
             {/* {"value"} {value} */}
             {"input"} {input}
           </div>
-          <Button className="w-full text-lg font-light space-x-2" type="submit">
+          <Button className="w-full space-x-2 text-lg font-light" type="submit">
             <Icons.subtitle className="stroke-1" /> <p>สร้างแผนการสอน</p>
           </Button>
         </form>
       </Form>
 
       <div className="container mx-auto">
-      {Object.entries(data).map(([key, value]) => (
-        <div key={key} className="mb-4">
-          <h3 className="text-lg font-bold">{key}</h3>
-          {Array.isArray(value) ? (
-            <ul className="list-disc pl-6">
-              {value.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
-          ) : (
-            typeof value === "object" ? (
+        {Object.entries(data).map(([key, value]) => (
+          <div key={key} className="mb-4">
+            <h3 className="text-lg font-bold">{key}</h3>
+            {Array.isArray(value) ? (
+              <ul className="list-disc pl-6">
+                {value.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
+            ) : typeof value === "object" ? (
               <ul className="list-disc pl-6">
                 {Object.entries(value).map(([subKey, subValue]) => (
-                  <li key={subKey}>{subKey}: {subValue}</li>
+                  <li key={subKey}>
+                    {subKey}: {subValue}
+                  </li>
                 ))}
               </ul>
             ) : (
               <p className="pl-6">{value}</p>
-            )
-          )}
-        </div>
-      ))}
-    </div>
+            )}
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

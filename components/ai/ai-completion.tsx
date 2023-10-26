@@ -2,15 +2,11 @@
 
 import { useState } from "react";
 
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Checkbox } from "@/components/ui/checkbox";
 
-import { Icons } from "../icons";
 
 import { useChat } from "ai/react";
 
-import { toast } from "sonner";
+// import { toast } from "sonner";
 
 import {
   Select,
@@ -23,23 +19,22 @@ import {
 const AiCompletion = () => {
   const [subject, setSubject] = useState("");
   const [grade, setGrade] = useState("ประถมศึกษาปีที่2");
-  const [topic, setTopic] = useState([
-    "สาระสำคัญ",
-    "มาตรฐานและตัวชี้วัด",
-    "ลักษณะผู้เรียน",
-    "จุดประสงค์การเรียนรู้",
-    "ขั้นตอนการเรียนรู้",
-    "สื่อการเรียนรู้",
-    "ภาระงานและชิ้นงาน",
-    "การวัดและประเมินผล",
-  ]);
+  // const [topic, setTopic] = useState([
+  //   "สาระสำคัญ",
+  //   "มาตรฐานและตัวชี้วัด",
+  //   "ลักษณะผู้เรียน",
+  //   "จุดประสงค์การเรียนรู้",
+  //   "ขั้นตอนการเรียนรู้",
+  //   "สื่อการเรียนรู้",
+  //   "ภาระงานและชิ้นงาน",
+  //   "การวัดและประเมินผล",
+  // ]);
 
   const { messages, input, handleInputChange, handleSubmit } = useChat({
     api: "/api/chat",
     body: {
       subject,
       grade,
-      topic,
     },
   });
 
@@ -92,8 +87,8 @@ const AiCompletion = () => {
         <br />
         {`grade:= ${grade}`}
         <br />
-        {`topic:= ${topic}`}
-        <br />
+        {/* {`topic:= ${topic}`}
+        <br /> */}
       </div>
     </div>
   );
