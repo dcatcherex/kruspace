@@ -1,7 +1,8 @@
 "use client";
 
+import React from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm, SubmitHandler, FieldValues } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import * as z from "zod";
 
 import { toast } from "sonner";
@@ -24,47 +25,50 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-import {
-  ContextMenu,
-  ContextMenuContent,
-  ContextMenuItem,
-  ContextMenuTrigger,
-} from "@/components/ui/context-menu";
-
 import { ScrollArea } from "@/components/ui/scroll-area";
 
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
-  FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 
 import { Icons } from "@/components/icons";
 import Image from "next/image";
 
-type TeachingData = {
-  method: string;
-  method_en: string;
-  title: string;
-  title_en: string;
-  content: string;
-  content_en: string;
-  time_recommend: string;
-  use: string;
-  min_time: number;
-  max_time: number;
-};
+// type TeachingData = {
+//   method: string;
+//   method_en: string;
+//   title: string;
+//   title_en: string;
+//   content: string;
+//   content_en: string;
+//   time_recommend: string;
+//   use: string;
+//   min_time: number;
+//   max_time: number;
+// };
 
 type TeachingCardProps = {
-  data: TeachingData[];
+  // data: TeachingData[];
+  data: {
+    id: number;
+    methodTH: string;
+    methodEN: string;
+    titleTH: string;
+    titleEN: string;
+    contentTH: string;
+    contentEN: string;
+    timeRecommend: string;
+    use: string;
+    minTime: number;
+    maxTime: number;
+  }[];
 };
 
 const FormSchema = z.object({
@@ -73,7 +77,7 @@ const FormSchema = z.object({
   }),
 });
 
-const TeachingCard: React.FC<TeachingCardProps> = ({ data }) => {
+const TeachingCard = ({ data }: TeachingCardProps) => {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
   });
@@ -83,8 +87,6 @@ const TeachingCard: React.FC<TeachingCardProps> = ({ data }) => {
     input,
     handleInputChange,
     handleSubmit,
-    setMessages,
-    setInput,
   } = useChat({
     api: "/api/chat",
     initialMessages: [
@@ -97,7 +99,6 @@ const TeachingCard: React.FC<TeachingCardProps> = ({ data }) => {
     ],
   });
 
-  function onSubmit(data: z.infer<typeof FormSchema>) {}
 
   return (
     <ul
@@ -119,28 +120,28 @@ const TeachingCard: React.FC<TeachingCardProps> = ({ data }) => {
       {/* main card */}
       {data.map((item) => (
         <li
-          key={item.title}
+          key={item.id}
           className="relative col-span-1 flex flex-col justify-between rounded-md border-[1px] border-l-8 border-l-sky-500 bg-white text-left shadow-sm  transition duration-150 ease-in-out  hover:ring-4 dark:bg-black  md:border-l-[1px] md:border-l-gray-200"
         >
           <div className="">
             <div
               className={`rounded-t-md px-4 py-0 pt-4 md:px-4 md:py-2 ${
-                item.method === "วิธีการสอน"
+                item.methodTH === "วิธีการสอน"
                   ? "md:bg-yellow-500"
-                  : item.method === "เทคนิคการสอน"
+                  : item.methodTH === "เทคนิคการสอน"
                   ? "md:bg-red-500"
-                  : item.method === "วัด/ประเมินผล"
+                  : item.methodTH === "วัด/ประเมินผล"
                   ? "md:bg-blue-500"
-                  : item.method === "จัดห้องเรียน"
+                  : item.methodTH === "จัดห้องเรียน"
                   ? "md:bg-violet-500"
-                  : item.method === "รูปแบบการสอน"
+                  : item.methodTH === "รูปแบบการสอน"
                   ? "md:bg-green-500"
                   : ""
               }`}
             >
               <div className="flex justify-between">
                 <h3 className="text-xs font-normal text-sky-500 md:text-base md:font-semibold md:text-black">
-                  {item.method_en}
+                  {item.methodEN}
                 </h3>
                 <div className="flex gap-2">
                   <Icons.share className="text-white opacity-0 hover:cursor-pointer  hover:text-black" />
@@ -169,26 +170,26 @@ const TeachingCard: React.FC<TeachingCardProps> = ({ data }) => {
                   </DialogHeader>
                   <div className="gap-4 space-y-4 md:flex md:space-y-0">
                     <li
-                      key={item.title}
+                      key={item.titleEN}
                       className="col-span-1 flex max-w-[300px] flex-col rounded-md border-[1px] bg-white"
                     >
                       <div className="">
                         <div
                           className={`rounded-t-md px-4 py-2 ${
-                            item.method === "วิธีการสอน"
+                            item.methodTH === "วิธีการสอน"
                               ? "bg-yellow-500"
-                              : item.method === "เทคนิคการสอน"
+                              : item.methodTH === "เทคนิคการสอน"
                               ? "bg-red-500"
-                              : item.method === "วัด/ประเมินผล"
+                              : item.methodTH === "วัด/ประเมินผล"
                               ? "bg-blue-500"
-                              : item.method === "จัดห้องเรียน"
+                              : item.methodTH === "จัดห้องเรียน"
                               ? "bg-violet-500"
-                              : item.method === "รูปแบบการสอน"
+                              : item.methodTH === "รูปแบบการสอน"
                               ? "bg-green-500"
                               : ""
                           }`}
                         >
-                          <h3 className="font-semibold">{item.method_en}</h3>
+                          <h3 className="font-semibold">{item.methodEN}</h3>
                         </div>
                         <div className="hidden md:block">
                           <Image
@@ -200,17 +201,17 @@ const TeachingCard: React.FC<TeachingCardProps> = ({ data }) => {
                         </div>
                         <div className="p-4">
                           <h1 className="mb-3 text-2xl font-semibold">
-                            {item.title_en}
+                            {item.titleEN}
                           </h1>
                           <p className=" text-muted-foreground ">
-                            {item.content_en}
+                            {item.contentEN}
                           </p>
                         </div>
                       </div>
                       <div className="flex justify-between p-4 ">
                         <div className="flex gap-2 font-semibold">
                           <Icons.clock />
-                          <p>{item.time_recommend} นาที</p>
+                          <p>{item.timeRecommend} นาที</p>
                         </div>
                         <div className="flex gap-2">
                           <Icons.light className="text-green-500" />
@@ -347,10 +348,10 @@ const TeachingCard: React.FC<TeachingCardProps> = ({ data }) => {
             {/* main card */}
             <div className=" p-4 pt-0">
               <h1 className="-mt-2 mb-1 line-clamp-1 text-lg font-semibold md:mb-3 md:mt-4 md:text-xl  ">
-                {item.title_en}
+                {item.titleEN}
               </h1>
               <p className=" line-clamp-2 text-sm font-light text-muted-foreground md:line-clamp-3 md:text-base ">
-                {item.content_en}
+                {item.contentEN}
               </p>
               <div className="">
                 <div className="mt-2 flex items-center justify-between">
@@ -368,7 +369,7 @@ const TeachingCard: React.FC<TeachingCardProps> = ({ data }) => {
           <div className="hidden justify-between p-2 md:p-4 ">
             <div className="flex gap-2 font-semibold">
               <Icons.clock />
-              <p>{item.time_recommend} นาที</p>
+              <p>{item.timeRecommend} นาที</p>
             </div>
             <div className="flex gap-2">
               <Icons.light className="text-green-500" />
