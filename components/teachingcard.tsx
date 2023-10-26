@@ -54,21 +54,23 @@ import Image from "next/image";
 //   max_time: number;
 // };
 
+// data: TeachingData[];
+type TeachingCardData = {
+  id: number;
+  methodTH: string;
+  methodEN: string;
+  titleTH: string;
+  titleEN: string;
+  contentTH: string;
+  contentEN: string;
+  timeRecommend: string;
+  use: string;
+  minTime: number;
+  maxTime: number;
+};
+
 type TeachingCardProps = {
-  // data: TeachingData[];
-  data: {
-    id: number;
-    methodTH: string;
-    methodEN: string;
-    titleTH: string;
-    titleEN: string;
-    contentTH: string;
-    contentEN: string;
-    timeRecommend: string;
-    use: string;
-    minTime: number;
-    maxTime: number;
-  }[];
+  data: TeachingCardData[];
 };
 
 const FormSchema = z.object({

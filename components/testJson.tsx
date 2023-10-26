@@ -11,14 +11,17 @@ type dataProps = {
 type TeachingCardProps = {
     // data: TeachingData[];
     data: {
-      uid: string;
-      method: string;
-      title: string;
-      content: string;
-      time_recommend: string;
+      id: number;
+      methodTH: string;
+      methodEN: string;
+      titleTH: string;
+      titleEN: string;
+      contentTH: string;
+      contentEN: string;
+      timeRecommend: string;
       use: string;
-      min_time: number;
-      max_time: number;
+      minTime: number;
+      maxTime: number;
     }[];
   };
 
