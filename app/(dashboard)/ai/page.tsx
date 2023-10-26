@@ -1,4 +1,3 @@
-import SimpleCard from '@/components/simplecard'
 import {TestForm} from '@/components/testform'
 import React from 'react'
 

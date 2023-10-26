@@ -9,11 +9,11 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 
 const Library = () => {
-  const methodData = card.filter((item) => item.method === "วิธีการสอน");
-  const techniqueData = card.filter((item) => item.method === "เทคนิคการสอน");
-  const evaluationData = card.filter((item) => item.method === "วัด/ประเมินผล");
-  const arrangementData = card.filter((item) => item.method === "จัดห้องเรียน");
-  const frameworkData = card.filter((item) => item.method === "รูปแบบการสอน");
+  const methodData = card.filter((item) => item.methodTH === "วิธีการสอน");
+  const techniqueData = card.filter((item) => item.methodTH === "เทคนิคการสอน");
+  const evaluationData = card.filter((item) => item.methodTH === "วัด/ประเมินผล");
+  const arrangementData = card.filter((item) => item.methodTH === "จัดห้องเรียน");
+  const frameworkData = card.filter((item) => item.methodTH === "รูปแบบการสอน");
 
   return (
     <div className="bg-slate-50 dark:bg-black md:p-4  ">
