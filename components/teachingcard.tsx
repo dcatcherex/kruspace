@@ -84,12 +84,7 @@ const TeachingCard = ({ data }: TeachingCardProps) => {
     resolver: zodResolver(FormSchema),
   });
 
-  const {
-    messages,
-    input,
-    handleInputChange,
-    handleSubmit,
-  } = useChat({
+  const { messages, input, handleInputChange, handleSubmit } = useChat({
     api: "/api/chat",
     initialMessages: [
       {
@@ -100,7 +95,6 @@ const TeachingCard = ({ data }: TeachingCardProps) => {
       },
     ],
   });
-
 
   return (
     <ul
@@ -358,12 +352,12 @@ const TeachingCard = ({ data }: TeachingCardProps) => {
               <div className="">
                 <div className="mt-2 flex items-center justify-between">
                   <div className="flex gap-2">
-                    <Icons.eye className="stroke=1 h-5 w-5 stroke-slate-300 " />
+                    <Icons.eye className=" h-5 w-5 stroke-slate-300 " />
                     <p className="text-sm font-light text-muted-foreground">
                       125
                     </p>
                   </div>
-                  <Icons.bookmark className="stroke=1 h-5 w-5 stroke-slate-300 hover:fill-sky-500 " />
+                  <Icons.bookmark className=" h-5 w-5 stroke-slate-300 hover:fill-sky-500 " />
                 </div>
               </div>
             </div>
