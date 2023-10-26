@@ -1,25 +1,20 @@
-
 import React from "react";
 import Link from "next/link";
 
 // import { env } from "@/env.mjs"
 import { siteConfig } from "@/config/site";
-import { cn } from "@/lib/utils";
-import { buttonVariants } from "@/components/ui/button";
 import HeadAnimation from "../headanimation";
 
+// const headline_en =
+//   "Lighten your load and heighten the quality of your lessons.";
+// const headline =
+//   "ลดเวลาเตรียมการสอน ครูมีเวลาสอนเต็มที่ขึ้น ใส่ใจนักเรียนได้มากขึ้น";
+const title1 = "ลดเวลาเตรียมการสอน";
+const title2 = "ครูมีเวลาสอนเต็มที่";
+const title3 = "ใส่ใจนักเรียนได้มากขึ้น";
 
-const headline_en =
-  "Lighten your load and heighten the quality of your lessons.";
-const headline =
-  "ลดเวลาเตรียมการสอน ครูมีเวลาสอนเต็มที่ขึ้น ใส่ใจนักเรียนได้มากขึ้น";
-// const headline = 'ใช้เวลาเตรียมการสอนน้อยลง มีเวลาสอนมากขึ้น'
-const title1 = "ลดเวลาเตรียมการสอน"
-const title2 = "ครูมีเวลาสอนเต็มที่"
-const title3 = "ใส่ใจนักเรียนได้มากขึ้น"
-
-const subhead_en =
-  "Automate your lesson preparation and generate ready-to-use teaching materials, saving countless hours and enhancing your students’ learning experience.";
+// const subhead_en =
+//   "Automate your lesson preparation and generate ready-to-use teaching materials, saving countless hours and enhancing your students’ learning experience.";
 const subhead =
   "ช่วยเตรียมแผนการสอนของคุณ และสร้างสื่อการเรียนรู้ที่พร้อมใช้งาน";
 
@@ -34,9 +29,9 @@ const SectionHero = () => {
         >
           ติดตาม Facebook
         </Link>
-        <h1 className="font-semibold text-3xl   sm:text-5xl md:text-6xl lg:text-7xl">
+        <h1 className="text-3xl font-semibold   sm:text-5xl md:text-6xl lg:text-7xl">
           <div className="pb-2 md:pb-4">
-            <HeadAnimation head1={title1} head2={title2}/>
+            <HeadAnimation head1={title1} head2={title2} />
           </div>
           {title3}
           {/* {headline} */}

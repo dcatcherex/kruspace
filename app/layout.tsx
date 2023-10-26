@@ -1,21 +1,19 @@
+import "./globals.css";
 
-import './globals.css'
-
-import type { Metadata } from 'next'
-import { Noto_Sans_Thai} from 'next/font/google'
-import { siteConfig } from "@/config/site"
-import { fontSans } from "@/lib/fonts"
-import { cn } from "@/lib/utils"
-import { SiteHeader } from "@/components/site-header"
-import { TailwindIndicator } from "@/components/tailwind-indicator"
-import { ThemeProvider } from "@/components/theme-provider"
-import { Toaster, toast } from 'sonner'
-
+import type { Metadata } from "next";
+import { Noto_Sans_Thai } from "next/font/google";
+import { siteConfig } from "@/config/site";
+import { fontSans } from "@/lib/fonts";
+import { cn } from "@/lib/utils";
+import { SiteHeader } from "@/components/site-header";
+import { TailwindIndicator } from "@/components/tailwind-indicator";
+import { ThemeProvider } from "@/components/theme-provider";
+import { Toaster, toast } from "sonner";
 
 const noto = Noto_Sans_Thai({
-  subsets: ['latin'],
-  display: 'swap',
-})
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: {
@@ -32,16 +30,16 @@ export const metadata: Metadata = {
     shortcut: "/favicon-16x16.png",
     apple: "/apple-touch-icon.png",
   },
-}
+};
 
 interface RootLayoutProps {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <>
-      <html lang="en" className={noto.className} suppressHydrationWarning >
+      <html lang="en" className={noto.className} suppressHydrationWarning>
         <head />
         <body
           className={cn(
@@ -49,7 +47,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
             fontSans.variable
           )}
         >
-        
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <div className="relative flex min-h-screen flex-col">
               <SiteHeader />
@@ -58,10 +55,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
             </div>
             <TailwindIndicator />
           </ThemeProvider>
-
         </body>
       </html>
     </>
-  )
+  );
 }
-

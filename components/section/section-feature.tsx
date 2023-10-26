@@ -6,8 +6,10 @@ const features = [
     icon: PresentationIcon,
     title: " ช่วยสร้างสื่อเตรียมการสอน",
     title_en: "Automated Lesson Preparation",
-    description: "สร้างสื่อที่พร้อมปรับใช้เพียงไม่นาน ได้สื่อและตัวช่วยในการสอนที่หลากหลาย",
-    description_en: "Get ready-to-use teaching materials generated in an instant.",
+    description:
+      "สร้างสื่อที่พร้อมปรับใช้เพียงไม่นาน ได้สื่อและตัวช่วยในการสอนที่หลากหลาย",
+    description_en:
+      "Get ready-to-use teaching materials generated in an instant.",
   },
   {
     icon: TimerIcon,
@@ -36,7 +38,7 @@ const SectionFeature = () => {
       className="container space-y-6 bg-slate-50 py-8 dark:bg-transparent md:py-12 lg:py-24"
     >
       <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
-        <h2 className="font-semibold text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
+        <h2 className="text-3xl font-semibold leading-[1.1] sm:text-3xl md:text-6xl">
           Features
         </h2>
         {/* <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
@@ -51,8 +53,8 @@ const SectionFeature = () => {
             className="relative overflow-hidden rounded-lg border bg-background p-2"
             key={index}
           >
-            <div className="flex md:flex-col items-start justify-between rounded-md p-2 md:p-6">
-              <feature.icon className="mb-4 mr-3 w-8 h-8" />
+            <div className="flex items-start justify-between rounded-md p-2 md:flex-col md:p-6">
+              <feature.icon className="mb-4 mr-3 h-8 w-8" />
               <div className="space-y-2">
                 <h3 className="font-bold">{feature.title}</h3>
                 <p className="text-sm text-muted-foreground">
@@ -62,7 +64,6 @@ const SectionFeature = () => {
             </div>
           </div>
         ))}
-        
       </div>
       {/* <div className="mx-auto text-center md:max-w-[58rem]">
           <p className="leading-normal text-muted-foreground sm:text-lg sm:leading-7">
