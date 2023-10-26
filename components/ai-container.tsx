@@ -1,5 +1,4 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Button } from "@/components/ui/button";
 import { NewspaperIcon } from "lucide-react";
 
 import {
@@ -15,12 +14,12 @@ import Completion from "@/components/completion";
 
 const AiContainer = () => {
   return (
-    <section className="space-y-6 pb-8  md:pb-12 md: lg:">
+    <section className="space-y-6 pb-8 md:pb-12">
       <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center">
         <Tabs defaultValue="lessonplan" className="max-w-[800px]">
           <TabsList>
             <TabsTrigger value="lessonplan">
-              <NewspaperIcon className="w-5 h-5 mr-1 stroke-muted-foreground stroke-2" />
+              <NewspaperIcon className="mr-1 h-5 w-5 stroke-muted-foreground stroke-2" />
               แผนการสอน
             </TabsTrigger>
             <TabsTrigger value="activity">กิจกรรม</TabsTrigger>
