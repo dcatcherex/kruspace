@@ -21,8 +21,6 @@ import {
 
 import {
   HelpCircleIcon,
-  FileSearch2Icon,
-  PencilIcon,
   SubtitlesIcon,
 } from "lucide-react";
 
@@ -31,14 +29,12 @@ export default function Completion() {
     api: "/api/completion",
   });
 
-  
-
   return (
     <div className="">
       <p
         className={
           completion
-            ? "border-2 border-sky-500 font-semibold p-2 mb-4 rounded-md bg-sky-100 dark:bg-slate-900 h-[300px] overflow-y-auto"
+            ? "mb-4 h-[300px] overflow-y-auto rounded-md border-2 border-sky-500 bg-sky-100 p-2 font-semibold dark:bg-slate-900"
             : ""
         }
       >
@@ -48,14 +44,14 @@ export default function Completion() {
         <div></div>
         <Label htmlFor="input">
           <div className="flex items-center gap-2 pb-2 pt-4">
-            <span className="px-3 py-2 bg-black text-white rounded-full">
+            <span className="rounded-full bg-black px-3 py-2 text-white">
               1
             </span>
             <p className="text-base">ป้อนหัวข้อ หรือข้อความ</p>
             <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger>
-                  <HelpCircleIcon className="w-4 h-4" />
+                  <HelpCircleIcon className="h-4 w-4" />
                 </TooltipTrigger>
                 <TooltipContent>
                   <p>Add to library</p>
@@ -69,15 +65,15 @@ export default function Completion() {
             onChange={handleInputChange}
           />
         </Label>
-        <div className=" text-right space-x-2 mt-1">
+        <div className=" mt-1 space-x-2 text-right">
           {/* <Badge variant="outline">สังเคราะห์แสง</Badge>
             <Badge variant="outline">แมลง</Badge>
             <Badge variant="outline">ดาวเคราะห์</Badge>
             <Badge variant="outline">พืช</Badge> */}
         </div>
-        <div className="flex items-center gap-2 mt-2">
+        <div className="mt-2 flex items-center gap-2">
           <div className="flex items-center gap-2">
-            <span className="px-3 py-1 bg-black text-white rounded-full">
+            <span className="rounded-full bg-black px-3 py-1 text-white">
               2
             </span>
             <p className="font-medium">เลือกระดับชั้น</p>
@@ -100,7 +96,7 @@ export default function Completion() {
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger>
-                <HelpCircleIcon className="w-4 h-4" />
+                <HelpCircleIcon className="h-4 w-4" />
               </TooltipTrigger>
               <TooltipContent>
                 <p>Add to library</p>
@@ -115,7 +111,7 @@ export default function Completion() {
             <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger>
-                  <HelpCircleIcon className="w-4 h-4" />
+                  <HelpCircleIcon className="h-4 w-4" />
                 </TooltipTrigger>
                 <TooltipContent>
                   <p>Add to library</p>
@@ -123,21 +119,24 @@ export default function Completion() {
               </Tooltip>
             </TooltipProvider>
           </div>
-          <div className="text-sm p-4 border-[1px] rounded-md text-muted-foreground">
-          
+          <div className="rounded-md border-[1px] p-4 text-sm text-muted-foreground">
             <div>
               สร้างแผนการสอนที่ผสมผสานเทคนิคการสอน และวิธีการที่หลากหลาย ได้แก่
             </div>
-            <ul className="list-disc pl-4 py-2">
+            <ul className="list-disc py-2 pl-4">
               <li>การสอนโดยตรง</li> <li>การตรวจสอบความเข้าใจ</li>{" "}
               <li>การสนทนา </li>
               <li>กิจกรรมที่น่าสนใจในห้องเรียน</li>
               <li>การมอบหมายงาน</li>
             </ul>
-            ในหัวข้อ <span className="text-black font-semibold">[หัวข้อหรือข้อความ]</span> ระดับชั้น <span className="text-black font-semibold">[ระดับชั้น]</span>  
+            ในหัวข้อ{" "}
+            <span className="font-semibold text-black">
+              [หัวข้อหรือข้อความ]
+            </span>{" "}
+            ระดับชั้น{" "}
+            <span className="font-semibold text-black">[ระดับชั้น]</span>
           </div>
         </div>
-
 
         <div>
           <div className="flex items-center gap-1">
@@ -150,7 +149,7 @@ export default function Completion() {
             <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger>
-                  <HelpCircleIcon className="w-4 h-4" />
+                  <HelpCircleIcon className="h-4 w-4" />
                 </TooltipTrigger>
                 <TooltipContent>
                   <p>Add to library</p>
@@ -158,7 +157,7 @@ export default function Completion() {
               </Tooltip>
             </TooltipProvider>
           </div>
-          <Button className="w-full text-lg font-light space-x-2" type="submit">
+          <Button className="w-full space-x-2 text-lg font-light" type="submit">
             <SubtitlesIcon className="stroke-1" /> <p>สร้างแผนการสอน</p>
           </Button>
         </div>

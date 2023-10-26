@@ -1,5 +1,4 @@
 import {
-    LucideProps,
     Moon,
     Star,
     SunMedium,
@@ -18,7 +17,7 @@ import {
     BookmarkIcon,
     Twitter,
     LightbulbIcon,HeartIcon,HandIcon,AlarmClockIcon
-    ,AtomIcon,OrbitIcon,RocketIcon,SatelliteIcon,
+    ,OrbitIcon,
     type XIcon as LucideIcon,
   } from "lucide-react"
 

@@ -119,9 +119,7 @@ export function FormSubmit() {
           Generate Lesson Plan
         </Button>
         <div className="flex justify-center">
-          <p className="-mt-4 text-sm text-slate-500">
-            Already generated: 
-          </p>
+          <p className="-mt-4 text-sm text-slate-500">Already generated:</p>
         </div>
       </form>
     </Form>

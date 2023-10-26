@@ -1,18 +1,15 @@
-"use client"
+"use client";
 
-import { zodResolver } from "@hookform/resolvers/zod"
-import * as z from "zod"
-import { useForm } from "react-hook-form"
-import  Link  from "next/link"
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
+import { useForm } from "react-hook-form";
+import Link from "next/link";
 
-import { Button } from "@/components/ui/button"
-import { Switch } from "@/components/ui/switch"
-import { Slider } from "@/components/ui/slider"
+import { Button } from "@/components/ui/button";
+import { Switch } from "@/components/ui/switch";
 // import { toast } from "@/components/ui/use-toast"
-import { Checkbox } from "@/components/ui/checkbox"
-import { Textarea } from "@/components/ui/textarea"
-
-
+import { Checkbox } from "@/components/ui/checkbox";
+import { Textarea } from "@/components/ui/textarea";
 
 import {
   Select,
@@ -20,9 +17,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select"
-
-
+} from "@/components/ui/select";
 
 import {
   Form,
@@ -32,8 +27,8 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form"
-import { Input } from "@/components/ui/input"
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
 
 const formSchema = z.object({
   username: z.string().min(2, {
@@ -44,10 +39,10 @@ const formSchema = z.object({
       required_error: "Please select an email to display.",
     })
     .email(),
-    marketing_emails: z.boolean().default(false).optional(),
-    security_emails: z.boolean(),
-    mobile: z.boolean().default(false).optional(),
-    bio: z
+  marketing_emails: z.boolean().default(false).optional(),
+  security_emails: z.boolean(),
+  mobile: z.boolean().default(false).optional(),
+  bio: z
     .string()
     .min(10, {
       message: "Bio must be at least 10 characters.",
@@ -55,7 +50,7 @@ const formSchema = z.object({
     .max(160, {
       message: "Bio must not be longer than 30 characters.",
     }),
-})
+});
 
 // 2. Define a submit handler.
 function onSubmit(values: z.infer<typeof formSchema>) {
@@ -63,13 +58,9 @@ function onSubmit(values: z.infer<typeof formSchema>) {
   // ✅ This will be type-safe and validated.
   if (values.mobile === true) {
     // values.mobile = 'iphone';
-
-    values.title = 'the solution';
-
-
   }
 
-  console.log(values)
+  console.log(values);
 }
 
 export function TestForm() {
@@ -82,11 +73,9 @@ export function TestForm() {
       security_emails: false,
       marketing_emails: false,
       mobile: false,
-      bio: "จุดประสงค์การเรียนรู้\nเกณฑ์การให้คะแนน\nจิตพิสัย\nประเมินผล"
+      bio: "จุดประสงค์การเรียนรู้\nเกณฑ์การให้คะแนน\nจิตพิสัย\nประเมินผล",
     },
-    
-    
-  })
+  });
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
@@ -132,50 +121,48 @@ export function TestForm() {
           )}
         />
         <FormField
-              control={form.control}
-              name="marketing_emails"
-              render={({ field }) => (
-                <FormItem className="flex flex-row items-center justify-between rounded-lg border p-4">
-                  <div className="space-y-0.5">
-                    <FormLabel className="text-base">
-                      Marketing emails
-                    </FormLabel>
-                    <FormDescription>
-                      Receive emails about new products, features, and more.
-                    </FormDescription>
-                  </div>
-                  <FormControl>
-                    <Switch
-                      checked={field.value}
-                      onCheckedChange={field.onChange}
-                    />
-                  </FormControl>
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="security_emails"
-              render={({ field }) => (
-                <FormItem className="flex flex-row items-center justify-between rounded-lg border p-4">
-                  <div className="space-y-0.5">
-                    <FormLabel className="text-base">Security emails</FormLabel>
-                    <FormDescription>
-                      Receive emails about your account security.
-                    </FormDescription>
-                  </div>
-                  <FormControl>
-                    <Switch
-                      checked={field.value}
-                      onCheckedChange={field.onChange}
-                      // disabled
-                      aria-readonly
-                    />
-                  </FormControl>
-                </FormItem>
-              )}
-            />
-             <FormField
+          control={form.control}
+          name="marketing_emails"
+          render={({ field }) => (
+            <FormItem className="flex flex-row items-center justify-between rounded-lg border p-4">
+              <div className="space-y-0.5">
+                <FormLabel className="text-base">Marketing emails</FormLabel>
+                <FormDescription>
+                  Receive emails about new products, features, and more.
+                </FormDescription>
+              </div>
+              <FormControl>
+                <Switch
+                  checked={field.value}
+                  onCheckedChange={field.onChange}
+                />
+              </FormControl>
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="security_emails"
+          render={({ field }) => (
+            <FormItem className="flex flex-row items-center justify-between rounded-lg border p-4">
+              <div className="space-y-0.5">
+                <FormLabel className="text-base">Security emails</FormLabel>
+                <FormDescription>
+                  Receive emails about your account security.
+                </FormDescription>
+              </div>
+              <FormControl>
+                <Switch
+                  checked={field.value}
+                  onCheckedChange={field.onChange}
+                  // disabled
+                  aria-readonly
+                />
+              </FormControl>
+            </FormItem>
+          )}
+        />
+        <FormField
           control={form.control}
           name="mobile"
           render={({ field }) => (
@@ -221,6 +208,5 @@ export function TestForm() {
         <Button type="submit">Submit</Button>
       </form>
     </Form>
-  )
-  
+  );
 }

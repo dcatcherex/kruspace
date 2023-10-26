@@ -8,7 +8,7 @@ const GPTLogo = (props: Props) => {
       style={{
         backgroundColor: "rgb(25, 195, 125)",
       }}
-      className="relative p-1 rounded-sm h-9 w-9 text-white flex items-center justify-center"
+      className="relative flex h-9 w-9 items-center justify-center rounded-sm p-1 text-white"
     >
       <svg
         width="41"

@@ -1,5 +1,4 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -9,12 +8,11 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
- import { FormSubmit } from "@/components/formsubmit"
-
+import { FormSubmit } from "@/components/formsubmit";
 
 const FormContainer = () => {
   return (
-    <section className="space-y-6 pb-8  md:pb-12 md: lg:">
+    <section className="md: lg:  space-y-6 pb-8 md:pb-12">
       <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center">
         <Tabs defaultValue="lessonplan" className="w-[400px]">
           <TabsList>
@@ -25,21 +23,22 @@ const FormContainer = () => {
             <Card>
               <CardHeader>
                 <CardTitle>Lesson Plan</CardTitle>
-                <CardDescription>Base on &quot;Teaching with AI&quot; by OpenAI in collaboration with Ethan Mollick and Lilach Mollick</CardDescription>
+                <CardDescription>
+                  Base on &quot;Teaching with AI&quot; by OpenAI in
+                  collaboration with Ethan Mollick and Lilach Mollick
+                </CardDescription>
               </CardHeader>
               <CardContent className="text-left">
                 <FormSubmit />
               </CardContent>
-              <CardFooter>
-              </CardFooter>
+              <CardFooter></CardFooter>
             </Card>
-        
           </TabsContent>
           <TabsContent value="activity">Coming Soon</TabsContent>
         </Tabs>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default FormContainer
+export default FormContainer;

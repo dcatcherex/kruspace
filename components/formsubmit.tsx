@@ -1,9 +1,9 @@
-//app/components/formsubmit.tsx
+// app/components/formsubmit.tsx
 "use client";
 
 import { useCompletion } from "ai/react";
 
-import axios from 'axios';
+import axios from "axios";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -28,7 +28,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { useForm } from "react-hook-form";
 
-//Schema for the form
+// Schema for the form
 const formSchema = z.object({
   topic: z.string().min(2, {
     message: "Topic must be at least 2 characters.",
@@ -38,7 +38,7 @@ const formSchema = z.object({
 });
 
 export function FormSubmit() {
-  const { completion, input, handleInputChange, handleSubmit,setInput } = useCompletion({
+  const { completion } = useCompletion({
     api: "/api/completion",
   });
 
@@ -52,24 +52,22 @@ export function FormSubmit() {
   });
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
-      const response = await axios.post('/api/completion', values);
+      const response = await axios.post("/api/completion", values);
       console.log(response.data);
     } catch (error) {
       console.error(error);
     }
   };
-  
+
   // function onSubmit(values: z.infer<typeof formSchema>) {
   //   // Do something with the form values.
   //   // ✅ This will be type-safe and validated.
   //   setInput(JSON.stringify(values))
-   
+
   //   console.log(values);
   //   console.log(input);
-  
+
   // }
-
-
 
   return (
     <div>
@@ -99,7 +97,10 @@ export function FormSubmit() {
             render={({ field }) => (
               <FormItem>
                 <FormLabel>2. Choose a learning level:</FormLabel>
-                <Select onValueChange={field.onChange} defaultValue={"2nd grade"}>
+                <Select
+                  onValueChange={field.onChange}
+                  defaultValue={"2nd grade"}
+                >
                   <FormControl>
                     <SelectTrigger>
                       <SelectValue placeholder="Select Grade" />
@@ -145,9 +146,7 @@ export function FormSubmit() {
             Generate Lesson Plan
           </Button>
           <div className="flex justify-center">
-            <p className="-mt-4 text-sm text-slate-500">
-              Already generated:
-            </p>
+            <p className="-mt-4 text-sm text-slate-500">Already generated:</p>
           </div>
         </form>
       </Form>

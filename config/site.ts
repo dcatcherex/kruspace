@@ -1,5 +1,3 @@
-export type SiteConfig = typeof siteConfig
-
 export const siteConfig = {
   name: "KRU SPACE",
   description:
@@ -9,10 +7,10 @@ export const siteConfig = {
       title: "Home",
       href: "/",
     },
-    {
-      title: "บทความ",
-      href: "/blog",
-    },
+    // {
+    //   title: "บทความ",
+    //   href: "/blog",
+    // },
     {
       title: "ไอเดียการสอน",
       href: "/library",
@@ -32,3 +30,5 @@ export const siteConfig = {
     docs: "https://ui.shadcn.com",
   },
 }
+
+export type SiteConfig = typeof siteConfig
