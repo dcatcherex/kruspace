@@ -29,10 +29,9 @@ import {
   ContextMenuContent,
   ContextMenuItem,
   ContextMenuTrigger,
-} from "@/components/ui/context-menu"
+} from "@/components/ui/context-menu";
 
-import { ScrollArea } from "@/components/ui/scroll-area"
-
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 import {
   Form,
@@ -79,64 +78,73 @@ const TeachingCard: React.FC<TeachingCardProps> = ({ data }) => {
     resolver: zodResolver(FormSchema),
   });
 
-  const { messages, input, handleInputChange, handleSubmit, setMessages, setInput } = useChat({
+  const {
+    messages,
+    input,
+    handleInputChange,
+    handleSubmit,
+    setMessages,
+    setInput,
+  } = useChat({
     api: "/api/chat",
-    initialMessages: [{
-      id:"0",
-      role: "system",
-      content:"You are a friendly and helpful instructional coach helping teachers plan a lesson.",
-    }]
+    initialMessages: [
+      {
+        id: "0",
+        role: "system",
+        content:
+          "You are a friendly and helpful instructional coach helping teachers plan a lesson.",
+      },
+    ],
   });
 
-  function onSubmit(data: z.infer<typeof FormSchema>) {
-   
-  }
+  function onSubmit(data: z.infer<typeof FormSchema>) {}
 
-  
   return (
     <ul
       role="list"
-      className="grid grid-cols-1 gap-2 md:gap-6 sm:grid-cols-2 lg:grid-cols-4 "
+      className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-4 "
     >
-      <div className="flex flex-col border-[1px] col-span-1 bg-white dark:bg-black rounded-md  shadow-sm transition ease-in-out  duration-150 hover:ring-4 hover:cursor-pointer ">
-        <div className="px-2 md:px-4 py-2 rounded-t-md bg-slate-300 font-semibold">
+      <div className="col-span-1 flex flex-col rounded-md border-[1px] bg-white shadow-sm  transition duration-150 ease-in-out  hover:cursor-pointer hover:ring-4 dark:bg-black ">
+        <div className="rounded-t-md bg-slate-300 p-2 font-semibold md:px-4">
           {"เลือกประเภท"}
         </div>
-        <div className="hidden md:block mix-blend-luminosity bg-slate-800 ">
+        <div className="hidden bg-slate-800 mix-blend-luminosity md:block ">
           <Image src="/placeholder.jpg" width={400} height={500} alt="image" />
         </div>
         <div className="p-2 md:p-4">
-          <h1 className="font-semibold text-2xl text-center">สร้างการ์ด</h1>
-          <Icons.plus className="w-20 h-20 mx-auto text-slate-300 align-middle " />
+          <h1 className="text-center text-2xl font-semibold">สร้างการ์ด</h1>
+          <Icons.plus className="mx-auto h-20 w-20 align-middle text-slate-300 " />
         </div>
       </div>
-
+      {/* main card */}
       {data.map((item) => (
         <li
           key={item.title}
-          className="flex flex-col justify-between border-[1px] col-span-1 bg-white dark:bg-black rounded-md  shadow-sm transition ease-in-out  duration-150 hover:ring-4  text-left relative"
+          className="relative col-span-1 flex flex-col justify-between rounded-md border-[1px] border-l-8 border-l-sky-500 bg-white text-left shadow-sm  transition duration-150 ease-in-out  hover:ring-4 dark:bg-black  md:border-l-[1px] md:border-l-gray-200"
         >
           <div className="">
             <div
-              className={`px-2 md:px-4 py-2 rounded-t-md ${
+              className={`rounded-t-md px-4 py-0 pt-4 md:px-4 md:py-2 ${
                 item.method === "วิธีการสอน"
-                  ? "bg-yellow-500"
+                  ? "md:bg-yellow-500"
                   : item.method === "เทคนิคการสอน"
-                  ? "bg-red-500"
+                  ? "md:bg-red-500"
                   : item.method === "วัด/ประเมินผล"
-                  ? "bg-blue-500"
+                  ? "md:bg-blue-500"
                   : item.method === "จัดห้องเรียน"
-                  ? "bg-violet-500"
+                  ? "md:bg-violet-500"
                   : item.method === "รูปแบบการสอน"
-                  ? "bg-green-500"
+                  ? "md:bg-green-500"
                   : ""
               }`}
             >
               <div className="flex justify-between">
-                <h3 className="font-semibold">{item.method_en}</h3>
+                <h3 className="text-xs font-normal text-sky-500 md:text-base md:font-semibold md:text-black">
+                  {item.method_en}
+                </h3>
                 <div className="flex gap-2">
-                  <Icons.share className="hover:text-black text-white hover:cursor-pointer  opacity-0" />
-                  <Icons.plus className="hover:text-black text-white hover:cursor-pointer opacity-0" />
+                  <Icons.share className="text-white opacity-0 hover:cursor-pointer  hover:text-black" />
+                  <Icons.plus className="text-white opacity-0 hover:cursor-pointer hover:text-black" />
                 </div>
               </div>
             </div>
@@ -147,9 +155,10 @@ const TeachingCard: React.FC<TeachingCardProps> = ({ data }) => {
                 height={500}
                 alt="image"
               />
+              {/* sub card */}
               <Dialog>
                 <DialogTrigger asChild>
-                  <Button className="opacity-0 hover:text-white  absolute bottom-4 left-4 bg-slate-500 bg-opacity-50 ">
+                  <Button className="absolute bottom-4  left-4 bg-black/80 font-light opacity-0 hover:text-white ">
                     รายละเอียด
                   </Button>
                 </DialogTrigger>
@@ -158,14 +167,14 @@ const TeachingCard: React.FC<TeachingCardProps> = ({ data }) => {
                   <DialogHeader>
                     <DialogTitle>เรียนรู้เพิ่มเติม</DialogTitle>
                   </DialogHeader>
-                  <div className="md:flex gap-4 space-y-4 md:space-y-0">
+                  <div className="gap-4 space-y-4 md:flex md:space-y-0">
                     <li
                       key={item.title}
-                      className="max-w-[300px] flex flex-col border-[1px] col-span-1 bg-white rounded-md"
+                      className="col-span-1 flex max-w-[300px] flex-col rounded-md border-[1px] bg-white"
                     >
                       <div className="">
                         <div
-                          className={`px-4 py-2 rounded-t-md ${
+                          className={`rounded-t-md px-4 py-2 ${
                             item.method === "วิธีการสอน"
                               ? "bg-yellow-500"
                               : item.method === "เทคนิคการสอน"
@@ -190,7 +199,7 @@ const TeachingCard: React.FC<TeachingCardProps> = ({ data }) => {
                           />
                         </div>
                         <div className="p-4">
-                          <h1 className="text-2xl font-semibold mb-3">
+                          <h1 className="mb-3 text-2xl font-semibold">
                             {item.title_en}
                           </h1>
                           <p className=" text-muted-foreground ">
@@ -198,7 +207,7 @@ const TeachingCard: React.FC<TeachingCardProps> = ({ data }) => {
                           </p>
                         </div>
                       </div>
-                      <div className="flex justify-between p-4 border-t-[1px]">
+                      <div className="flex justify-between p-4 ">
                         <div className="flex gap-2 font-semibold">
                           <Icons.clock />
                           <p>{item.time_recommend} นาที</p>
@@ -211,29 +220,36 @@ const TeachingCard: React.FC<TeachingCardProps> = ({ data }) => {
                       </div>
                     </li>
 
-                    <div className="flex flex-col justify-between p-4 border-[1px] rounded-md w-full">
+                    <div className="flex w-full flex-col justify-between rounded-md border-[1px] p-4">
                       {/* ai output */}
                       <ScrollArea className="h-[300px] w-full pr-4">
-  
-                      <ul>
-                        {messages.map((m, index) => (
-                          <li key={index} className={`mb-2 p-2 rounded-md ${
-                            m.role === "user" ? "bg-blue-200" : "bg-gray-200"
-                          }`}>
-                            <div className="flex gap-2 justify-between items-center">
-                              <div className="flex gap-2">
-                                {m.role === "user" ? <Icons.smile /> : <Icons.bot className="flex-none w-6 min-w-6" />}
-                                {m.content}
+                        <ul>
+                          {messages.map((m, index) => (
+                            <li
+                              key={index}
+                              className={`mb-2 rounded-md p-2 ${
+                                m.role === "user"
+                                  ? "bg-blue-200"
+                                  : "bg-gray-200"
+                              }`}
+                            >
+                              <div className="flex items-center justify-between gap-2">
+                                <div className="flex gap-2">
+                                  {m.role === "user" ? (
+                                    <Icons.smile />
+                                  ) : (
+                                    <Icons.bot className=" w-6 flex-none" />
+                                  )}
+                                  {m.content}
+                                </div>
+                                <Icons.copy className="h-4 w-4 text-muted-foreground hover:cursor-pointer" />
                               </div>
-                              <Icons.copy className="text-muted-foreground w-4 h-4 hover:cursor-pointer" />
-                            </div>
-                          </li>
-                        ))}
-
-                      </ul>
+                            </li>
+                          ))}
+                        </ul>
                       </ScrollArea>
                       <div>
-                        <div className="flex gap-2 text-muted-foreground mb-2">
+                        <div className="mb-2 flex gap-2 text-muted-foreground">
                           <Button variant="outline">อธิบายเพิ่มเติม</Button>
                           <Select>
                             <SelectTrigger className="w-[180px]">
@@ -310,7 +326,7 @@ const TeachingCard: React.FC<TeachingCardProps> = ({ data }) => {
                                 )}
                               />
                               <Button
-                                className="bg-slate-500 font-light text-lg"
+                                className="bg-slate-500 text-lg font-light"
                                 type="submit"
                               >
                                 <Icons.send className="mr-2 h-4 w-4" />
@@ -328,16 +344,28 @@ const TeachingCard: React.FC<TeachingCardProps> = ({ data }) => {
                 </DialogContent>
               </Dialog>
             </div>
-            <div className="p-2 md:p-4">
-              <h1 className="text-2xl font-semibold mb-3 line-clamp-1">
+            {/* main card */}
+            <div className=" p-4 pt-0">
+              <h1 className="-mt-2 mb-1 line-clamp-1 text-lg font-semibold md:mb-3 md:mt-4 md:text-xl  ">
                 {item.title_en}
               </h1>
-              <p className="line-clamp-3 text-muted-foreground ">
+              <p className=" line-clamp-2 text-sm font-light text-muted-foreground md:line-clamp-3 md:text-base ">
                 {item.content_en}
               </p>
+              <div className="">
+                <div className="mt-2 flex items-center justify-between">
+                  <div className="flex gap-2">
+                    <Icons.eye className="stroke=1 h-5 w-5 stroke-slate-300 " />
+                    <p className="text-sm font-light text-muted-foreground">
+                      125
+                    </p>
+                  </div>
+                  <Icons.bookmark className="stroke=1 h-5 w-5 stroke-slate-300 hover:fill-sky-500 " />
+                </div>
+              </div>
             </div>
           </div>
-          <div className="flex justify-between p-2 md:p-4 border-t-[1px]">
+          <div className="hidden justify-between p-2 md:p-4 ">
             <div className="flex gap-2 font-semibold">
               <Icons.clock />
               <p>{item.time_recommend} นาที</p>
@@ -350,60 +378,6 @@ const TeachingCard: React.FC<TeachingCardProps> = ({ data }) => {
           </div>
         </li>
       ))}
-
-      {/* {data.map((item) => (
-        <li
-          key={item.title}
-          className="flex flex-col justify-between border-[1px]  col-span-1 bg-white rounded-md  shadow-sm transition ease-in-out  duration-150 hover:scale-105 hover:cursor-pointer"
-        >
-          <div>
-            <div
-              className={`px-4 py-2 rounded-t-md ${
-                item.method === "วิธีการสอน"
-                  ? "bg-yellow-500"
-                  : item.method === "เทคนิคการสอน"
-                  ? "bg-red-500"
-                  : item.method === "วัด/ประเมินผล"
-                  ? "bg-blue-500"
-                  : item.method === "จัดห้องเรียน"
-                  ? "bg-violet-500"
-                  : item.method === "รูปแบบการสอน"
-                  ? "bg-green-500"
-                  : ""
-              }`}
-            >
-              <h3 className="font-semibold">{item.method}</h3>
-            </div>
-            <div>
-              <Image
-                src="/placeholder.jpg"
-                width={400}
-                height={500}
-                alt="image"
-              />
-            </div>
-            <div className="p-4">
-              <h1 className="text-2xl font-semibold mb-3 line-clamp-1">
-                {item.title}
-              </h1>
-              <p className="line-clamp-3 text-muted-foreground ">
-                {item.content}
-              </p>
-            </div>
-          </div>
-          <div className="flex justify-between p-4 border-t-[1px]">
-            <div className="flex gap-2 font-semibold">
-              <Icons.clock />
-              <p>{item.time_recommend} นาที</p>
-            </div>
-            <div className="flex gap-2">
-              <Icons.light className="text-green-500" />
-              <Icons.heart className="text-red-500" />
-              <Icons.hand className="text-yellow-500" />
-            </div>
-          </div>
-        </li>
-      ))} */}
     </ul>
   );
 };

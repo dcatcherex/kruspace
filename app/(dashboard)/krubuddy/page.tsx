@@ -11,6 +11,12 @@ const KruBuddy = () => {
       {/* <Completion /> */}
       {/* <AiForm /> */}
     <AiCompletion />
+    
+    <div>
+
+
+
+    </div>
     </div>
   )
 }

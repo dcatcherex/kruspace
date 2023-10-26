@@ -14,7 +14,7 @@ export const siteConfig = {
       href: "/blog",
     },
     {
-      title: "คลังความรู้",
+      title: "ไอเดียการสอน",
       href: "/library",
     },
     {

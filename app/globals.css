@@ -7,6 +7,37 @@ li:hover .hover\:text-black { opacity: 1;}
 li:hover .opacity-0 { opacity: 1;}
  
 @layer base {
+  .check-red {
+    @apply border-2 border-red-500;
+  }
+  .check-blue {
+    @apply border-2 border-blue-500;
+  }
+  .check-green {
+    @apply border-2 border-green-500;
+  }
+  .check-yellow {
+    @apply border-2 border-yellow-500;
+  }
+
+  @layer utilities {
+    .bg-both {
+      @apply bg-white dark:bg-black;
+    }
+
+    .h1-bold {
+      @apply text-[30px] font-bold leading-[42px] tracking-tighter;
+    }
+
+    .flex-center{
+      @apply flex justify-center items-center;
+    }
+
+    .flex-between{
+      @apply flex justify-between items-center;
+    }
+  }
+  
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;

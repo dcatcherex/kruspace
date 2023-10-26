@@ -14,6 +14,8 @@ import {
     SmileIcon,
     CopyIcon,
     SubtitlesIcon,
+    EyeIcon,
+    BookmarkIcon,
     Twitter,
     LightbulbIcon,HeartIcon,HandIcon,AlarmClockIcon
     ,AtomIcon,OrbitIcon,RocketIcon,SatelliteIcon,
@@ -39,6 +41,8 @@ import {
     smile: SmileIcon,
     copy: CopyIcon,
     subtitle: SubtitlesIcon,
+    eye: EyeIcon,
+    bookmark: BookmarkIcon,
     twitter: Twitter,
     logo: OrbitIcon,
     light: LightbulbIcon,
