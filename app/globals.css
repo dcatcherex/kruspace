@@ -10,7 +10,7 @@ li:hover .opacity-0 {
   opacity: 1;
 }
 
-@layer base {
+@layer utilities {
   .check-red {
     @apply border-2 border-red-500;
   }
