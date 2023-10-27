@@ -1,8 +1,6 @@
 "use client";
 import { CardDataType } from "@/types/type";
 import { useState } from "react";
-import {toast} from "sonner";
-
 
 import {
   Dialog,
@@ -18,28 +16,30 @@ import { Button } from "@/components/ui/button";
 import { Icons } from "@/components/icons";
 import Image from "next/image";
 
-type GetContentByLanguageFn = (
-  item: CardDataType,
-  language: "TH" | "EN" | "JP" | "CN"
-) => {
-  method: string;
-  title: string;
-  content: string;
-};
-
 type TeachingCardProps = {
-  language:"TH" | "EN" | "JP" | "CN" ;
-  bookmarkedItems: Array<number | null>;
+  bookmarkedItems: Array<string | null>;
   setCurrentCard: (item:number)=>void
   setBookmarkedItems: React.Dispatch<React.SetStateAction<number[]>>;
-  handleBookmark: (item:number)=>void;
-  getContentByLanguage:GetContentByLanguageFn;
+  handleBookmarkedItems: (item:number)=>void;
   card: CardDataType[];
 };
 
-const TeachingCard = ({ card, bookmarkedItems, setCurrentCard, setBookmarkedItems, handleBookmark, getContentByLanguage, language }: TeachingCardProps) => {
+const TeachingCard = ({ card, bookmarkedItems, setCurrentCard, setBookmarkedItems, handleBookmarkedItems }: TeachingCardProps) => {
+  const [language, setLanguage] = useState<"TH" | "EN">("EN");
 
-  
+
+  // Add the bookmarked item to the list
+  const handleBookmark = (itemId: number) => {
+    if (bookmarkedItems.includes(itemId)) {
+      setBookmarkedItems(bookmarkedItems.filter((id) => id !== itemId).sort());
+    } else {
+      setBookmarkedItems([...bookmarkedItems, itemId].sort());
+    }
+  };
+
+  const toggleLanguage = () => {
+    setLanguage(language === "TH" ? "EN" : "TH");
+  };
 
   return (
     <ul
@@ -82,7 +82,7 @@ const TeachingCard = ({ card, bookmarkedItems, setCurrentCard, setBookmarkedItem
                 >
                   <div className="flex justify-between">
                     <h3 className="text-xs font-normal text-sky-500 md:text-base md:font-semibold md:text-black">
-                    {getContentByLanguage(item, language).method}
+                      {item.methodEN}
                     </h3>
                     <div className="flex gap-2">
                       <Icons.share className="text-white opacity-0 hover:cursor-pointer  hover:text-black" />
@@ -102,10 +102,10 @@ const TeachingCard = ({ card, bookmarkedItems, setCurrentCard, setBookmarkedItem
                 {/* main card */}
                 <div className=" p-4 pt-0">
                   <h1 className="-mt-2 mb-1 line-clamp-1 text-lg font-semibold md:mb-3 md:mt-4 md:text-xl  ">
-                  {getContentByLanguage(item, language).title}
+                    {item.titleEN}
                   </h1>
                   <p className=" line-clamp-2 text-sm font-light text-muted-foreground md:line-clamp-3 md:text-base ">
-                  {getContentByLanguage(item, language).content}
+                    {item.contentEN}
                   </p>
                   <div className="">
                     <div className="mt-2 flex items-center justify-between">

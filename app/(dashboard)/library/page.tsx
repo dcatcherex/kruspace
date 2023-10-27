@@ -4,15 +4,76 @@ import React,{useState} from "react";
 import TeachingCard from "@/components/teachingcard";
 import card from "@/data/teaching.json";
 import { Icons } from "@/components/icons";
+import {toast} from "sonner";
+import { CardDataType } from "@/types/type";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import LibraryBucketContainer from "@/components/library/library-bucket-container";
 import LibrarySheetChat from "@/components/library/library-sheet-chat";
+import { Button } from "@/components/ui/button";
 
 const Library = () => {
 
   const [currentCard, setCurrentCard] = useState(1);
-  
+  const [bookmarkedItems, setBookmarkedItems] = useState<number[]>([]);
+  const [language, setLanguage] = useState<"TH" | "EN" | "JP">("EN");
+
+  // Add the bookmarked item to the list
+  const handleBookmark = (itemId: number) => {
+    if (bookmarkedItems.includes(itemId)) {
+      setBookmarkedItems(bookmarkedItems.filter((id) => id !== itemId).sort());
+    } else {
+      setBookmarkedItems([...bookmarkedItems, itemId].sort());
+      toast('Set Bookmark')
+    }
+  };
+
+  const toggleLanguage = () => {
+    setLanguage((prevLanguage) => {
+      switch (prevLanguage) {
+        case "TH":
+          return "EN";
+        case "EN":
+          return "JP";
+        case "JP":
+          return "TH";
+        default:
+          return "EN";
+      }
+    });
+  };
+
+  function getContentByLanguage(item: CardDataType, language: "TH" | "EN" | "JP" | "CN") {
+    switch (language) {
+      case "TH":
+        return {
+          method: item.methodTH,
+          title: item.titleTH,
+          content: item.contentTH,
+        };
+      case "EN":
+        return {
+          method: item.methodEN,
+          title: item.titleEN,
+          content: item.contentEN,
+
+        };
+      case "JP":
+        return {
+          method: item.methodJP,
+          title: item.titleJP,
+          content: item.contentJP,
+
+        };
+      default:
+        return {
+          method: item.methodEN,
+          title: item.titleEN,
+          content: item.contentEN,
+
+        };
+    }
+  }
 
   const methodData = card.filter((item) => item.methodTH === "วิธีการสอน");
   const techniqueData = card.filter((item) => item.methodTH === "เทคนิคการสอน");
@@ -28,8 +89,10 @@ const Library = () => {
     <div className="bg-slate-50 dark:bg-black md:p-4  ">
 
       <div className="container">df</div>
+      <Button onClick={toggleLanguage}>{language}</Button>
+      <Button onClick={() => toast('This is a sonner toast')}>toast Language</Button>
       {/* <div className="w-full bg-sky-400 text-center">เลือกหมวดหมู่</div> */}
-      <LibrarySheetChat card={card} currentCard={1}/>
+      <LibrarySheetChat card={card} currentCard={currentCard}/>
       <div className="container flex">
         <Tabs defaultValue="ทั้งหมด" className=" p-4 md:container md:p-0">
           <TabsList className="sticky top-20 z-50 hidden md:block">
@@ -64,7 +127,14 @@ const Library = () => {
           </TabsList>
           <TabsContent value="ทั้งหมด">
             <div className="flex">
-              <TeachingCard card={card} />
+              <TeachingCard 
+              card={card} 
+              bookmarkedItems={bookmarkedItems} 
+              handleBookmark={handleBookmark} 
+              setBookmarkedItems={setBookmarkedItems}
+              setCurrentCard={setCurrentCard}
+              getContentByLanguage={getContentByLanguage}
+              language={language}/>
             </div>
           </TabsContent>
           <TabsContent value="วิธีการสอน">
