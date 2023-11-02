@@ -1598,5 +1598,37 @@
     "use": "['head','hand']",
     "minTime": 20,
     "maxTime": 30
+  },
+  {
+    "id": 165,
+    "methodTH": "จัดห้องเรียน",
+    "methodEN": "classroom management",
+    "methodJP": "「クラスルームの管理」",
+    "titleTH": "แบ่งกลุ่มคละความสามารถ",
+    "titleEN": "Grouping by abilities",
+    "titleJP": "能力によるグループ分け",
+    "contentTH": "",
+    "contentEN": "",
+    "contentJP": "",
+    "timeRecommend": "2023-01-04T17:00:00.000Z",
+    "use": "['hand']",
+    "minTime": 1,
+    "maxTime": 5
+  },
+  {
+    "id": 178,
+    "methodTH": "รูปแบบการสอน",
+    "methodEN": "teaching framework",
+    "methodJP": "「教育フレームワーク」",
+    "titleTH": "GROW Model (ตั้งคำถาม)",
+    "titleEN": "GROW Model (Questioning)",
+    "titleJP": "「GROWモデル（質問）」",
+    "contentTH": "Goal (เป้าหมายคืออะไร), Reality (ความเป็นจริงเป็นอย่างไร), Option (ทางเลือกมีอะไรบ้าง), Way out (เลือกทาไหนเพื่อไปต่อ)",
+    "contentEN": "Goal (What is the objective), Reality (What is the current situation), Option (What are the available choices), Way out (Which option to choose to move forward)",
+    "contentJP": "目標（目的は何か）、現実（現状はどうか）、選択肢（利用可能な選択肢は何か）、解決策（前進するためにどの選択肢を選ぶか）",
+    "timeRecommend": "40-90",
+    "use": "['head']",
+    "minTime": 40,
+    "maxTime": 90
   }
   ]

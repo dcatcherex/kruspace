@@ -1,7 +1,7 @@
 const LibraryBucketCard
  = () => {
   return (
-    <div>LibraryBucketCard
+    <div>
         
     </div>
   )

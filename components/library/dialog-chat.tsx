@@ -28,7 +28,6 @@ import {
 } from "@/components/ui/select";
 
 import { ScrollArea } from "@/components/ui/scroll-area";
-import Image from "next/image";
 
 const formSchema = z.object({
   prompt: z.string().min(2, {
@@ -84,8 +83,9 @@ const DialogChat = ({ currentCard, card }: DialogChatProps) => {
           ))}
         </ul>
       </ScrollArea>
+      
       <div>
-        <div className="mb-2 flex flex-col gap-2 text-muted-foreground md:flex-row">
+        <div className=" mb-2 flex flex-col gap-2 text-muted-foreground md:flex-row">
           <Select>
             <SelectTrigger className="h-8">
               <SelectValue placeholder="ประยุกต์ใช้กับวิชา..." />

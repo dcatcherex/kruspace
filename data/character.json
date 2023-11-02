@@ -1,0 +1,34 @@
+[
+    {
+        "id":1,
+        "titleTH":"ผู้ช่วยครู",
+        "titleEN":"Teacher Assistant",
+        "descriptionTH":"ช่วยออกแบบแผนการสอน ที่ปรึกษาให้กับครู",
+        "descriptionEN":"Help planing a lesson plan for a teacher",
+        "image":"/char/staff1.svg"
+    },
+    {
+        "id":2,
+        "titleTH":"ผู้ช่วยครู",
+        "titleEN":"Spoken English Teacher",
+        "descriptionTH":"ช่วยออกแบบแผนการสอน ที่ปรึกษาให้กับครู",
+        "descriptionEN":"Help planing a lesson plan for a teacher",
+        "image":"/char/staff3.svg"
+    },
+    {
+        "id":3,
+        "titleTH":"ผู้ช่วยครู",
+        "titleEN":"Spoken English Teacher",
+        "descriptionTH":"ช่วยออกแบบแผนการสอน ที่ปรึกษาให้กับครู",
+        "descriptionEN":"Help planing a lesson plan for a teacher",
+        "image":"/char/staff2.svg"
+    },
+    {
+        "id":4,
+        "titleTH":"ผู้ช่วยครู",
+        "titleEN":"Spoken English Teacher",
+        "descriptionTH":"ช่วยออกแบบแผนการสอน ที่ปรึกษาให้กับครู",
+        "descriptionEN":"Help planing a lesson plan for a teacher",
+        "image":"/char/staff4.svg"
+    }
+]

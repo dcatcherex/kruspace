@@ -1,19 +1,19 @@
-'use client'
+"use client";
 
-import React,{useState} from "react";
+import React, { useState } from "react";
 import TeachingCard from "@/components/teachingcard";
 import card from "@/data/teaching.json";
 import { Icons } from "@/components/icons";
-import {toast} from "sonner";
+import { toast } from "sonner";
 import { CardDataType } from "@/types/type";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import LibraryBucketContainer from "@/components/library/library-bucket-container";
 import LibrarySheetChat from "@/components/library/library-sheet-chat";
 import { Button } from "@/components/ui/button";
+import LibraryRecommend from "@/components/library/library-recommend";
 
 const Library = () => {
-
   const [currentCard, setCurrentCard] = useState(1);
   const [bookmarkedItems, setBookmarkedItems] = useState<number[]>([]);
   const [language, setLanguage] = useState<"TH" | "EN" | "JP">("EN");
@@ -24,7 +24,7 @@ const Library = () => {
       setBookmarkedItems(bookmarkedItems.filter((id) => id !== itemId).sort());
     } else {
       setBookmarkedItems([...bookmarkedItems, itemId].sort());
-      toast('Set Bookmark')
+      toast("Set Bookmark");
     }
   };
 
@@ -43,7 +43,10 @@ const Library = () => {
     });
   };
 
-  function getContentByLanguage(item: CardDataType, language: "TH" | "EN" | "JP" | "CN") {
+  function getContentByLanguage(
+    item: CardDataType,
+    language: "TH" | "EN" | "JP" | "CN"
+  ) {
     switch (language) {
       case "TH":
         return {
@@ -56,21 +59,18 @@ const Library = () => {
           method: item.methodEN,
           title: item.titleEN,
           content: item.contentEN,
-
         };
       case "JP":
         return {
           method: item.methodJP,
           title: item.titleJP,
           content: item.contentJP,
-
         };
       default:
         return {
           method: item.methodEN,
           title: item.titleEN,
           content: item.contentEN,
-
         };
     }
   }
@@ -87,12 +87,16 @@ const Library = () => {
 
   return (
     <div className="bg-slate-50 dark:bg-black md:p-4  ">
-
-      <div className="container">df</div>
+      <div className="container"></div>
+      <h3>bookmarked: {bookmarkedItems.join(" ,")}</h3>
       <Button onClick={toggleLanguage}>{language}</Button>
-      <Button onClick={() => toast('This is a sonner toast')}>toast Language</Button>
+      <Button onClick={() => toast("This is a sonner toast")}>
+        toast Language
+      </Button>
       {/* <div className="w-full bg-sky-400 text-center">เลือกหมวดหมู่</div> */}
-      <LibrarySheetChat card={card} currentCard={currentCard}/>
+      <div>currentCard: {currentCard}</div>
+      <LibrarySheetChat card={card} currentCard={currentCard} />
+
       <div className="container flex">
         <Tabs defaultValue="ทั้งหมด" className=" p-4 md:container md:p-0">
           <TabsList className="sticky top-20 z-50 hidden md:block">
@@ -126,15 +130,24 @@ const Library = () => {
             </TabsTrigger>
           </TabsList>
           <TabsContent value="ทั้งหมด">
-            <div className="flex">
-              <TeachingCard 
-              card={card} 
-              bookmarkedItems={bookmarkedItems} 
-              handleBookmark={handleBookmark} 
-              setBookmarkedItems={setBookmarkedItems}
-              setCurrentCard={setCurrentCard}
+            <LibraryRecommend
+              bookmarkedItems={bookmarkedItems}
+              card={card.slice(0, 5)}
               getContentByLanguage={getContentByLanguage}
-              language={language}/>
+              handleBookmark={handleBookmark}
+              language={language}
+              setCurrentCard={setCurrentCard}
+            />
+            <div className="flex">
+              <TeachingCard
+                card={card}
+                bookmarkedItems={bookmarkedItems}
+                handleBookmark={handleBookmark}
+                setBookmarkedItems={setBookmarkedItems}
+                setCurrentCard={setCurrentCard}
+                getContentByLanguage={getContentByLanguage}
+                language={language}
+              />
             </div>
           </TabsContent>
           <TabsContent value="วิธีการสอน">
@@ -155,7 +168,7 @@ const Library = () => {
           <TabsContent value="password">Change your password here.</TabsContent>
         </Tabs>
         <div className="sticky top-20 max-w-[300px] md:block">
-          <LibraryBucketContainer card={card} currentCard={5} />
+          <LibraryBucketContainer card={card} currentCard={currentCard} />
         </div>
       </div>
     </div>

@@ -14,16 +14,16 @@ type DialogDetailProps = {
   card: CardDataType[];
 };
 
-const DialogDetail = ({ currentCard = 1, card }: DialogDetailProps) => {
+const DialogDetail = ({ currentCard, card }: DialogDetailProps) => {
   return (
     <section>
       <div className="gap-4 space-y-4 md:flex md:space-y-0">
         <li className="relative col-span-1 flex flex-col justify-between rounded-md border-[1px] border-l-8 border-l-sky-500 bg-white text-left shadow-sm  transition duration-150 ease-in-out   dark:bg-black  md:border-l-[1px] md:border-l-gray-200">
           <div className="">
             <div
-              className={`rounded-t-md px-4 py-0 pt-4 md:px-4 md:py-2 ${
+              className={`rounded-full px-4 py-0 pt-4 md:px-4 md:py-2 ${
                 card[currentCard].methodTH === "วิธีการสอน"
-                  ? "md:bg-yellow-500"
+                  ? "md:text-yellow-500"
                   : card[currentCard].methodTH === "เทคนิคการสอน"
                   ? "md:bg-red-500"
                   : card[currentCard].methodTH === "วัด/ประเมินผล"
@@ -36,41 +36,86 @@ const DialogDetail = ({ currentCard = 1, card }: DialogDetailProps) => {
               }`}
             >
               <div className="flex justify-between">
-                <h3 className="text-xs font-normal text-sky-500 md:text-base md:font-semibold md:text-black">
+                <h3 className="my-2 rounded-full bg-yellow-500 px-2 py-1 text-sm font-normal uppercase  text-white md:text-sm md:font-medium md:text-white">
                   {card[currentCard].methodEN}
                 </h3>
+
                 <div className="flex gap-2">
                   <Icons.share className="text-white opacity-0 hover:cursor-pointer  hover:text-black" />
 
                   <Icons.plus className="text-white opacity-0 hover:cursor-pointer hover:text-black" />
                 </div>
               </div>
+              <div className="md: flex justify-between  ">
+                <div className="flex gap-2 font-semibold text-black">
+                  <Icons.clock />
+                  <p>{card[currentCard].timeRecommend} นาที</p>
+                </div>
+                <div className="flex gap-2">
+                  <Icons.light className="h-5 w-5 text-green-500" />
+                  <Icons.heart className="h-5 w-5 text-red-500" />
+                  <Icons.hand className="h-5 w-5 text-yellow-500" />
+                </div>
+              </div>
             </div>
-            <div className="relative hidden md:block">
+            {/* <div className="relative hidden md:block">
               <Image
                 src="/placeholder.jpg"
                 width={400}
                 height={500}
                 alt="image"
               />
-            </div>
+            </div> */}
             {/* main card */}
             <div className=" p-4 pt-0">
-              <h1 className="-mt-2 mb-1  text-lg font-semibold md:mb-3 md:mt-4 md:text-xl  ">
+              <h1 className="md: -mt-2  mb-1 text-lg font-semibold text-yellow-500 md:mt-4 md:text-xl  ">
                 {card[currentCard].titleEN}
               </h1>
-              <p className="  text-sm font-light text-muted-foreground  md:text-base ">
+              <p className="  text-sm text-muted-foreground  md:text-sm ">
                 {card[currentCard].contentEN}
               </p>
-              <Collapsible>
-                <CollapsibleTrigger className="mt-4 flex w-full justify-between rounded-lg border-[1px] p-2 font-semibold">
-                  <h3>Example</h3> <Icons.updown />
-                </CollapsibleTrigger>
-                <CollapsibleContent className="mt-2">
-                  Yes. Free to use for personal and commercial projects. No
-                  attribution required.
-                </CollapsibleContent>
-              </Collapsible>
+
+              <h3 className="mt-4  font-semibold">Example</h3>
+              <p className="text-gray-500">(In progress)</p>
+              <p className="text-sm text-gray-300  md:text-sm">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Recusandae repudiandae vel atque, omnis dolorem earum in
+                molestiae vero optio officiis?
+              </p>
+
+              <h3 className="mt-4 font-semibold">Resources</h3>
+              <p className="text-gray-500">(In progress)</p>
+
+              <div className="mt-2 text-sm text-gray-300">
+                <div className="flex gap-2">
+                  <Icons.image className="stroke-1 text-gray-500" />
+                  Image
+                </div>
+                <ul className="list-inside list-disc">
+                  <li>Document1</li>
+                  <li>Document2</li>
+                </ul>
+              </div>
+              <div className="mt-2 text-sm text-gray-300">
+                <div className="flex gap-2">
+                  <Icons.youtube className="stroke-1 text-gray-500" />
+                  Video
+                </div>
+                <ul className="list-inside list-disc">
+                  <li>Video1</li>
+                  <li>Video2</li>
+                </ul>
+              </div>
+              <div className="mt-2 text-sm text-gray-300">
+                <div className="flex gap-2">
+                  <Icons.text className="stroke-1 text-gray-500" />
+                  Document
+                </div>
+                <ul className="list-inside list-disc">
+                  <li>Document1</li>
+                  <li>Document2</li>
+                </ul>
+              </div>
 
               <div className="">
                 <div className="mt-2 flex items-center justify-between">
@@ -83,17 +128,6 @@ const DialogDetail = ({ currentCard = 1, card }: DialogDetailProps) => {
                   <Icons.bookmark className=" h-5 w-5 stroke-slate-300 hover:fill-sky-500 " />
                 </div>
               </div>
-            </div>
-          </div>
-          <div className="flex justify-between p-2 md:p-4 ">
-            <div className="flex gap-2 font-semibold">
-              <Icons.clock />
-              <p>{card[currentCard].timeRecommend} นาที</p>
-            </div>
-            <div className="flex gap-2">
-              <Icons.light className="text-green-500" />
-              <Icons.heart className="text-red-500" />
-              <Icons.hand className="text-yellow-500" />
             </div>
           </div>
         </li>
