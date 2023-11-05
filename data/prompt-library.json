@@ -1,0 +1,704 @@
+[
+    {
+      "id": 1,
+      "categoryEN": "lesson planning",
+      "categoryTH": "วางแผนการสอน",
+      "titleEN": "Syllabus Designer",
+      "titleTH": "นักออกแบบหลักสูตร",
+      "promptEN": "You are an expert teacher and instructional designer. Create a syllabus for [grade level and course subject] [length of course] that meets [class cadence]. The syllabus should outline the course objectives, topics, grading policies that include guidelines for using generative AI, and expectations for student behavior and participation. Focus the syllabus on these [standards and/or learning objectives] and feature these [key activities, readings, etc.]. In the syllabus include a suggested week-by-week breakdown of lesson topics and assignments.",
+      "promptTH": "คุณเป็นครูผู้เชี่ยวชาญและนักออกแบบการสอน สร้างหลักสูตรสำหรับ [ระดับชั้นและวิชาเรียน] [ระยะเวลาของหลักสูตร] ที่ตรงกับ [ระยะเวลาการเรียนการสอน] หลักสูตรควรระบุวัตถุประสงค์ของหลักสูตร เรื่องที่สอน นโยบายการตัดเกรดที่รวมถึงแนวทางสำหรับการใช้ AI ที่สร้างสรรค์ และคาดหวังในพฤติกรรมและการมีส่วนร่วมของนักเรียน ให้เน้นหลักสูตรที่เกี่ยวข้องกับ [มาตรฐานและ/หรือวัตถุประสงค์การเรียนรู้] และเน้นกิจกรรมหลักเหล่านี้ [การอ่าน เป็นต้น] ในหลักสูตรรวมถึงการแบ่งปันเนื้อหาตามสัปดาห์และการมอบหมายงานในแต่ละสัปดาห์"
+    },
+    {
+      "id": 2,
+      "categoryEN": "lesson planning",
+      "categoryTH": "วางแผนการสอน",
+      "titleEN": "Unit or Lesson Objectives",
+      "titleTH": "วัตถุประสงค์ของหน่วยการเรียนรู้หรือบทเรียน",
+      "promptEN": "Generate a list of [number] of [lesson, unit] objectives for my [grade and subject] class on [topic]. Each objective should begin with [sentence structure] and align to [standards and/or learning framework].",
+      "promptTH": "สร้างรายการของ [จำนวน] [วัตถุประสงค์ของบทเรียนหรือหน่วยการเรียนรู้] สำหรับวิชา [ระดับชั้นและวิชา] ในหัวข้อ [หัวข้อ] แต่ละวัตถุประสงค์ควรเริ่มต้นด้วย [โครงสร้างประโยค] และสอดคล้องกับ [มาตรฐานและ/หรือกรอบการเรียนรู้]"
+    },
+    {
+      "id": 3,
+      "categoryEN": "lesson planning",
+      "categoryTH": "วางแผนการสอน",
+      "titleEN": "Lesson Idea Generator",
+      "titleTH": "เครื่องมือสร้างไอเดียบทเรียน",
+      "promptEN": "You are an expert [grade and subject] teacher. Come up with [number] ideas for lesson plans in our unit on [unit topic]. The lesson plans should be [number] minutes each and should [build on each other/stand alone]. The lessons should focus on: [insert specific unit topics]. Each lesson should be engaging and appropriate for [grade level] students. Each lesson should be aligned to [standards] and should include: learning objectives; a list of key vocabulary; a lesson outline that includes direct instruction, an engaging activity, and a closure with a synthesis/summary of student learning; and an assessment of learning.",
+      "promptTH": "\"\"\"\nคุณเป็นครูผู้เชี่ยวชาญในวิชา [ระดับและวิชา]. จงคิด [จำนวน] แผนการสอนสำหรับหน่วยการเรียนรู้ของเราในหัวข้อ [หัวข้อหน่วยการเรียนรู้]. แผนการสอนควรมีระยะเวลา [จำนวน] นาทีแต่ละครั้งและควร [เชื่อมโยงกัน/เป็นแบบเดี่ยว]. บทเรียนควรเน้นไปที่: [แทรกหัวข้อหน่วยการเรียนรู้เฉพาะ]. แต่ละบทเรียนควรเป็นที่น่าสนใจและเหมาะสมสำหรับนักเรียนระดับ [ระดับชั้น]. แต่ละบทเรียนควรสอดคล้องกับ [มาตรฐาน] และควรประกอบด้วย: วัตถุประสงค์การเรียนรู้; รายการคำศัพท์สำคัญ; โครงสร้างบทเรียนที่รวมถึงการสอนโดยตรง, กิจกรรมที่น่าสนใจ, และการปิดท้ายด้วยการสรุป/สรุปผลการเรียนรู้ของนักเรียน; และการป"
+    },
+    {
+      "id": 4,
+      "categoryEN": "lesson planning",
+      "categoryTH": "วางแผนการสอน",
+      "titleEN": "Lesson Plans",
+      "titleTH": "แผนการสอน",
+      "promptEN": "Generate a lesson plan for [grade/subject] on [topic] that covers [standard(s)] lasts [desired duration of time] and includes reading materials, a video, and a way for students to demonstrate their learning.",
+      "promptTH": "สร้างแผนการสอนสำหรับ [ระดับชั้น/วิชา] เรื่อง [หัวข้อ] ที่ครอบคลุมมาตรฐาน [มาตรฐาน] ใช้เวลา [ระยะเวลาที่ต้องการ] และรวมวัสดุการอ่าน วิดีโอ และวิธีให้นักเรียนสามารถสื่อสารการเรียนรู้ของพวกเขาได้"
+    },
+    {
+      "id": 5,
+      "categoryEN": "lesson planning",
+      "categoryTH": "วางแผนการสอน",
+      "titleEN": "PBL Lesson Plan",
+      "titleTH": "แผนการเรียนรู้ PBL",
+      "promptEN": "Generate a [number of days or weeks] Project Based Learning plan consisting of [number of minutes each day] for [grade/subject] that is based on the Buck Institute for Education’s Gold Standard PBL  that covers [standard(s)] to answer the driving question of [driving question].\n\nInclude the following:\n\nProject summary that includes a project launch, milestones, anticipated student Need to Know questions\n\nActivities aligned to the milestones and related activities that will build student knowledge and experience with the topic(s), allow for students to share drafts of their work, opportunities for peer feedback and revision, reflection upon their work\n\nList scaffolds to help a variety of student need to be successful\n\nA plan for a public presentation of learning to an authentic audience beyond their classroom peers and an opportunity to reflect upon their final product\n\nDraft a parent letter explaining what Project Based Learning is and why learning this way helps students",
+      "promptTH": "\"\"\"\nสร้างแผนการเรียนรู้โครงการที่เน้นการเรียนรู้จากโครงการ (Project Based Learning) ที่ประกอบด้วย [จำนวนวันหรือสัปดาห์] โดยใช้เวลา [จำนวนนาทีต่อวัน] สำหรับวิชา [ระดับชั้น/วิชา] โดยใช้หลักเกณฑ์ Gold Standard PBL ของสถาบันบัค (Buck Institute for Education) ที่ครอบคลุม [มาตรฐาน] เพื่อตอบคำถามหลักของโครงการ [คำถามหลัก]\n\nรวมถึงสิ่งต่อไปนี้:\n\nสรุปโครงการที่รวมการเริ่มต้นโครงการ, ขั้นตอนการพัฒนา, คำถามที่นักเรียนต้องการทราบ\n\nกิจกรรมที่สอดคล้องกับขั้นตอนการพัฒนาและกิจกรรมที่เกี่ยวข้องที่จะช่วยให้นักเรียนมีความรู้และประสบการณ์เกี่ยวกับหัวข้อที่เรียนรู้, ให้นักเรียนแบ่งปันร่างงานของพวกเขา, ให้โอกาสในการให้คำติชมและแก้ไข, การ"
+    },
+    {
+      "id": 6,
+      "categoryEN": "lesson planning",
+      "categoryTH": "วางแผนการสอน",
+      "titleEN": "5E Lesson Plan",
+      "titleTH": "แผนการเรียนรู้ 5E",
+      "promptEN": "You are an expert [grade and subject] teacher. Design a lesson plan for our unit on [subject] based on the 5E instructional model, which has students Engage, Explore, Explain, Elaborate, and Evaluate. The lesson plan should be [number] minutes long and should focus on: [specific content]. The lesson plan should be aligned to [standards] for [grade level] and should include: a list of key vocabulary; a lesson outline that includes a closure with a synthesis/summary of student learning; options for differentiation; and an assessment of learning.",
+      "promptTH": "คุณเป็นครูผู้เชี่ยวชาญในวิชา [ระดับและวิชา]. ออกแบบแผนการสอนสำหรับหน่วยการเรียนรู้ของเราในวิชา [วิชา] โดยใช้แบบจำลองการสอน 5E ซึ่งประกอบด้วยขั้นตอนการเริ่มต้น (Engage), การสำรวจ (Explore), การอธิบาย (Explain), การพัฒนา (Elaborate), และการประเมินผล (Evaluate). แผนการสอนควรมีระยะเวลา [จำนวน] นาทีและควรเน้นไปที่: [เนื้อหาที่เฉพาะเจาะจง]. แผนการสอนควรสอดคล้องกับมาตรฐาน [มาตรฐาน] สำหรับระดับชั้น [ระดับชั้น] และควรประกอบด้วย: รายการคำศัพท์สำคัญ; โครงสร้างการสอนที่รวมถึงการสรุป/สรุปผลการเรียนรู้ของนักเรียน; ตัวเลือกสำหรับการแตกต่าง; และการประเมินการเรียนรู้."
+    },
+    {
+      "id": 7,
+      "categoryEN": "lesson planning",
+      "categoryTH": "วางแผนการสอน",
+      "titleEN": "Multi-Disciplinary Unit Plan",
+      "titleTH": "แผนการเรียนร่วมสาขาหลายสาขา",
+      "promptEN": "You are an expert STEM educator in a [grade level] classroom. Develop an interdisciplinary unit for my [grade level] students that integrates these standards: [specific standards] for my [subject] class. The unit should be [number] days, and each lesson should be [number] minutes long. Create an outline for each lesson plan that utilizes [pedagogical framework]. In the unit plan include objectives for the unit and each lesson, any materials needed, formative assessments for each lesson, and a final project.",
+      "promptTH": "คุณเป็นผู้เชี่ยวชาญด้านการศึกษาทางวิทยาศาสตร์ เรียนในห้องเรียนระดับ [ระดับชั้น] พัฒนาหน่วยการเรียนรวมที่เหมาะสมสำหรับนักเรียนระดับ [ระดับชั้น] ที่รวมมาตรฐานเหล่านี้: [มาตรฐานที่เฉพาะเจาะจง] สำหรับวิชา [วิชา] หน่วยการเรียนควรใช้เวลา [จำนวน] วัน และแต่ละบทเรียนควรใช้เวลา [จำนวน] นาที สร้างเค้าโครงสำหรับแผนการสอนแต่ละบทที่ใช้ [กรอบการสอน] ในแผนการสอนหน่วยควรรวมวัตถุประสงค์สำหรับหน่วยการเรียนและแต่ละบทเรียน วัสดุที่จำเป็น การประเมินแบบฟอร์เมทต์สำหรับแต่ละบทเรียน และโครงการปลายภาค"
+    },
+    {
+      "id": 8,
+      "categoryEN": "lesson planning",
+      "categoryTH": "วางแผนการสอน",
+      "titleEN": "Slides",
+      "titleTH": "สไลด์",
+      "promptEN": "You are an expert teacher and instructional designer. Create the content for a slide deck on [topic/subject] for my [grade] class. The slides should be formatted with a header and then a set of bullets for each slide. Change the variety of each slide including questions for students and activities. The last slide should include text for a formative assessment. Also include a description of any image that should be included on the slide.",
+      "promptTH": "คุณเป็นครูผู้เชี่ยวชาญและนักออกแบบการสอน สร้างเนื้อหาสำหรับสไลด์เด็กศึกษาในระดับชั้น [ระดับชั้น] เนื้อหาควรจัดรูปแบบด้วยส่วนหัวและจากนั้นเป็นชุดข้อความสำหรับแต่ละสไลด์ เปลี่ยนแปลงหลายรูปแบบของแต่ละสไลด์ รวมถึงการตั้งคำถามสำหรับนักเรียนและกิจกรรม สไลด์สุดท้ายควรรวมข้อความสำหรับการประเมินรูปแบบ รวมถึงคำอธิบายของภาพที่ควรจะเพิ่มในสไลด์"
+    },
+    {
+      "id": 9,
+      "categoryEN": "lesson planning",
+      "categoryTH": "วางแผนการสอน",
+      "titleEN": "Lesson Hooks",
+      "titleTH": "การเรียนรู้เบื้องต้น",
+      "promptEN": "You are an expert educator, skilled at creating engaging lessons and activities for students. Create [number] fun ways for me to introduce a lesson on[description of lesson or activity] for [grade level] students in [class subject]. The activities should be [time] minutes long. My students love [student interests], so provide options for both subjects in your response.",
+      "promptTH": "คุณเป็นผู้เชี่ยวชาญในการศึกษา ที่มีความสามารถในการสร้างบทเรียนและกิจกรรมที่น่าสนใจสำหรับนักเรียน สร้างวิธีสนุกๆ [number] วิธีให้ฉันนำเสนอบทเรียนเกี่ยวกับ [description of lesson or activity] สำหรับนักเรียนระดับชั้น [grade level] ในวิชา [class subject] กิจกรรมควรใช้เวลา [time] นาที นักเรียนของฉันชอบ [student interests] ดังนั้นโปรดให้ตัวเลือกทั้งสองวิชาในการตอบของคุณ"
+    },
+    {
+      "id": 10,
+      "categoryEN": "lesson planning",
+      "categoryTH": "วางแผนการสอน",
+      "titleEN": "Graphic Organizers",
+      "titleTH": "แผนผังแบบกราฟิก",
+      "promptEN": "You are an expert educator and instructional designer. Create a Venn diagram for my [subject] class. Make the left section [topic], the right section [second topic], and the overlapping section [shared topic]. Provide two versions: one blank and one with at least [number] items in each section.",
+      "promptTH": "คุณเป็นผู้เชี่ยวชาญด้านการศึกษาและการออกแบบการสอน สร้างแผนภาพวงกลมเวนสำหรับวิชา [subject] ของฉัน ทำให้ส่วนด้านซ้ายเป็น [topic] ส่วนด้านขวาเป็น [second topic] และส่วนที่ซ้อนทับกันเป็น [shared topic] ให้สร้างเวอร์ชันสองรูปแบบ: หนึ่งรูปว่างเปล่าและหนึ่งรูปที่มีอย่างน้อย [number] รายการในแต่ละส่วน"
+    },
+    {
+      "id": 11,
+      "categoryEN": "lesson planning",
+      "categoryTH": "วางแผนการสอน",
+      "titleEN": "Critical Thinking Questions",
+      "titleTH": "คำถามที่ให้คิดอย่างวิจารณ์",
+      "promptEN": "You are an expert educator and instructional designer. Create a list of [number] open-ended, critical thinking questions for [insert grade, subject, and topic].",
+      "promptTH": "คุณเป็นผู้เชี่ยวชาญด้านการศึกษาและการออกแบบการสอน สร้างรายการของคำถามที่เปิดให้คิดอย่างวิจารณ์สำหรับ [ใส่เกรด วิชา และหัวข้อ] จำนวน [ตัวเลข] ข้อ"
+    },
+    {
+      "id": 12,
+      "categoryEN": "lesson planning",
+      "categoryTH": "วางแผนการสอน",
+      "titleEN": "Science Demos",
+      "titleTH": "การสาธิตวิทยาศาสตร์",
+      "promptEN": "You are an expert science teacher, skilled at designing and executing effective lessons for students. Create an engaging classroom demonstration for my [grade level and subject] class that will introduce the topic of [specific topic]. The demonstration should be [number] minutes long and should include [demo specifications like time, materials, student handout, etc.].",
+      "promptTH": "คุณเป็นครูวิทยาศาสตร์ที่เชี่ยวชาญ ที่มีความสามารถในการออกแบบและดำเนินการบทเรียนที่มีประสิทธิภาพสำหรับนักเรียน สร้างการสาธิตในห้องเรียนที่น่าสนใจสำหรับชั้นเรียนของฉัน [ระดับชั้นและวิชา] ที่จะแนะนำหัวข้อ [หัวข้อที่เฉพาะเจาะจง] การสาธิตควรใช้เวลา [จำนวน] นาทีและควรประกอบด้วย [ข้อกำหนดการสาธิตเช่นเวลา วัสดุ ใบงานสำหรับนักเรียน เป็นต้น]"
+    },
+    {
+      "id": 13,
+      "categoryEN": "lesson planning",
+      "categoryTH": "วางแผนการสอน",
+      "titleEN": "Discussion Topics",
+      "titleTH": "หัวข้อการสนทนา",
+      "promptEN": "Generate a list of discussion topics for [grade level and subject] class on [topic] with [LOW/MEDIUM/HIGH] complexity level.",
+      "promptTH": "สร้างรายการหัวข้อการสนทนาสำหรับวิชา [ระดับชั้นและวิชา] ในเรื่อง [หัวข้อ] ด้วยระดับความซับซ้อน [ต่ำ/ปานกลาง/สูง]"
+    },
+    {
+      "id": 14,
+      "categoryEN": "lesson planning",
+      "categoryTH": "วางแผนการสอน",
+      "titleEN": "Real World Examples",
+      "titleTH": "ตัวอย่างในโลกจริง",
+      "promptEN": "You are an expert educator, skilled at making all topics and lessons relevant and interesting to your students. Create [number] examples of [topic] in the real world for my [grade level and subject] class learning about [topic].",
+      "promptTH": "คุณเป็นผู้เชี่ยวชาญในการศึกษา ที่มีความสามารถในการทำให้ทุกหัวข้อและบทเรียนเป็นสิ่งที่เกี่ยวข้องและน่าสนใจต่อนักเรียนของคุณ สร้างตัวอย่าง [number] ตัวอย่างของ [topic] ในโลกจริงสำหรับนักเรียนระดับชั้น [grade level and subject] ที่กำลังเรียนรู้เกี่ยวกับ [topic] ของฉัน"
+    },
+    {
+      "id": 15,
+      "categoryEN": "lesson planning",
+      "categoryTH": "วางแผนการสอน",
+      "titleEN": "Lesson Closures",
+      "titleTH": "การปิดบทเรียน",
+      "promptEN": "You are an expert educator, skilled at designing and executing thoughtful lessons for students. Create [number] engaging ways for me to close a lesson on [topic] for my [grade level and subject] students. The lesson closure activities should be [number] minutes long and should help summarize and emphasize key information on the topic.",
+      "promptTH": "คุณเป็นผู้เชี่ยวชาญในการศึกษา ที่มีความสามารถในการออกแบบและดำเนินการบทเรียนที่มีความคิดริเริ่มสำหรับนักเรียน สร้าง [จำนวน] วิธีที่น่าสนใจเพื่อให้ฉันสรุปบทเรียนเกี่ยวกับ [หัวข้อ] สำหรับนักเรียนระดับชั้น [ระดับชั้นและวิชา] กิจกรรมสรุปบทเรียนควรใช้เวลา [จำนวน] นาทีและควรช่วยสรุปและเน้นข้อมูลสำคัญเกี่ยวกับหัวข้อนั้นๆ"
+    },
+    {
+      "id": 16,
+      "categoryEN": "lesson planning",
+      "categoryTH": "วางแผนการสอน",
+      "titleEN": "Essay Topics",
+      "titleTH": "หัวข้อเรียงความ",
+      "promptEN": "Provide [number] essay topics for [grade] students on [topic]. The essay topics should be appropriate for a variety of skill levels and student backgrounds. Include a title, student directions on picking a topic and what is expected. Create a chart formatted rubric that the students will be graded by.",
+      "promptTH": "ให้ [number] หัวข้อเรียงความสำหรับนักเรียนชั้น [grade] เกี่ยวกับ [topic] หัวข้อเรียงความควรเหมาะสมสำหรับระดับทักษะและพื้นฐานของนักเรียนที่แตกต่างกัน รวมถึงชื่อเรื่อง คำแนะนำให้นักเรียนเลือกหัวข้อและคาดหวังอะไร สร้างตารางรูบิคที่จัดรูปแบบให้นักเรียนได้รับการตรวจประเมิน"
+    },
+    {
+      "id": 17,
+      "categoryEN": "lesson planning",
+      "categoryTH": "วางแผนการสอน",
+      "titleEN": "Leveled Study Guides",
+      "titleTH": "คู่มือการศึกษาระดับ",
+      "promptEN": "You are an expert teacher and knowledgable about how students study best. Create a comprehensive study guide for my [grade level] students for an upcoming [type of assessment] in their [subject] class on [topic]. Include key concepts, vocabulary terms, practice questions, and tips for effective studying and test-taking strategies. The study guide should have three versions for students who are approaching proficiency, proficient, and exceeding proficiency in the subject.",
+      "promptTH": "คุณเป็นครูผู้เชี่ยวชาญและมีความรู้เกี่ยวกับวิธีการเรียนของนักเรียนอย่างดีที่สุด สร้างคู่มือการเรียนรู้ที่ครอบคลุมทั้งหมดสำหรับนักเรียนระดับ [ระดับชั้น] สำหรับการประเมินที่กำลังจะมาถึงในวิชา [วิชา] ในหัวข้อ [หัวข้อ] รวมถึงแนวความคิดหลัก คำศัพท์ที่เกี่ยวข้อง คำถามที่ใช้ฝึกฝน และเคล็ดลับสำหรับการเรียนรู้อย่างมีประสิทธิภาพและกลยุทธ์ในการสอบ คู่มือการเรียนรู้ควรมีสามรุ่นสำหรับนักเรียนที่กำลังเข้าใจได้ ที่เข้าใจได้และเก่งกว่าในวิชานั้น"
+    },
+    {
+      "id": 18,
+      "categoryEN": "lesson planning",
+      "categoryTH": "วางแผนการสอน",
+      "titleEN": "Vocabulary Lists",
+      "titleTH": "รายการคำศัพท์",
+      "promptEN": "You’re an expert teacher with expertise in teaching reading as well as vocabulary acquisition and application. Please create a vocabulary list with [number] of words for students in [grade] with [reading level] for the following [topic]. Avoid any controversial words, inappropriate words, and proper nouns. Provide two versions: one with the words only, and one with words and definitions in student friendly language.",
+      "promptTH": "คุณเป็นครูผู้เชี่ยวชาญที่มีความเชี่ยวชาญในการสอนการอ่านรวมถึงการเรียนรู้และการประยุกต์ใช้คำศัพท์ โปรดสร้างรายการคำศัพท์ที่มีจำนวน [number] คำสำหรับนักเรียนในชั้น [grade] ที่มีระดับการอ่าน [reading level] สำหรับหัวข้อต่อไปนี้ หลีกเลี่ยงคำที่เป็นเรื่องขัดแย้ง คำที่ไม่เหมาะสม และนามสมมติ ให้ระบุสองรุ่น: รุ่นแรกมีเพียงคำศัพท์เท่านั้น และรุ่นที่สองมีคำศัพท์และคำจำกัดความในภาษาที่เข้าใจง่ายสำหรับนักเรียน"
+    },
+    {
+      "id": 19,
+      "categoryEN": "lesson planning",
+      "categoryTH": "วางแผนการสอน",
+      "titleEN": "Math Games",
+      "titleTH": "เกมคณิตศาสตร์",
+      "promptEN": "You are an expert educator and instructional game designer. Create an educational math game for [grade level] with a focus on [math topic(s)]. The game should include levels for a mix of student ability levels, a comprehensive description of the directions of the game for the teacher and students to follow, goals for each level, and any materials needed for the game.",
+      "promptTH": "คุณเป็นผู้เชี่ยวชาญด้านการศึกษาและการออกแบบเกมการเรียนรู้ สร้างเกมคณิตศาสตร์ที่เป็นเกมการศึกษาสำหรับระดับชั้น [ระดับชั้น] โดยให้เน้นที่หัวข้อ [หัวข้อคณิตศาสตร์] เกมควรประกอบด้วยระดับสำหรับนักเรียนที่มีความสามารถต่าง ๆ คำอธิบายอย่างละเอียดเกี่ยวกับกฎกติกาของเกมสำหรับครูและนักเรียนที่ต้องปฏิบัติตาม เป้าหมายสำหรับแต่ละระดับ และวัสดุที่จำเป็นสำหรับการเล่นเกม"
+    },
+    {
+      "id": 20,
+      "categoryEN": "lesson planning",
+      "categoryTH": "วางแผนการสอน",
+      "titleEN": "Essential Questions",
+      "titleTH": "คำถามสำคัญ",
+      "promptEN": "You are an expert teacher and skilled curriculum writer. Generate [number] “essential questions” for my [grade level and subject] class studying [topic]. The questions should stimulate thoughtful engagement and critical thinking, and reflect real world applications. Each question should be open-ended and large in scope. The questions are intended to be continually revisited and reflected upon during this topic of study. Make sure the questions are appropriate for [grade level] students.",
+      "promptTH": "\"\"\"\nคุณเป็นครูผู้เชี่ยวชาญและนักเขียนหลักสูตรที่มีความชำนาญ สร้างคำถาม \"คำถามสำคัญ\" [number] ของคาบเรียนของฉันในระดับชั้น [grade level] และวิชา [subject] ที่ศึกษาเรื่อง [topic] คำถามควรกระตุ้นการมีสมาธิและความคิดวิเคราะห์อย่างรอบคอบ และสะท้อนการประยุกต์ใช้ในชีวิตจริง แต่ละคำถามควรเป็นคำถามที่เปิดกว้างและมีขอบเขตใหญ่ คำถามเหล่านี้จะถูกใช้ซ้ำอยู่เสมอและถูกสะท้อนกลับมาในระหว่างการศึกษาเรื่องนี้ ตรวจสอบให้แน่ใจว่าคำถามเหล่านี้เหมาะสมสำหรับนักเรียนระดับชั้น [grade level]"
+    },
+    {
+      "id": 21,
+      "categoryEN": "lesson planning",
+      "categoryTH": "วางแผนการสอน",
+      "titleEN": "Direct Instruction",
+      "titleTH": "คำสั่งโดยตรง",
+      "promptEN": "You are an expert educator with extensive experience in [subject]. Provide direct instruction on [specific topic] for me to give my [grade and subject] class, learning about [topic]. The instruction should be engaging, [number] minutes long, and include [number] reflective closure questions so I can assess students' understanding of the material.",
+      "promptTH": "คุณเป็นผู้เชี่ยวชาญในการศึกษาที่มีประสบการณ์ที่หลากหลายใน [subject] ให้คำแนะนำโดยตรงเกี่ยวกับ [specific topic] เพื่อให้ฉันสอนนักเรียนในชั้น [grade and subject] เรียนรู้เกี่ยวกับ [topic] คำแนะนำควรเป็นเรื่องที่น่าสนใจ ใช้เวลา [number] นาที และประกอบด้วยคำถามสรุปท้าย [number] คำถามเพื่อให้ฉันประเมินความเข้าใจของนักเรียนต่อเนื่อง"
+    },
+    {
+      "id": 22,
+      "categoryEN": "lesson planning",
+      "categoryTH": "วางแผนการสอน",
+      "titleEN": "Worksheet Creator",
+      "titleTH": "สร้างเวิร์กชีท",
+      "promptEN": "You are an expert teacher and curriculum developer skilled at crafting resources for your students. Create a worksheet for my [grade level and subject] students learning [topic]. The worksheet should include [specific content]. Provide two worksheets: a blank one for students and one with an answer key for teachers.",
+      "promptTH": "คุณเป็นครูผู้เชี่ยวชาญและผู้พัฒนาหลักสูตรที่มีความเชี่ยวชาญในการสร้างทรัพยากรสำหรับนักเรียนของคุณ สร้างกระดาษทำการสำหรับนักเรียนระดับชั้น [ระดับชั้นและวิชา] ที่กำลังเรียนรู้เรื่อง [หัวข้อ] กระดาษทำการควรประกอบด้วย [เนื้อหาที่เฉพาะเจาะจง] ให้สองแบบ: แบบว่างสำหรับนักเรียนและแบบมีคำตอบสำหรับครู"
+    },
+    {
+      "id": 23,
+      "categoryEN": "lesson planning",
+      "categoryTH": "วางแผนการสอน",
+      "titleEN": "Classroom Jeopardy",
+      "titleTH": "เกม Classroom Jeopardy",
+      "promptEN": "You are an expert teacher and game designer skilled in creating exciting and effective learning experiences for your students. Design a Jeopardy-style trivia game for my [grade level and subject] class. Include [number] category topics, as they relate to [class subject]: [insert specific categories]. For each category, write [number] questions that relate to that topic through the lens of [class subject]. Include a “Double Jeopardy” and a \"Final Jeopardy\" round with more challenging questions. Make sure all questions are appropriate for [grade level] students.",
+      "promptTH": "คุณเป็นครูผู้เชี่ยวชาญและนักออกแบบเกมที่มีความเชี่ยวชาญในการสร้างประสบการณ์การเรียนรู้ที่น่าตื่นเต้นและมีประสิทธิภาพสำหรับนักเรียนของคุณ ออกแบบเกมคำถามแบบ Jeopardy-style สำหรับชั้นเรียนของฉันในวิชา [ระดับชั้นและวิชา] รวมถึงหมวดหมู่ [จำนวน] หัวข้อที่เกี่ยวข้องกับ [วิชาเรียน]: [แทรกหมวดหมู่ที่เฉพาะเจาะจง] สำหรับแต่ละหมวดหมู่เขียนคำถาม [จำนวน] คำถามที่เกี่ยวข้องกับหัวข้อนั้นโดยใช้มุมมองของ [วิชาเรียน] รวมถึงรอบ \"Double Jeopardy\" และ \"Final Jeopardy\" พร้อมคำถามที่ยากมากขึ้น ตรวจสอบให้แน่ใจว่าคำถามทั้งหมดเหมาะสมสำหรับนักเรียนระดับ [ระดับชั้น]"
+    },
+    {
+      "id": 24,
+      "categoryEN": "lesson planning",
+      "categoryTH": "วางแผนการสอน",
+      "titleEN": "Standard Alignment for Text",
+      "titleTH": "การจัดแนวมาตรฐานสำหรับข้อความ",
+      "promptEN": "You are an expert educator and curriculum developer skilled in ensuring your teaching content and materials align with applicable standards. I am using the following piece of text about [topic] in my [grade and subject] class. Find and break down the [specific standard set] standard(s) to which it aligns.",
+      "promptTH": "คุณเป็นผู้เชี่ยวชาญด้านการศึกษาและผู้พัฒนาหลักสูตรที่มีความเชี่ยวชาญในการให้เนื้อหาการสอนและวัสดุการสอนของคุณสอดคล้องกับมาตรฐานที่เกี่ยวข้อง ฉันกำลังใช้ชิ้นส่วนข้อความต่อไปนี้เกี่ยวกับ [หัวข้อ] ในชั้นเรียน [ระดับชั้นและวิชา] ค้นหาและแยกมาตรฐาน [ชุดมาตรฐานที่เฉพาะเจาะจง] ที่สอดคล้องกับมันได้"
+    },
+    {
+      "id": 25,
+      "categoryEN": "lesson planning",
+      "categoryTH": "วางแผนการสอน",
+      "titleEN": "Worksheets for ESL/ELL Students",
+      "titleTH": "แบบฝึกหัดสำหรับนักเรียนที่เรียนภาษาอังกฤษเป็นภาษาที่สอง/นักเรียนที่เรียนภาษาอังกฤษเป็นภาษาต่างประเทศ",
+      "promptEN": "You are an expert ESL teacher. Generate a fill-in-the-blank worksheet with [number] sentences and a word bank for my [grade level] students who are learning English as a second language. The students are at an [beginning/intermediate/advanced] level of English proficiency.",
+      "promptTH": "คุณเป็นครูสอนภาษาอังกฤษเป็นภาษาที่สองที่เชี่ยวชาญ สร้างกระดาษทำการเติมคำที่มี [number] ประโยคและคำในธนาคารคำสำหรับนักเรียนระดับชั้น [grade level] ของฉันที่กำลังเรียนภาษาอังกฤษเป็นภาษาที่สอง นักเรียนอยู่ในระดับความถนัดในการใช้ภาษาอังกฤษที่เริ่มต้น/ปานกลาง/ขั้นสูง"
+    },
+    {
+      "id": 26,
+      "categoryEN": "lesson planning",
+      "categoryTH": "วางแผนการสอน",
+      "titleEN": "Field Trip Ideas",
+      "titleTH": "ไอเดียการเดินทางไปสนาม",
+      "promptEN": "You are an expert educator, proficient in creating hands-on learning experiences. Plan a field trip to [location] in [city] for my [number] [grade level] students learning about [topic]. Include the educational aspects such as: identify the educational objectives, make sure the objectives align with [standards] for [grade level] students, and how the trip will be tied to the curriculum. Also, make sure to cover the administrative aspects such as: the logistics about the location, materials required, a permission slip, and an email for chaperones.",
+      "promptTH": "คุณเป็นผู้เชี่ยวชาญในการศึกษา ที่เชี่ยวชาญในการสร้างประสบการณ์การเรียนรู้แบบมีการปฏิบัติจริง วางแผนการเดินทางไปที่ [สถานที่] ใน [เมือง] สำหรับนักเรียนระดับชั้น [ระดับชั้น] จำนวน [จำนวน] ที่กำลังเรียนรู้เกี่ยวกับ [หัวข้อ] รวมถึงด้านการศึกษา เช่น: ระบุวัตถุประสงค์ทางการศึกษา ให้แน่ใจว่าวัตถุประสงค์สอดคล้องกับ[มาตรฐาน]สำหรับนักเรียนระดับชั้น[ระดับชั้น]และวิธีการเชื่อมโยงการเดินทางกับหลักสูตร นอกจากนี้ ให้แน่ใจว่าครอบคลุมด้านการบริหาร เช่น: ข้อมูลเกี่ยวกับสถานที่ วัสดุที่จำเป็น ใบอนุญาต และอีเมลสำหรับผู้คุ้มครอง"
+    },
+    {
+      "id": 27,
+      "categoryEN": "lesson planning",
+      "categoryTH": "วางแผนการสอน",
+      "titleEN": "Team Building Activities",
+      "titleTH": "กิจกรรมสร้างสรรค์ทีม",
+      "promptEN": "You are an expert instructional designer and expert at designing activities that create community in [environment]. Create a list of [number] team building activities that I can do with my [description of group] on [event].",
+      "promptTH": "คุณเป็นผู้เชี่ยวชาญในการออกแบบกิจกรรมที่สร้างความเป็นชุมชนใน [environment] สร้างรายการของกิจกรรมสร้างสรรค์ที่ฉันสามารถทำกับกลุ่มของฉัน [description of group] ใน [event]"
+    },
+    {
+      "id": 28,
+      "categoryEN": "lesson planning",
+      "categoryTH": "วางแผนการสอน",
+      "titleEN": "Improve Your Content",
+      "titleTH": "ปรับปรุงเนื้อหาของคุณ",
+      "promptEN": "Improve this content [content] by [changing the tone, fixing grammar, making it more concise, and/or making it more engaging].",
+      "promptTH": "ปรับปรุงเนื้อหานี้ [เนื้อหา] โดยการ [เปลี่ยนทัศนคติ, แก้ไขไวยากรณ์, ทำให้กระชับยิ่งขึ้น, และ/หรือทำให้น่าสนใจมากขึ้น]"
+    },
+    {
+      "id": 29,
+      "categoryEN": "lesson planning",
+      "categoryTH": "วางแผนการสอน",
+      "titleEN": "Poems",
+      "titleTH": "บทกวี",
+      "promptEN": "You are an expert poet and teacher. Create a [type of poem] on [subject] for my [grade level]. The length of the poem should be [length] and include these key vocabulary words: [vocabulary]. Identify the poet’s work that has inspired your poem.",
+      "promptTH": "คุณเป็นนักกวีและครูผู้เชี่ยวชาญ สร้าง [ประเภทของบทกวี] เกี่ยวกับ [หัวข้อ] สำหรับระดับชั้นของฉัน ความยาวของบทกวีควรเป็น [ความยาว] และต้องรวมคำศัพท์สำคัญเหล่านี้: [คำศัพท์] ระบุชื่อผลงานของนักกวีที่ได้เป็นแรงบันดาลใจให้กับบทกวีของคุณ"
+    },
+    {
+      "id": 30,
+      "categoryEN": "lesson planning",
+      "categoryTH": "วางแผนการสอน",
+      "titleEN": "Creative Writing Assignments",
+      "titleTH": "การมอบหมายเขียนเรื่องสร้างสรรค์",
+      "promptEN": "You are an expert educator and creative writing specialist. Generate a list of [number] creative writing [journal/essay] prompts for a [grade level and subject] class. Prompts should be [topic] and [tone]. Please include a rubric [rubric format] for assessing [subject/area working on].",
+      "promptTH": "คุณเป็นผู้เชี่ยวชาญด้านการศึกษาและการเขียนสร้างสรรค์ สร้างรายการข้อความสร้างสรรค์ [จำนวน] สำหรับการเขียน [วารสาร/เรียงความ] สำหรับชั้นเรียน [ระดับชั้นและวิชา] ข้อความสร้างสรรค์ควรเป็นเรื่อง [หัวข้อ] และ [ลักษณะ] โปรดรวมระเบียบวัดผล [รูปแบบระเบียบ] เพื่อประเมิน [วิชา/พื้นที่ที่กำลังทำงาน]"
+    },
+    {
+      "id": 31,
+      "categoryEN": "lesson planning",
+      "categoryTH": "วางแผนการสอน",
+      "titleEN": "Debate Topics",
+      "titleTH": "หัวข้อการโต้วาที",
+      "promptEN": "You are an expert educator and expert debate coach. Create a list of [number] debate topics for [grade level] in [topic] to research and debate. The debate topics should be age appropriate, engaging, relevant, and [somewhat/moderately/very/a mix of] difficult(y) for [grade level] students.",
+      "promptTH": "คุณเป็นผู้เชี่ยวชาญด้านการศึกษาและโค้ชการอภิปรายที่เชี่ยวชาญ สร้างรายการหัวข้อโต้วาที [number] หัวข้อสำหรับนักเรียนระดับชั้น [grade level] ในเรื่อง [topic] เพื่อให้สามารถวิจัยและอภิปรายได้ หัวข้อโต้วาทีควรเหมาะสมตามวัย น่าสนใจ สอดคล้องกับปัญหาปัจจุบัน และ[ค่อนข้าง/ปานกลาง/มาก/ผสม]ยากสำหรับนักเรียนระดับชั้น [grade level]"
+    },
+    {
+      "id": 32,
+      "categoryEN": "lesson planning",
+      "categoryTH": "วางแผนการสอน",
+      "titleEN": "Online Tutoring Plan",
+      "titleTH": "แผนการสอนออนไลน์",
+      "promptEN": "You are an expert teacher with expertise in online learning. Generate a [number] minute lesson plan for [number] [grade-level] students on [topic] that can be taught remotely and interactively, on [delivery format]. The lesson should meet [standards/learning objectives] and should include at least one way for students to demonstrate their learning in the lesson plan.",
+      "promptTH": "คุณเป็นครูผู้เชี่ยวชาญด้านการเรียนการสอนออนไลน์ สร้างแผนการสอนที่ใช้เวลา [number] นาทีสำหรับนักเรียนระดับชั้น [grade-level] จำนวน [number] คน เกี่ยวกับเรื่อง [topic] ที่สามารถสอนได้จากระยะไกลและมีการปฏิสัมพันธ์ ผ่าน [delivery format] แผนการสอนควรตรงตาม [standards/learning objectives] และควรรวมอย่างน้อยหนึ่งวิธีให้นักเรียนสามารถสื่อสารการเรียนรู้ของพวกเขาในแผนการสอนได้"
+    },
+    {
+      "id": 33,
+      "categoryEN": "lesson planning",
+      "categoryTH": "วางแผนการสอน",
+      "titleEN": "Art Projects",
+      "titleTH": "โครงการศิลปะ",
+      "promptEN": "You are an expert educator and instructional designer. Please list [number] art projects and lesson plans, ranging from [time duration] each, on [insert topic] for my [grade] students. Please make sure to include [skills/projects/materials/learning objectives].",
+      "promptTH": "คุณเป็นผู้เชี่ยวชาญด้านการศึกษาและการออกแบบการสอน โปรดระบุ [จำนวน] โครงการศิลปะและแผนการเรียนรู้ที่มีระยะเวลา [ระยะเวลา] แต่ละโครงการ เกี่ยวกับเรื่อง [แทรกหัวข้อ] สำหรับนักเรียนชั้น [ระดับชั้น] ของฉัน โปรดแน่ใจว่ารวมอยู่ในรายการ [ทักษะ/โครงการ/วัสดุ/วัตถุประสงค์ในการเรียนรู้]"
+    },
+    {
+      "id": 34,
+      "categoryEN": "lesson planning",
+      "categoryTH": "วางแผนการสอน",
+      "titleEN": "Apples to Apples",
+      "titleTH": "แอปเปิ้ลสำหรับแอปเปิ้ล",
+      "promptEN": "You are an expert [subject] teacher, proficient in creating fun and educational learning activities. Create a version of the card game Apples to Apples for my [grade level and subject] class. For the “red cards,” generate a list of 60 nouns – they can be people, places, things, or ideas. For the “green cards,” generate a list of 20 adjectives – they can describe qualities or states of being. Make sure words are appropriate and are vocabulary words related to [topic].",
+      "promptTH": "\"\"\"\nคุณเป็นครูผู้เชี่ยวชาญในวิชา [subject] และเชี่ยวชาญในการสร้างกิจกรรมการเรียนรู้ที่สนุกและมีประสิทธิภาพ สร้างเวอร์ชันของเกมไพ่ Apples to Apples สำหรับชั้นเรียนของฉันในระดับ [grade level and subject] สำหรับ \"ไพ่สีแดง\" สร้างรายการของคำนาม 60 คำ - ทั้งคน สถานที่ สิ่งของ หรือความคิด สำหรับ \"ไพ่สีเขียว\" สร้างรายการของคำคุณศัพท์ 20 คำ - ที่สามารถบรรลุถึงคุณลักษณะหรือสถานะของการเป็นได้ ตรวจสอบให้แน่ใจว่าคำเหล่านั้นเหมาะสมและเป็นคำศัพท์ที่เกี่ยวข้องกับ [topic]\"\"\""
+    },
+    {
+      "id": 35,
+      "categoryEN": "lesson planning",
+      "categoryTH": "วางแผนการสอน",
+      "titleEN": "Music Class Lesson Plans",
+      "titleTH": "แผนการเรียนรู้วิชาดนตรี",
+      "promptEN": "You are an expert music teacher and curriculum designer. Create [number] lesson plan ideas, ranging from [number range] minutes each, for [grade level] students learning about [topic]. Lesson plans should be engaging and age appropriate. Include songs with movement, singing games, and movement to a steady beat. Activities may include the use of [teacher accessible instrument(s)] for the teacher, or the use of [student accessible instrument(s)] for students.",
+      "promptTH": "คุณเป็นครูด้านดนตรีที่เชี่ยวชาญและนักออกแบบหลักสูตร สร้างแผนการเรียนรู้ [จำนวน] แผนการเรียนรู้ ที่ระยะเวลา [ช่วงเวลา] นาที สำหรับนักเรียนระดับชั้น [ระดับชั้น] ที่เรียนรู้เกี่ยวกับ [หัวข้อ] แผนการเรียนรู้ควรมีความน่าสนใจและเหมาะสมตามวัย รวมถึงเพลงที่มีการเคลื่อนไหว กิจกรรมร้องเพลงและการเคลื่อนไหวตามจังหวะที่เสถียร กิจกรรมอาจรวมการใช้เครื่องดนตรีที่สามารถเข้าถึงได้ของครูหรือการใช้เครื่องดนตรีที่สามารถเข้าถึงได้ของนักเรียน"
+    },
+    {
+      "id": 36,
+      "categoryEN": "profession development, administrative",
+      "categoryTH": "การพัฒนาอาชีพ, การบริหารงาน",
+      "titleEN": "PD Idea Generator",
+      "titleTH": "เครื่องมือสร้างความคิด PD",
+      "promptEN": "You are an expert school administrator, proficient in planning and organizing workshops. Generate [number] ideas for professional development presentations on the topic of [topic]. The presentations should be [time duration] each. The presentations should focus on: [specific content]. The presentations should be engaging, and applicable for [intended audience]. Each presentation should utilize principles of [pedagogical/theoretical framework].",
+      "promptTH": "คุณเป็นผู้ดูแลโรงเรียนที่เชี่ยวชาญในการวางแผนและจัดงานสัมมนา สร้าง [จำนวน] ไอเดียสำหรับการนำเสนอการพัฒนาอาชีพเกี่ยวกับหัวข้อ [หัวข้อ] การนำเสนอควรใช้เวลา [ระยะเวลา] แต่ละครั้ง การนำเสนอควรเน้นที่: [เนื้อหาที่เฉพาะเจาะจง] การนำเสนอควรเป็นที่น่าสนใจและสามารถนำไปใช้ได้สำหรับ [กลุ่มเป้าหมาย] แต่ละการนำเสนอควรใช้หลักการของ [กรอบทฤษฎี/กรอบการเรียนการสอน]"
+    },
+    {
+      "id": 37,
+      "categoryEN": "profession development, administrative",
+      "categoryTH": "การพัฒนาอาชีพ, การบริหารงาน",
+      "titleEN": "PD Workshop Planner",
+      "titleTH": "แผนกำหนดการสัมมนา PD",
+      "promptEN": "You are an expert educational consultant, proficient in producing and facilitating professional development workshops. Create a specific plan for a professional development presentation for [target audience] on [topic]. The workshop should be [time duration] long and should incorporate active learning, support collaboration, and offer feedback and reflection.",
+      "promptTH": "คุณเป็นที่เชี่ยวชาญที่ปรึกษาด้านการศึกษา ที่เชี่ยวชาญในการสร้างและสนับสนุนการเติบโตอย่างมืออาชีพ สร้างแผนเฉพาะเพื่อการนำเสนอการพัฒนาอาชีพสำหรับ [กลุ่มเป้าหมาย] เกี่ยวกับ [หัวข้อ] การเตรียมงานควรใช้เวลา [ระยะเวลา] และควรรวมการเรียนรู้แบบเข้าร่วมกิจกรรม สนับสนุนการทำงานร่วมกัน และให้คำแนะนำและการสะท้อนกลับ"
+    },
+    {
+      "id": 38,
+      "categoryEN": "profession development",
+      "categoryTH": "การพัฒนาอาชีพ",
+      "titleEN": "Team Building Activities",
+      "titleTH": "กิจกรรมสร้างสรรค์ทีม",
+      "promptEN": "You are an expert instructional designer and expert at designing activities that create community in [environment]. Create a list of [number] team building activities that I can do with my [description of group] on [event].",
+      "promptTH": "คุณเป็นผู้เชี่ยวชาญในการออกแบบกิจกรรมที่สร้างความเป็นชุมชนใน [environment] สร้างรายการของกิจกรรมสร้างสรรค์ที่ฉันสามารถทำกับกลุ่มของฉัน [description of group] ใน [event]"
+    },
+    {
+      "id": 39,
+      "categoryEN": "special needs",
+      "categoryTH": "การศึกษาพิเศษ",
+      "titleEN": "Script for IEP Evaluations",
+      "titleTH": "สคริปต์สำหรับการประเมิน IEP",
+      "promptEN": "You are an expert educator in an inclusive classroom. Write a script for a conversation with a parent whose [grade level] child you would like to have evaluated for special education services. In the conversation, include the specific reasons you think the evaluation is necessary: [insert specific behaviors, issues at school]. Include a brief explanation of IDEA, how the evaluation process would work, and that you will also notify them of this information in writing.",
+      "promptTH": "คุณเป็นผู้เชี่ยวชาญด้านการศึกษาในห้องเรียนที่รองรับทุกคน เขียนสคริปต์สำหรับการสนทนากับผู้ปกครองของเด็กในระดับชั้น [ระดับชั้น] ที่คุณต้องการให้ประเมินบริการการศึกษาพิเศษ ในการสนทนาให้ระบุเหตุผลที่เฉพาะเจาะจงว่าทำไมคุณคิดว่าการประเมินเป็นเรื่องจำเป็น: [แทรกพฤติกรรมที่เฉพาะเจาะจง, ปัญหาที่เกิดขึ้นที่โรงเรียน] รวมถึงอธิบายสั้น ๆ เกี่ยวกับ IDEA กระบวนการประเมินทำงานอย่างไร และว่าคุณยังจะแจ้งให้พวกเขาทราบเรื่องนี้ในรูปแบบเขียนอีกด้วย"
+    },
+    {
+      "id": 40,
+      "categoryEN": "special needs",
+      "categoryTH": "การศึกษาพิเศษ",
+      "titleEN": "Worksheets for ESL/ELL Students",
+      "titleTH": "แบบฝึกหัดสำหรับนักเรียนที่เรียนภาษาอังกฤษเป็นภาษาที่สอง/นักเรียนที่เรียนภาษาอังกฤษเป็นภาษาต่างประเทศ",
+      "promptEN": "You are an expert ESL teacher. Generate a fill-in-the-blank worksheet with [number] sentences and a word bank for my [grade level] students who are learning English as a second language. The students are at an [beginning/intermediate/advanced] level of English proficiency.",
+      "promptTH": "คุณเป็นครูสอนภาษาอังกฤษเป็นภาษาที่สองที่เชี่ยวชาญ สร้างกระดาษทำการเติมคำที่มี [number] ประโยคและคำในธนาคารคำสำหรับนักเรียนระดับชั้น [grade level] ของฉันที่กำลังเรียนภาษาอังกฤษเป็นภาษาที่สอง นักเรียนอยู่ในระดับความถนัดในการใช้ภาษาอังกฤษที่เริ่มต้น/ปานกลาง/ขั้นสูง"
+    },
+    {
+      "id": 41,
+      "categoryEN": "special needs",
+      "categoryTH": "การศึกษาพิเศษ",
+      "titleEN": "Writing IEP Goals",
+      "titleTH": "เขียนเป้าหมาย IEP",
+      "promptEN": "You are an expert special needs teacher. Write a [goal area] IEP goal for my [grade level] student to understand [topic]. Make the IEP goal specific [description], measurable [description], attainable, reasonable, and time-bound [amount of time].",
+      "promptTH": "คุณเป็นครูผู้เชี่ยวชาญด้านการศึกษาเด็กพิเศษความต้องการพิเศษ โปรดเขียนเป้าหมาย IEP สำหรับนักเรียนระดับชั้น [ระดับชั้น] เพื่อให้เข้าใจเรื่อง [หัวข้อ] ทำให้เป้าหมาย IEP เป็นเรื่องที่เฉพาะเจาะจง [คำอธิบาย] สามารถวัดได้ [คำอธิบาย] สามารถบรรลุได้ มีความเหมาะสม และมีระยะเวลาที่กำหนด [จำนวนเวลา]"
+    },
+    {
+      "id": 42,
+      "categoryEN": "special needs",
+      "categoryTH": "การศึกษาพิเศษ",
+      "titleEN": "ABA Teaching Strategies",
+      "titleTH": "\"\"\"\nกลยุทธ์การสอน ABA",
+      "promptEN": "You are a master special needs teacher. Generate a list of [number] specific ABA teaching strategies I can use for a [grade level] student who exhibits the following [type/category of behavior] behaviors in the classroom: [list specific examples]. Make the strategies function-based in regard to the [category of behavior] behaviors, and take into account the purpose/motivation of this student's behavior. In addition to listing strategies, guide me on how best to implement these reinforcement behaviors and consequences, as well as any ways I may need to modify the classroom environment in order to foster the appropriate behavior.",
+      "promptTH": "คุณเป็นครูผู้ชำนาญการด้านการศึกษาเด็กพิเศษ สร้างรายการของกลยุทธ์การสอน ABA [number] กลยุทธ์ที่เฉพาะเจาะจงที่ฉันสามารถนำมาใช้กับนักเรียนระดับชั้น [grade level] ที่แสดงพฤติกรรม [type/category of behavior] ต่อไปนี้ในห้องเรียน: [list specific examples] ทำให้กลยุทธ์เชิงฟังก์ชันตรงกับพฤติกรรม [category of behavior] และให้คำนึงถึงวัตถุประสงค์/แรงจูงใจของพฤติกรรมของนักเรียนคนนี้ นอกจากการระบุกลยุทธ์แล้ว ช่วยแนะนำวิธีการนำเสนอพฤติกรรมเสริมและผลกระทบที่ดีที่สุด รวมถึงวิธีปรับเปลี่ยนสภาพแวดล้อมในห้องเรียนเพื่อส่งเสริมพฤติกรรมที่เหมาะสม"
+    },
+    {
+      "id": 43,
+      "categoryEN": "special needs",
+      "categoryTH": "การศึกษาพิเศษ",
+      "titleEN": "Service Providers",
+      "titleTH": "ผู้ให้บริการ",
+      "promptEN": "You are an expert educator in an inclusive classroom. Generate a script for a [phone conversation/Zoom call/in person meeting] with [grade level] student's [service provider: OT/PT/SLP/SEIT/paraprofessional]. The [speech difficulties/behaviors/fine motor difficulties/social issues] that we are working on with the student in the classroom include [insert issues]. We would like to set up a time for [him/her] to come observe the student in the classroom, as well as receive a few immediate suggestions that we can implement now.",
+      "promptTH": "คุณเป็นผู้เชี่ยวชาญด้านการศึกษาในห้องเรียนที่รองรับทุกคน สร้างสคริปต์สำหรับการสนทนาทางโทรศัพท์/การโทรทัศน์/การประชุมสัมมนาสถานที่กับผู้ให้บริการ [OT/PT/SLP/SEIT/ผู้ช่วยการศึกษา] ของนักเรียนระดับชั้น [ระดับชั้น] ปัญหาที่เรากำลังทำงานกับนักเรียนในห้องเรียนรวมถึง [ปัญหาที่แทรกแซง] เราต้องการจัดเวลาให้ [เขา/เธอ] มาสังเกตการณ์นักเรียนในห้องเรียนและได้รับคำแนะนำที่สามารถนำมาใช้ได้ทันทีบางอย่าง"
+    },
+    {
+      "id": 44,
+      "categoryEN": "administrative, communication",
+      "categoryTH": "การบริหารงาน, การสื่อสาร",
+      "titleEN": "Reference Letters",
+      "titleTH": "จดหมายอ้างอิง",
+      "promptEN": "You are an expert writer, skillful at conveying a person’s abilities and attributes. Write a [reference letter/character letter] for [person and their relationship to you] who [action that is requiring the letter]. Use specific, positive, descriptive words and be sure to include/highlight [insert specific information]. Also note [any additional information]. In your response, do not [insert any specific requirements/guidelines].",
+      "promptTH": "คุณเป็นนักเขียนที่เชี่ยวชาญ มีความสามารถในการสื่อสารถึงความสามารถและลักษณะของบุคคล เขียน [จดหมายอ้างอิง/จดหมายลักษณะบุคคล] สำหรับ [บุคคลและความสัมพันธ์กับคุณ] ซึ่ง [การกระทำที่ต้องการจดหมาย] ใช้คำที่เป็นเอกลักษณ์บวกและละเอียดอ่อน และแน่ใจว่ารวม/เน้น [ใส่ข้อมูลเฉพาะ]. โปรดทราบเพิ่มเติม [ข้อมูลเพิ่มเติมใดๆ]. ในการตอบกลับของคุณ โปรดอย่า [ใส่ข้อกำหนด/แนวทางเฉพาะใดๆ]."
+    },
+    {
+      "id": 45,
+      "categoryEN": "administrative",
+      "categoryTH": "การบริหารงาน",
+      "titleEN": "Faculty Meetings",
+      "titleTH": "การประชุมคณะกรรมการ",
+      "promptEN": "You are an expert school administrator with expertise in planning for and leading well-organized meetings. Generate an agenda with talking points for a [length of time] [ weekly/monthly/quarterly] faculty meeting. Include [insert specific meeting content and structure].",
+      "promptTH": "คุณเป็นผู้บริหารโรงเรียนที่เชี่ยวชาญในการวางแผนและนำทีมประชุมอย่างเป็นระเบียบเพื่อการประชุมคณะกรรมการ [ระยะเวลา] [รายสัปดาห์/รายเดือน/รายไตรมาส]. รวมถึง [แทรกเนื้อหาและโครงสร้างการประชุมที่เฉพาะเจาะจง]"
+    },
+    {
+      "id": 46,
+      "categoryEN": "administrative, assessment",
+      "categoryTH": "การบริหารงาน, การประเมิน",
+      "titleEN": "Classroom Observations",
+      "titleTH": "การสังเกตการณ์ในห้องเรียน",
+      "promptEN": "You are an educational administrator of a [school type] with expertise in providing actionable feedback to teachers based on classroom observations.  Create an observation report using the [framework]. I  will provide you with the lesson plan, and I need you to rate the following components; 1a: Demonstrating knowledge of content and pedagogy, 1e: Designing coherent instruction, 3b: Using questioning and discussion techniques, 3c: Engaging students in learning, and 3d: Using assessment in instruction based on the lesson. Also take into account these classroom notes [notes]. This is the lesson plan [lesson content].",
+      "promptTH": "คุณเป็นผู้ดูแลการศึกษาของโรงเรียนประเภทหนึ่งที่มีความเชี่ยวชาญในการให้คำแนะนำที่สามารถปฏิบัติตามได้แก่ครูโดยอิงจากการสังเกตการณ์ในห้องเรียน สร้างรายงานการสังเกตการณ์โดยใช้ [กรอบการทำงาน] ฉันจะให้คุณแผนการเรียนและฉันต้องการให้คุณให้คะแนนส่วนประกอบต่อไปนี้ 1a: การสื่อสารความรู้เนื้อหาและวิธีการสอน 1e: การออกแบบการสอนที่สอดคล้องกัน 3b: การใช้เทคนิคการถามและการสนทนา 3c: การเกี่ยวพันกับการเรียนรู้ของนักเรียน และ 3d: การใช้การประเมินในการสอนโดยอิงจากบทเรียน นอกจากนี้โปรดพิจารณาบันทึกห้องเรียนเหล่านี้ [บันทึก] นี่คือแผนการเรียน [เนื้อหาบทเรียน]"
+    },
+    {
+      "id": 47,
+      "categoryEN": "administrative",
+      "categoryTH": "การบริหารงาน",
+      "titleEN": "Classroom Management Strategies",
+      "titleTH": "\"\"\"\nกลยุทธ์การจัดการห้องเรียน",
+      "promptEN": "Create a list of strategies for dealing with [insert issue] in my classroom. The issue is occurring in my [grade, subject, time of day]. The classroom management strategies should be [method or approach].",
+      "promptTH": "สร้างรายการยุทธวิธีในการจัดการกับ [แทรกปัญหา] ในห้องเรียนของฉัน ปัญหาเกิดขึ้นในระดับชั้น [ระดับชั้น, วิชา, เวลาในวัน] ยุทธวิธีการจัดการห้องเรียนควรเป็น [วิธีหรือแนวทาง]"
+    },
+    {
+      "id": 48,
+      "categoryEN": "assessment, lesson planning",
+      "categoryTH": "การประเมิน, วางแผนการสอน",
+      "titleEN": "Bloom’s Taxonomy",
+      "titleTH": "หลักสูตรของบลูม",
+      "promptEN": "You are an expert teacher and curriculum writer that has proficiency in developing learning frameworks. Create a Bloom’s Taxonomy for [grade level and subject] students studying [topic], with [number] activities for each level of Bloom’s Taxonomy. Format as a bulleted list.",
+      "promptTH": "คุณเป็นครูผู้เชี่ยวชาญและนักเขียนหลักสูตรที่มีความเชี่ยวชาญในการพัฒนากรอบการเรียนรู้ สร้าง Bloom's Taxonomy สำหรับนักเรียนระดับ [ระดับชั้นและวิชา] ที่ศึกษาเรื่อง [หัวข้อ] พร้อมกิจกรรม [จำนวน] กิจกรรมสำหรับแต่ละระดับของ Bloom's Taxonomy รูปแบบเป็นรายการย่อย"
+    },
+    {
+      "id": 49,
+      "categoryEN": "assessment, lesson planning",
+      "categoryTH": "การประเมิน, วางแผนการสอน",
+      "titleEN": "Rubrics",
+      "titleTH": "เกณฑ์การประเมิน",
+      "promptEN": "You are an expert teacher and curriculum writer, skilled in assessing student work. Create a rubric for my [grade level and subject] class studying [topic]. My students are completing [assignment title], in which they [assignment description]. Format the rubric as a chart and include a 5 point scale.",
+      "promptTH": "คุณเป็นครูผู้เชี่ยวชาญและเขียนหลักสูตรที่เก่งในการประเมินงานของนักเรียน สร้างรูบิคสำหรับชั้นเรียนของฉันในระดับ [ระดับชั้นและวิชา] ที่ศึกษาเรื่อง [หัวข้อ] นักเรียนของฉันกำลังทำ [ชื่องาน] ซึ่งพวกเขา [คำอธิบายงาน] จัดรูปแบบรูบิคเป็นตารางและรวมเกณฑ์การให้คะแนน 5 ระดับ"
+    },
+    {
+      "id": 50,
+      "categoryEN": "assessment, lesson planning",
+      "categoryTH": "การประเมิน, วางแผนการสอน",
+      "titleEN": "Quizzes",
+      "titleTH": "แบบทดสอบ",
+      "promptEN": "You are an expert teacher with proficiency in creating and administering student assessments. Create a [type] quiz for [grade level, subject] students learning about [topic]. Include [insert skills]. Provide an answer key for the teacher.",
+      "promptTH": "คุณเป็นครูผู้เชี่ยวชาญที่มีความเชี่ยวชาญในการสร้างและดำเนินการทดสอบนักเรียน สร้างแบบทดสอบ [ประเภท] สำหรับนักเรียนระดับชั้น [ระดับชั้น, วิชา] ที่เรียนรู้เกี่ยวกับ [หัวข้อ] รวมถึง [แทรกทักษะ] ให้คำตอบสำหรับครู"
+    },
+    {
+      "id": 51,
+      "categoryEN": "assessment, lesson planning",
+      "categoryTH": "การประเมิน, วางแผนการสอน",
+      "titleEN": "AI-Assisted Assessments",
+      "titleTH": "\"\"\"\nการประเมินที่มีการช่วยเหลือจาก AI",
+      "promptEN": "You are an expert educator, skilled at writing thoughtful and creative assessments. Design an assessment to evaluate what [grade level and subject] students have learned in our unit on [topic]. \nInclude questions about: [specific content]. \nAct as a brainstorming partner and make the assessment collaborative. \nInclude elements like feedback mechanisms, role-playing, and peer teaching, so my students can incorporate ChatGPT into their assessment. \nChatGPT is only to be used to creatively enhance the students’ learning experience; do not include instructions for ChatGPT to research information or fact check [specific topic].",
+      "promptTH": "\"\"\"\nคุณเป็นผู้เชี่ยวชาญในการศึกษาและเป็นผู้ที่มีความสามารถในการเขียนการประเมินที่ให้ความคิดและความคิดสร้างสรรค์ ออกแบบการประเมินเพื่อประเมินว่านักเรียนระดับชั้น [ระดับชั้นและวิชา] เรียนรู้อะไรไปในหน่วยของเราเกี่ยวกับ [หัวข้อ] \nรวมถึงคำถามเกี่ยวกับ: [เนื้อหาที่เฉพาะเจาะจง] \nเป็นห่วงใยเป็นพาร์ทเนอร์ในการคิดค้นและทำให้การประเมินเป็นการทำงานร่วมกัน \nรวมถึงองค์ประกอบเช่นกลไกการให้คำติชม การแสดงบทบาท และการสอนระดับเพื่อน เพื่อให้นักเรียนของฉันสามารถนำ ChatGPT เข้ามาใช้ในการประเมินของพวกเขาได้ \nChatGPT เพียงแค่ใช้ในการเสริมสร้างประสบการณ์การเรียนรู้ของนักเรียน โปรดอย่ารวมคำแนะนำใ"
+    },
+    {
+      "id": 52,
+      "categoryEN": "assessment, lesson planning",
+      "categoryTH": "การประเมิน, วางแผนการสอน",
+      "titleEN": "Exit Tickets",
+      "titleTH": "ตั๋วออก",
+      "promptEN": "You are an expert educator, skilled at creating engaging, hands-on lessons and activities for students. Create [number] “exit ticket” ideas I can use in my [grade level and subject] class at the end of a [topic] lesson on [specific content]. The exit ticket activities/questions should be very brief and should serve as a form of assessment to gauge students’ understanding of the material covered.",
+      "promptTH": "\"\"\"\nคุณเป็นผู้เชี่ยวชาญด้านการศึกษาที่มีความสามารถในการสร้างบทเรียนและกิจกรรมที่น่าสนใจและมีการปฏิบัติจริงสำหรับนักเรียน สร้างไอเดีย \"ตั๋วออก\" [จำนวน] ที่ฉันสามารถนำมาใช้ในชั้นเรียนของฉันในระดับชั้น [ระดับชั้นและวิชา] ที่สิ้นสุดของบทเรียนเกี่ยวกับหัวข้อ [หัวข้อ] และเนื้อหาที่เฉพาะเจาะจง กิจกรรม/คำถามในตั๋วออกควรสั้นและเป็นการประเมินเพื่อวัดความเข้าใจของนักเรียนในเนื้อหาที่ได้รับการสอน\n\"\"\""
+    },
+    {
+      "id": 53,
+      "categoryEN": "assessment, lesson planning",
+      "categoryTH": "การประเมิน, วางแผนการสอน",
+      "titleEN": "Formative Assessments",
+      "titleTH": "การประเมินรูปแบบ",
+      "promptEN": "Generate a list of [number] formative assessment ideas related to [insert topic] for my [grade level and subject] students.",
+      "promptTH": "สร้างรายการของ [number] ไอเดียการประเมินแบบฟอร์เมทที่เกี่ยวข้องกับ [insert topic] สำหรับนักเรียนระดับชั้น [grade level and subject] ของฉัน"
+    },
+    {
+      "id": 54,
+      "categoryEN": "assessment, lesson planning",
+      "categoryTH": "การประเมิน, วางแผนการสอน",
+      "titleEN": "Student Exemplars",
+      "titleTH": "ตัวอย่างของนักเรียน",
+      "promptEN": "Acting as a [grade] level student, write a student exemplar for the following activity [activity description] at [proficiency] level.",
+      "promptTH": "การแสดงบทบาทเป็นนักเรียนระดับ [ระดับเกรด] เขียนตัวอย่างนักเรียนสำหรับกิจกรรมต่อไปนี้ [คำอธิบายกิจกรรม] ในระดับความเชี่ยวชาญ [ระดับความเชี่ยวชาญ]"
+    },
+    {
+      "id": 55,
+      "categoryEN": "assessment, lesson planning",
+      "categoryTH": "การประเมิน, วางแผนการสอน",
+      "titleEN": "Performance Task",
+      "titleTH": "งานประเมินผลการปฏิบัติงาน",
+      "promptEN": "You are an expert teacher proficient in crafting unique educational assessments. Generate [number] creative, summative performance tasks, that are an alternative to a standard test, for my [grade level and subject] class learning about [topic]. These tasks should be [insert specifics or descriptive information]. The tasks should ensure my students are exhibiting and applying their understanding and skills of [specific information about topic].",
+      "promptTH": "คุณเป็นครูผู้เชี่ยวชาญที่เชี่ยวชาญในการสร้างการประเมินการศึกษาที่เป็นเอกลักษณ์ สร้าง [จำนวน] งานสรุปผลที่สร้างสรรค์ที่เป็นทางเลือกในการทดสอบมาตรฐานสำหรับชั้นเรียนของฉันในระดับชั้น [ระดับชั้นและวิชา] ที่เรียนรู้เกี่ยวกับ [หัวข้อ] งานเหล่านี้ควรเป็น [ใส่รายละเอียดหรือข้อมูลที่เป็นลักษณะ] งานเหล่านี้ควรให้นักเรียนของฉันแสดงความเข้าใจและทักษะในการประยุกต์ใช้ของพวกเขาเกี่ยวกับ [ข้อมูลที่เฉพาะเจาะจงเกี่ยวกับหัวข้อ]"
+    },
+    {
+      "id": 56,
+      "categoryEN": "assessment, lesson planning",
+      "categoryTH": "การประเมิน, วางแผนการสอน",
+      "titleEN": "Oral Exam Ideas",
+      "titleTH": "ไอเดียสอบปากเปล่า",
+      "promptEN": "You are an expert teacher and curriculum writer skilled in designing and administering student assessments. Create a [number] question, oral exam for my [grade and subject] students studying [topic]. The exam should be [number] minutes long and cover [specific content].",
+      "promptTH": "คุณเป็นครูผู้เชี่ยวชาญและนักเขียนหลักสูตรที่มีความเชี่ยวชาญในการออกแบบและดำเนินการประเมินผลการเรียนของนักเรียน สร้างข้อสอบชั่วโมงสำหรับนักเรียนระดับ [เกรดและวิชา] ที่ศึกษาเรื่อง [หัวข้อ] ข้อสอบควรใช้เวลา [จำนวนนาที] และครอบคลุมเนื้อหา [เนื้อหาที่เฉพาะเจาะจง]"
+    },
+    {
+      "id": 57,
+      "categoryEN": "assessment, lesson planning",
+      "categoryTH": "การประเมิน, วางแผนการสอน",
+      "titleEN": "In-Class Writing Assignments",
+      "titleTH": "การมอบหมายเขียนในห้องเรียน",
+      "promptEN": "You are an expert educator and curriculum writer skilled in developing thoughtful exercises for your students. Create an in-class writing assignment for my [grade and subject] class studying [topic]. The assignment should include [specific content information] and should take [number] minutes to complete.",
+      "promptTH": "คุณเป็นผู้เชี่ยวชาญด้านการศึกษาและการเขียนหลักสูตรที่มีความเชี่ยวชาญในการพัฒนาการบริหารกิจการที่มีความคิดสร้างสรรค์สำหรับนักเรียนของคุณ สร้างการมอบหมายเขียนในห้องเรียนสำหรับวิชา [ระดับชั้นและวิชา] ที่ศึกษาเรื่อง [หัวข้อ] การมอบหมายควรประกอบด้วย [ข้อมูลเนื้อหาที่เฉพาะเจาะจง] และควรใช้เวลา [จำนวน] นาทีในการทำเสร็จ"
+    },
+    {
+      "id": 58,
+      "categoryEN": "assessment",
+      "categoryTH": "การประเมิน",
+      "titleEN": "Analyze Behavior Data",
+      "titleTH": "วิเคราะห์ข้อมูลพฤติกรรม",
+      "promptEN": "You are an expert educator and student behavior specialist. Review this [student behavior data] from my [grade level and subject] and do the following: identify common student issues. Based on this information, provide a set of strategies that I can use with this student group to [desired outcome: increase engagement, lower student behavioral issues, etc.].",
+      "promptTH": "คุณเป็นผู้เชี่ยวชาญด้านการศึกษาและการปรับพฤติกรรมของนักเรียน กรุณาตรวจสอบ [ข้อมูลพฤติกรรมของนักเรียน] ในระดับชั้น [ระดับชั้นและวิชา] และดำเนินการตามขั้นตอนต่อไปนี้: ระบุปัญหาที่พบบ่อยในนักเรียน จากข้อมูลนี้ ให้คุณแนะนำกลุ่มกิจกรรมที่ฉันสามารถใช้กับนักเรียนเหล่านี้เพื่อ [ผลลัพธ์ที่ต้องการ: เพิ่มความสนใจในการเรียนรู้ ลดปัญหาพฤติกรรมของนักเรียน เป็นต้น]"
+    },
+    {
+      "id": 59,
+      "categoryEN": "communication",
+      "categoryTH": "การสื่อสาร",
+      "titleEN": "Slides",
+      "titleTH": "สไลด์",
+      "promptEN": "You are an expert teacher and instructional designer. Create the content for a slide deck on [topic/subject] for my [grade] class. The slides should be formatted with a header and then a set of bullets for each slide. Change the variety of each slide including questions for students and activities. The last slide should include text for a formative assessment. Also include a description of any image that should be included on the slide.",
+      "promptTH": "คุณเป็นครูผู้เชี่ยวชาญและนักออกแบบการสอน สร้างเนื้อหาสำหรับสไลด์เด็กศึกษาในระดับชั้น [ระดับชั้น] เนื้อหาควรจัดรูปแบบด้วยส่วนหัวและจากนั้นเป็นชุดข้อความสำหรับแต่ละสไลด์ เปลี่ยนแปลงหลายรูปแบบของแต่ละสไลด์ รวมถึงการตั้งคำถามสำหรับนักเรียนและกิจกรรม สไลด์สุดท้ายควรรวมข้อความสำหรับการประเมินรูปแบบ รวมถึงคำอธิบายของภาพที่ควรจะเพิ่มในสไลด์"
+    },
+    {
+      "id": 60,
+      "categoryEN": "communication",
+      "categoryTH": "การสื่อสาร",
+      "titleEN": "Email Responses",
+      "titleTH": "การตอบกลับทางอีเมล",
+      "promptEN": "Create a response to this email [email content or issue raised in email] that provides this response [response]. Keep the tone professional and friendly and write from the point of view of [teacher, administrator, etc.]",
+      "promptTH": "\"\"\"\nสร้างการตอบกลับอีเมลนี้ [เนื้อหาของอีเมลหรือปัญหาที่ถูกยกขึ้นในอีเมล] โดยให้การตอบกลับดังนี้ [การตอบกลับ] ให้ความรู้สึกเป็นมืออาชีพและเป็นมิตร และเขียนจากมุมมองของ [ครู ผู้ดูแลระบบ เป็นต้น]"
+    },
+    {
+      "id": 61,
+      "categoryEN": "communication",
+      "categoryTH": "การสื่อสาร",
+      "titleEN": "Newsletters",
+      "titleTH": "จดหมายข่าว",
+      "promptEN": "You are an expert educator and skilled writer. Write a [daily/ weekly /monthly] newsletter that I can send to the parents of my [grade level] class. Include sections for [each classroom subject/ each day of the week/ each week in the month]. For each [classroom subject/ day of the week/ week of the month], write a brief paragraph summarizing the main activities the students did for that [subject/ day/ week], including any [specific types of activities]. Make the newsletter [number] pages long and make the tone of the newsletter [desired tone].",
+      "promptTH": "คุณเป็นผู้เชี่ยวชาญในการศึกษาและเป็นนักเขียนที่มีความชำนาญ โปรดเขียนจดหมายข่าว [รายวัน / รายสัปดาห์ / รายเดือน] ที่ฉันสามารถส่งให้กับผู้ปกครองของชั้นเรียน [ระดับชั้น] ของฉัน รวมส่วนสำหรับ [แต่ละวิชาในห้องเรียน / แต่ละวันของสัปดาห์ / แต่ละสัปดาห์ในเดือน] สำหรับแต่ละ [วิชาในห้องเรียน / วันของสัปดาห์ / สัปดาห์ของเดือน] เขียนย่อๆ ยกเลิกสรุปกิจกรรมหลักที่นักเรียนทำสำหรับ [วิชา / วัน / สัปดาห์] นั้น รวมถึงกิจกรรม [ประเภทที่ระบุ] ทำให้จดหมายข่าวมีความยาว [จำนวน] หน้าและทำให้เสียงของจดหมายข่าวเป็น [เสียงที่ต้องการ]"
+    },
+    {
+      "id": 62,
+      "categoryEN": "communication",
+      "categoryTH": "การสื่อสาร",
+      "titleEN": "Parents' Night Curriculum Presentation",
+      "titleTH": "การนำเสนอหลักสูตรในคืนพบปะผู้ปกครอง",
+      "promptEN": "You are an expert public speaker and instructional leader. Generate a [number] minute script I can give on the curriculum in my [grade level, subject] classroom for parents’ night at my school. Include information on [important classroom topics/philosophy/educational beliefs]. Include the following units we will cover: [insert units] and provide text for a slide presentation.",
+      "promptTH": "คุณเป็นผู้ที่เชี่ยวชาญในการพูดสาธารณะและเป็นผู้นำในการสอน สร้างสคริปต์ที่มีระยะเวลา [number] นาทีที่ฉันสามารถใช้ในการนำเสนอหลักสูตรในห้องเรียนของฉันในระหว่างคืนผู้ปกครองที่โรงเรียนของฉัน รวมถึงข้อมูลเกี่ยวกับ [หัวข้อสำคัญในห้องเรียน/ปรัชญา/ความเชื่อทางการศึกษา] รวมถึงหน่วยการเรียนที่เราจะศึกษา: [แทรกหน่วยการเรียน] และให้ข้อความสำหรับการนำเสนอในสไลด์"
+    },
+    {
+      "id": 63,
+      "categoryEN": "communication",
+      "categoryTH": "การสื่อสาร",
+      "titleEN": "Parent-Teacher Conference Emails",
+      "titleTH": "อีเมลการประชุมผู้ปกครอง-ครู",
+      "promptEN": "Write an email to remind parents about our upcoming parent-teacher conference. Include the date: [date], time: [time], location: [location], and the following instructions: [instructions for how to schedule a meeting]. Also, express your excitement about the opportunity to discuss their child's progress.",
+      "promptTH": "เขียนอีเมลเพื่อเตือนผู้ปกครองเกี่ยวกับการประชุมผู้ปกครอง-ครูของเราที่กำลังจะมาถึง รวมถึงวันที่: [วันที่], เวลา: [เวลา], สถานที่: [สถานที่], และคำแนะนำต่อไปนี้: [คำแนะนำสำหรับการนัดหมาย]. นอกจากนี้ยังแสดงความตื่นเต้นของคุณเกี่ยวกับโอกาสในการพูดคุยเกี่ยวกับความคืบหน้าของลูกของพวกเขา"
+    },
+    {
+      "id": 64,
+      "categoryEN": "communication",
+      "categoryTH": "การสื่อสาร",
+      "titleEN": "Class Representative Email for Parents",
+      "titleTH": "อีเมลล์ตัวแทนชั้นเรียนสำหรับผู้ปกครอง",
+      "promptEN": "You are an experienced educator and excellent communicator. Write an email to the parent representatives of [grade level] classroom, asking them to help organize [insert event/duty] for [parents/faculty/students]. In the email, ask them to [organize a sign-up/send an email/bring in X item/chaperone upcoming trip] for [number] students. The tone of the email should be friendly and professional.",
+      "promptTH": "คุณเป็นผู้สอนที่มีประสบการณ์และสื่อสารได้ดีเป็นอย่างดี กรุณาเขียนอีเมลถึงผู้แทนผู้ปกครองของห้องเรียนระดับ [ระดับชั้น] เพื่อขอความช่วยเหลือในการจัดการ [เพิ่มเติมเหตุการณ์/หน้าที่] สำหรับ [ผู้ปกครอง/คณะอาจารย์/นักเรียน] ในอีเมล ขอให้พวกเขา [จัดการลงชื่อเข้าร่วม/ส่งอีเมล/นำเข้าสิ่งของ X/เป็นผู้ดูแลการเดินทางที่กำลังจะมาถึง] สำหรับนักเรียน [จำนวน] คน ทัศนคติของอีเมลควรเป็นเพื่อนรักและมีความเป็นมืออาชีพ"
+    },
+    {
+      "id": 65,
+      "categoryEN": "communication",
+      "categoryTH": "การสื่อสาร",
+      "titleEN": "School Updates",
+      "titleTH": "อัปเดตข่าวสารจากโรงเรียน",
+      "promptEN": "You are an experienced school leader and a great communicator. Can you help me write a school update for [School Name] for [audience]? Please include an introduction, a section called School Happenings that covers [description], a section called Achievements that covers [description], a section called Upcoming Events that covers [description], a section called Policy Changes that covers [description], a section called Important Dates that covers [description], and a final section that has a summary and the following [a call to action for your school community]. Please write the update in an informative and friendly style.",
+      "promptTH": "คุณเป็นผู้นำโรงเรียนที่มีประสบการณ์และสื่อสารได้ดีเป็นอย่างดี คุณสามารถช่วยเขียนอัปเดตโรงเรียนสำหรับ [School Name] สำหรับ [audience] ได้ไหมคะ? โปรดรวมบทนำ ส่วนที่เรียกว่า School Happenings ที่ครอบคลุม [description] ส่วนที่เรียกว่า Achievements ที่ครอบคลุม [description] ส่วนที่เรียกว่า Upcoming Events ที่ครอบคลุม [description] ส่วนที่เรียกว่า Policy Changes ที่ครอบคลุม [description] ส่วนที่เรียกว่า Important Dates ที่ครอบคลุม [description] และส่วนสุดท้ายที่มีสรุปและ [a call to action for your school community] ตามด้วย โปรดเขียนอัปเดตในสไตล์ที่เป็นประโยชน์และเป็นมิตรค่ะ"
+    },
+    {
+      "id": 66,
+      "categoryEN": "communication",
+      "categoryTH": "การสื่อสาร",
+      "titleEN": "Service Providers",
+      "titleTH": "ผู้ให้บริการ",
+      "promptEN": "You are an expert educator in an inclusive classroom. Generate a script for a [phone conversation/Zoom call/in person meeting] with [grade level] student's [service provider: OT/PT/SLP/SEIT/paraprofessional]. The [speech difficulties/behaviors/fine motor difficulties/social issues] that we are working on with the student in the classroom include [insert issues]. We would like to set up a time for [him/her] to come observe the student in the classroom, as well as receive a few immediate suggestions that we can implement now.",
+      "promptTH": "คุณเป็นผู้เชี่ยวชาญด้านการศึกษาในห้องเรียนที่รองรับทุกคน สร้างสคริปต์สำหรับการสนทนาทางโทรศัพท์/การโทรทัศน์/การประชุมสัมมนาสถานที่กับผู้ให้บริการ [OT/PT/SLP/SEIT/ผู้ช่วยการศึกษา] ของนักเรียนระดับชั้น [ระดับชั้น] ปัญหาที่เรากำลังทำงานกับนักเรียนในห้องเรียนรวมถึง [ปัญหาที่แทรกแซง] เราต้องการจัดเวลาให้ [เขา/เธอ] มาสังเกตการณ์นักเรียนในห้องเรียนและได้รับคำแนะนำที่สามารถนำมาใช้ได้ทันทีบางอย่าง"
+    },
+    {
+      "id": 67,
+      "categoryEN": "communication",
+      "categoryTH": "การสื่อสาร",
+      "titleEN": "Educational Philosophy Statement",
+      "titleTH": "คำอภิปรายเกี่ยวกับปรัชญาการศึกษา",
+      "promptEN": "I am a(n) [type of educator]. Please write an educational philosophy statement I can use for my [purpose: class/ website/resume]. The statement should be from a [insert philosophy] perspective and be [number] pages long.",
+      "promptTH": "ฉันเป็น [ประเภทของผู้สอน]. โปรดเขียนคำอภิปรายเกี่ยวกับปรัชญาการศึกษาที่ฉันสามารถนำไปใช้ใน [วัตถุประสงค์: ชั้นเรียน/เว็บไซต์/เรซูเม่] คำอภิปรายควรมีมุมมองจากทฤษฎี [แทรกปรัชญา] และความยาว [จำนวน] หน้า"
+    },
+    {
+      "id": 68,
+      "categoryEN": "for students",
+      "categoryTH": "สำหรับนักเรียน",
+      "titleEN": "Explain It to Me Like…",
+      "titleTH": "อธิบายให้ฉันเห็นภาพเหมือนว่า...",
+      "promptEN": "You are an expert teacher with the ability to explain complex topics in simpler terms. Explain the concept of [topic] in simple terms, so that my [grade level/subject] class can understand [this concept/specific example]?",
+      "promptTH": "คุณเป็นครูผู้เชี่ยวชาญที่มีความสามารถในการอธิบายเนื้อหาที่ซับซ้อนให้เข้าใจง่ายขึ้น อธิบายแนวคิดของ [หัวข้อ] ให้เข้าใจได้ง่ายๆ ให้กับนักเรียนระดับชั้น [ระดับชั้น/วิชา] ของฉัน เพื่อให้พวกเขาเข้าใจ [แนวคิดนี้/ตัวอย่างเฉพาะ]"
+    },
+    {
+      "id": 69,
+      "categoryEN": "for students",
+      "categoryTH": "สำหรับนักเรียน",
+      "titleEN": "Studying Help",
+      "titleTH": "ช่วยในการเรียน",
+      "promptEN": "I’m a [grade level and subject] student preparing for an upcoming [topic and specific type of assessment]. Below are the notes I’ve taken for the test. Based on my notes, can you generate a practice test to help me prepare?",
+      "promptTH": "ฉันเป็นนักเรียนระดับ [ระดับชั้นและวิชา] ที่กำลังเตรียมตัวสำหรับการสอบ [หัวข้อและประเภทของการประเมิน] ที่กำลังจะมาถึง ด้านล่างนี้คือบันทึกข้อความที่ฉันได้รับสำหรับการสอบ โดยอิงจากบันทึกข้อความของฉัน คุณสามารถสร้างข้อสอบทดสอบเพื่อช่วยฉันเตรียมตัวได้ไหมคะ?"
+    },
+    {
+      "id": 70,
+      "categoryEN": "for students",
+      "categoryTH": "สำหรับนักเรียน",
+      "titleEN": "Flashcards",
+      "titleTH": "การ์ดฟลาช",
+      "promptEN": "I am a [grade level/subject] student. For my [assessment] define the following terms: [insert terms]. Format the terms and definitions so that I can easily use them to create flashcards.",
+      "promptTH": "ฉันเป็นนักเรียนระดับ [ระดับชั้น/วิชา]. สำหรับการประเมินของฉัน โปรดนิยามคำศัพท์ต่อไปนี้: [แทรกคำศัพท์]. จัดรูปแบบคำศัพท์และคำนิยามให้สามารถใช้ง่ายเพื่อสร้างการ์ดคำศัพท์ได้"
+    },
+    {
+      "id": 71,
+      "categoryEN": "for students",
+      "categoryTH": "สำหรับนักเรียน",
+      "titleEN": "College Essay Ideas",
+      "titleTH": "ไอเดียเรียนมหาวิทยาลัย",
+      "promptEN": "I am a [grade level] student preparing to apply to college. Create [number] essay topics for me to write my college essay on as part of [application information]. The essay topics should allow me to show a college admissions board what makes me unique. Some things I care about are [topics].",
+      "promptTH": "ฉันเป็นนักเรียนระดับ [ระดับชั้น] ที่กำลังเตรียมตัวเพื่อสมัครเข้ามหาวิทยาลัย สร้างหัวข้อเรียงความ [จำนวน] ให้ฉันเขียนเรียงความสำหรับเอสเอสเอ็มของฉันเป็นส่วนหนึ่งของ [ข้อมูลใบสมัคร] หัวข้อเรียงความควรช่วยให้ฉันแสดงให้คณะกรรมการสมัครเข้ามหาวิทยาลัยเห็นว่าฉันเป็นคนที่เป็นเอกลักษณ์อย่างไร บางสิ่งที่ฉันสนใจคือ [หัวข้อ]"
+    },
+    {
+      "id": 72,
+      "categoryEN": "for students",
+      "categoryTH": "สำหรับนักเรียน",
+      "titleEN": "Help Me Understand…",
+      "titleTH": "ช่วยฉันเข้าใจ...",
+      "promptEN": "I am a [grade level] student reading [book title] by [author] for [type of class].  I want to understand what this passage from [chapter/section/act] means in the context of the [piece/play/book/article].",
+      "promptTH": "ฉันเป็นนักเรียนระดับ [ระดับชั้น] ที่อ่านหนังสือ [ชื่อหนังสือ] โดย [ผู้เขียน] สำหรับ [ประเภทของวิชา]. ฉันต้องการทราบว่าตอนนี้ข้อความใน [บท/ส่วน/ตอน] นี้หมายความว่าอย่างไรในบริบทของ [ชิ้นเรื่อง/ละคร/หนังสือ/บทความ]"
+    },
+    {
+      "id": 73,
+      "categoryEN": "for students",
+      "categoryTH": "สำหรับนักเรียน",
+      "titleEN": "Summarize a Text",
+      "titleTH": "สรุปเนื้อหา",
+      "promptEN": "You are an expert [student/educator/administrator] with expertise in summarizing and pulling out important sections of a text. The following text is from [class/book/author/PD session] and is about [topic]. Follow these steps: read the text, summarize the text, and identify [insert your main focus]. In your response include the summary and bullet points for the [main focus].",
+      "promptTH": "คุณเป็นผู้เชี่ยวชาญ [นักเรียน/ผู้สอน/ผู้ดูแลระบบ] ที่มีความเชี่ยวชาญในการสรุปและสกัดสาระสำคัญจากข้อความ ข้อความต่อไปนี้มาจาก [วิชา/หนังสือ/ผู้เขียน/การอบรม PD] และเกี่ยวกับ [หัวข้อ] ทำตามขั้นตอนเหล่านี้: อ่านข้อความ, สรุปข้อความ, และระบุ [ใส่โฟกัสหลักของคุณ] ในการตอบกลับของคุณ รวมถึงสรุปและข้อความย่อสำหรับ [โฟกัสหลัก]"
+    },
+    {
+      "id": 74,
+      "categoryEN": "for students",
+      "categoryTH": "สำหรับนักเรียน",
+      "titleEN": "Juneteenth Prompts",
+      "titleTH": "ข้อความเรื่อง Juneteenth",
+      "promptEN": "",
+      "promptTH": ""
+    },
+    {
+      "id": 75,
+      "categoryEN": "for students",
+      "categoryTH": "สำหรับนักเรียน",
+      "titleEN": "Time Travel",
+      "titleTH": "การเดินทางย้อนเวลา",
+      "promptEN": "You are an expert [subject] teacher crafting an imaginative [topic] assignment. Pretend you are a time travel guide, visiting the [historical or time in the future] period. List, and provide any necessary information about, the best events, sights, or people to experience/talk to during that time; include at least [number] of items. Then, use this information to craft [number] thoughtful [topic] assignments for [grade level] students.",
+      "promptTH": "คุณเป็นครูผู้เชี่ยวชาญในวิชา [subject] ที่กำลังสร้างการมอบหมายที่น่าสนใจในเรื่อง [topic] จง fin ว่าคุณเป็นผู้นำทัวร์เวลาที่กำลังเดินทางไปยังช่วงเวลา [historical or time in the future] ระบุและให้ข้อมูลที่จำเป็นเกี่ยวกับเหตุการณ์ที่ดีที่สุด สถานที่ที่น่าสนใจ หรือคนที่ควรไปสัมผัส/พูดคุยในช่วงเวลานั้น รวมอย่างน้อย [number] รายการ จากนั้นใช้ข้อมูลเหล่านี้ในการสร้างการมอบหมายที่น่าสนใจ [number] ให้กับนักเรียนระดับ [grade level]"
+    },
+    {
+      "id": 76,
+      "categoryEN": "for students",
+      "categoryTH": "สำหรับนักเรียน",
+      "titleEN": "Emoji Translator",
+      "titleTH": "แปลตัวอักษร Emoji",
+      "promptEN": "You are an emoji expert. Using only emojis, translate the following text to emojis for my [grade level or age] students: [insert numbered sentences]. Use only age-appropriate emojis in your response and provide one response per numbered sentence..",
+      "promptTH": "คุณเป็นผู้เชี่ยวชาญในการใช้สัญลักษณ์อีโมจิ เพื่อให้นักเรียนระดับชั้น [ระดับชั้นหรืออายุ] เข้าใจ โปรดแปลข้อความต่อไปนี้เป็นสัญลักษณ์อีโมจิเท่านั้น: [แทรกประโยคที่มีเลขลำดับ] โปรดใช้สัญลักษณ์อีโมจิที่เหมาะสมตามอายุในการตอบแต่ละประโยค และให้คำตอบหนึ่งต่อหนึ่งประโยค"
+    },
+    {
+      "id": 77,
+      "categoryEN": "for students",
+      "categoryTH": "สำหรับนักเรียน",
+      "titleEN": "Celebrity Heads Game",
+      "titleTH": "เกมหัวคนดัง",
+      "promptEN": "We’re going to play a game called Celebrity Heads. I will think of a famous person, either alive or dead; real or fictional. I will write their name down on a piece of paper. You need to ask me a series of ‘yes’ or ‘no’ questions to determine who the famous person is. I will respond with only, ‘Yes’, ‘No’ or ‘Partially’ to each of your questions. Some examples of useful questions include: “Is this person real or fictional?”, “Are they alive or dead?”, “Are they under 30 years old?”",
+      "promptTH": "เรากำลังจะเล่นเกมที่เรียกว่า Celebrity Heads ฉันจะคิดถึงบุคคลดังคนหนึ่ง ไม่ว่าจะเป็นคนที่ยังมีชีวิตหรือเสียชีวิต จริงหรือจินตนาการ ฉันจะเขียนชื่อของเขาลงบนกระดาษ คุณต้องถามฉันคำถามที่ตอบได้เฉพาะ 'ใช่' หรือ 'ไม่ใช่' เพื่อรู้ว่าบุคคลดังคนนั้นคือใคร ฉันจะตอบกับคำถามของคุณด้วยคำว่า 'ใช่' 'ไม่ใช่' หรือ 'บางส่วน' เท่านั้น ตัวอย่างของคำถามที่เป็นประโยชน์ได้รวมถึง: 'บุคคลนี้เป็นคนจริงหรือจินตนาการ?', 'เขายังมีชีวิตหรือเสียชีวิต?', 'เขาอายุต่ำกว่า 30 ปีหรือไม่?'"
+    },
+    {
+      "id": 78,
+      "categoryEN": "for students",
+      "categoryTH": "สำหรับนักเรียน",
+      "titleEN": "Model Un/Model Congress",
+      "titleTH": "\"\"\"\nโมเดล Un/โมเดลคองเกรส",
+      "promptEN": "You are an expert delegate in high school Model UN. Generate ideas for the “possible solutions” section of a position paper on [topic] from the point of view of [country]. Include specific plans [country] might like the UN to undertake to address [topic], plans [country] would like Member States to undertake in their own countries, and an explanation for why these ideas would work. Only include information for the “possible solutions” section.",
+      "promptTH": "\"\"\"\nคุณเป็นผู้แทนผู้เชี่ยวชาญในการประชุมรุ่นจำลองสหประชาชาติในโรงเรียนมัธยมปลาย สร้างความคิดเพื่อส่วน \"วิธีการที่เป็นไปได้\" ของกระดาษตำแหน่งเกี่ยวกับ [หัวข้อ] จากมุมมองของ [ประเทศ] รวมถึงแผนที่เฉพาะเจาะจงที่ [ประเทศ] อาจชอบให้สหประชาชาติดำเนินการเพื่อจัดการกับ [หัวข้อ] แผนที่ [ประเทศ] ต้องการสมาชิกประเทศดำเนินการในประเทศของตนเอง และอธิบายเหตุผลว่าทำไมความคิดเหล่านี้จะเป็นไปได้ ให้เฉพาะข้อมูลสำหรับส่วน \"วิธีการที่เป็นไปได้\" เท่านั้น\n\"\"\""
+    }
+  ]

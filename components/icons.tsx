@@ -30,7 +30,10 @@ import {
     BabyIcon,
     ChevronsUpDownIcon,
     SettingsIcon,
+    Settings2Icon,
     BookmarkIcon,
+    MenuIcon,
+    LaughIcon,
     Twitter,
     LightbulbIcon,HeartIcon,HandIcon,AlarmClockIcon
     ,OrbitIcon,
@@ -38,6 +41,12 @@ import {
     SendHorizonalIcon,
     PlusCircleIcon,
     ShuffleIcon,
+    GemIcon,
+    FilePlusIcon,
+    SearchIcon,
+    ArrowDownAZIcon,
+    XCircleIcon,
+    GraduationCapIcon,
   } from "lucide-react"
 
   
@@ -79,13 +88,22 @@ import {
     bookmark: BookmarkIcon,
     updown: ChevronsUpDownIcon,
     setting: SettingsIcon,
+    setting2: Settings2Icon,
+    search:SearchIcon,
+    sort:ArrowDownAZIcon,
     random: ShuffleIcon,
+    menu: MenuIcon,
+    laugh: LaughIcon,
     twitter: Twitter,
     logo: OrbitIcon,
     light: LightbulbIcon,
     heart: HeartIcon,
     hand: HandIcon,
-    clock: AlarmClockIcon
+    gem: GemIcon,
+    fileplus: FilePlusIcon,
+    clock: AlarmClockIcon,
+    xcircle: XCircleIcon,
+    school: GraduationCapIcon
     
     
   }
