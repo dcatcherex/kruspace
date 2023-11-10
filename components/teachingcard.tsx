@@ -104,8 +104,8 @@ const TeachingCard = ({
                 height={500}
                 alt="image"
               />
-              <Icons.image className="absolute left-4 top-4 h-10 w-10 rounded-full bg-black/70 stroke-1 p-2 text-white hover:bg-sky-500" />
-              <Icons.youtube className="absolute left-4 top-16 h-10 w-10 rounded-full bg-black/70 stroke-1 p-2 text-white hover:bg-red-500" />
+              <Icons.image className="absolute left-4 top-4 hidden h-10 w-10 rounded-full bg-black/70 stroke-1 p-2 text-white hover:bg-sky-500 group-hover:block" />
+              <Icons.youtube className="absolute left-4 top-16 hidden h-10 w-10 rounded-full bg-black/70 stroke-1 p-2 text-white hover:bg-red-500 group-hover:block" />
             </div>
             {/* main card */}
             <div className=" p-4 pt-0">

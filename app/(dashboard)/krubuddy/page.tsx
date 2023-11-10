@@ -1,55 +1,26 @@
-import React from "react";
-import AiCompletion from "@/components/ai/ai-completion";
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
-
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
-
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-
+import TestJson from "@/components/testJson";
+import testData from "@/data/testJson.json";
+import teaching from "@/data/teaching.json";
+import DialogContainer from "@/components/library/dialog-container";
+import TestCard from "@/components/testcard";
+import CreateCard from "@/components/library/create-card";
+import ChatCompanion from "@/components/chat/chat-companion";
+import ChatCompanionContainer from "@/components/chat/chat-companion-container";
 import ChatContainer from "@/components/chat/chat-container";
+import ChatTopMenu from "@/components/chat/chat-top-menu";
+import ChatInput from "@/components/chat/chat-input";
 
-const KruBuddy = () => {
+const page = () => {
   return (
-    <div className="container ">
-      KruBuddy
-      {/* <Completion /> */}
-      {/* <AiForm /> */}
-      <div className="mx-auto">
-        <AiCompletion />
-      </div>
-      <Dialog>
-        <DialogTrigger>
-          <div className="fixed bottom-4 right-4  transition-transform hover:scale-110">
-            <Image
-              src="/char/owl.svg"
-              alt="krubuddy"
-              width={150}
-              height={150}
-            />
-          </div>
-        </DialogTrigger>
-        <DialogContent className="mx-auto bg-[#F5F5F5]">
-          <ChatContainer />
-        </DialogContent>
-      </Dialog>
-      <Popover>
-        <PopoverTrigger className="mx-auto">ff</PopoverTrigger>
-        <PopoverContent align="start" asChild></PopoverContent>
-      </Popover>
-    </div>
+    <section className="container min-h-screen bg-slate-100 dark:bg-slate-900">
+      {/* <TestJson data={teaching}/>
+        {testData.length} */}
+      {/* <CreateCard />
+        <TestCard /> */}
+      <ChatContainer />
+      {/* <ChatTopMenu /> */}
+      {/* <ChatInput /> */}
+    </section>
   );
 };
-
-export default KruBuddy;
+export default page;

@@ -1,9 +1,11 @@
 "use client";
 
+import { useChatStore } from "@/stores/chat";
+
 import Image from "next/image";
 import { Icons } from "../icons";
 
-import prompt from "../../data/prompt-library.json";
+import promptData from "../../data/prompt-library.json";
 
 import { useState } from "react";
 import Search from "../search";
@@ -113,9 +115,12 @@ const companion = [
 ];
 
 const ChatPrompt = () => {
+  const prompt = useChatStore((state) => state.prompt);
+  const updatePrompt = useChatStore((state) => state.updatePrompt);
+
   const [filterValue, setFilterValue] = useState("all");
 
-  const filteredData = prompt.filter((item) => {
+  const filteredData = promptData.filter((item) => {
     if (filterValue === "all") return true;
     return item.categoryEN === filterValue;
   });
@@ -176,7 +181,8 @@ const ChatPrompt = () => {
         </button>
       </div>
       <ul className="grid grid-cols-3 gap-4">
-        <li className="flex flex-col items-center justify-center rounded-xl border-[1px] bg-white shadow-sm shadow-slate-100 transition-transform ease-in-out hover:scale-105 hover:cursor-pointer hover:bg-slate-200 ">
+        <li className="flex flex-col items-center justify-center rounded-xl border-[1px] bg-white shadow-sm shadow-slate-100 transition-transform ease-in-out hover:scale-105 hover:cursor-pointer hover:bg-slate-200 "
+        >
           <div className="rounded-b-lg p-2">
             <h3 className="mb-1  text-sm font-semibold">Create a prompt</h3>
             <Icons.plus className="mx-auto" />
@@ -185,8 +191,9 @@ const ChatPrompt = () => {
         {filteredData.map((item) => (
           <li
             key={item.id}
-            className="rounded-xl border-[1px] bg-white shadow-sm shadow-slate-100 transition-transform ease-in-out hover:scale-105 hover:cursor-pointer hover:bg-slate-200 "
-          >
+            className={`rounded-xl border-[1px] bg-white shadow-sm shadow-slate-100 transition-transform ease-in-out hover:scale-105 hover:cursor-pointer hover:bg-slate-200 ${prompt.includes(item.promptEN) ? "ring-4 ring-sky-500":""} `}
+            onClick={()=> updatePrompt(item.promptTH)}
+            >
             <div className="rounded-b-lg p-2">
               <h3 className="mb-1 line-clamp-1 text-sm font-semibold">
                 {item.titleTH}

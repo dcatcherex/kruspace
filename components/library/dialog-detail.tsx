@@ -9,16 +9,26 @@ import {
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
 
+type GetContentByLanguageFn = (
+  item: CardDataType,
+  language: "TH" | "EN" | "JP" | "CN"
+) => {
+  method: string;
+  title: string;
+  content: string;
+};
+
 type DialogDetailProps = {
   currentCard: number;
   card: CardDataType[];
+  getContentByLanguage?: GetContentByLanguageFn;
 };
 
 const DialogDetail = ({ currentCard, card }: DialogDetailProps) => {
   return (
     <section>
       <div className="gap-4 space-y-4 md:flex md:space-y-0">
-        <li className="relative col-span-1 flex flex-col justify-between rounded-md border-[1px] border-l-8 border-l-sky-500 bg-white text-left shadow-sm  transition duration-150 ease-in-out   dark:bg-black  md:border-l-[1px] md:border-l-gray-200">
+        <li className="relative col-span-1 flex flex-col justify-between rounded-md border-[1px] border-l-8  bg-white text-left shadow-sm  transition duration-150 ease-in-out   dark:bg-black  md:border-l-[1px] ">
           <div className="">
             <div
               className={`rounded-full px-4 py-0 pt-4 md:px-4 md:py-2 ${
@@ -37,7 +47,7 @@ const DialogDetail = ({ currentCard, card }: DialogDetailProps) => {
             >
               <div className="flex justify-between">
                 <h3 className="my-2 rounded-full bg-yellow-500 px-2 py-1 text-sm font-normal uppercase  text-white md:text-sm md:font-medium md:text-white">
-                  {card[currentCard].methodEN}
+                  {card[currentCard].methodTH}
                 </h3>
 
                 <div className="flex gap-2">
@@ -47,7 +57,7 @@ const DialogDetail = ({ currentCard, card }: DialogDetailProps) => {
                 </div>
               </div>
               <div className="md: flex justify-between  ">
-                <div className="flex gap-2 font-semibold text-black">
+                <div className="flex gap-2 font-semibold text-black dark:text-white">
                   <Icons.clock />
                   <p>{card[currentCard].timeRecommend} นาที</p>
                 </div>
@@ -69,13 +79,13 @@ const DialogDetail = ({ currentCard, card }: DialogDetailProps) => {
             {/* main card */}
             <div className=" p-4 pt-0">
               <h1 className="md: -mt-2  mb-1 text-lg font-semibold text-yellow-500 md:mt-4 md:text-xl  ">
-                {card[currentCard].titleEN}
+                {card[currentCard].titleTH}
               </h1>
               <p className="  text-sm text-muted-foreground  md:text-sm ">
-                {card[currentCard].contentEN}
+                {card[currentCard].contentTH}
               </p>
 
-              <h3 className="mt-4  font-semibold">Example</h3>
+              <h3 className="mt-4  font-semibold">ตัวอย่าง</h3>
               <p className="text-gray-500">(In progress)</p>
               <p className="text-sm text-gray-300  md:text-sm">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -83,32 +93,32 @@ const DialogDetail = ({ currentCard, card }: DialogDetailProps) => {
                 molestiae vero optio officiis?
               </p>
 
-              <h3 className="mt-4 font-semibold">Resources</h3>
+              <h3 className="mt-4 font-semibold">สื่อต่าง ๆ</h3>
               <p className="text-gray-500">(In progress)</p>
 
               <div className="mt-2 text-sm text-gray-300">
                 <div className="flex gap-2">
-                  <Icons.image className="stroke-1 text-gray-500" />
-                  Image
+                  <Icons.image className="stroke-1 text-gray-500 dark:text-white" />
+                  รูปภาพ
                 </div>
                 <ul className="list-inside list-disc">
-                  <li>Document1</li>
-                  <li>Document2</li>
+                  <li>รูปภาพ1</li>
+                  <li>รูปภาพ2</li>
                 </ul>
               </div>
               <div className="mt-2 text-sm text-gray-300">
                 <div className="flex gap-2">
-                  <Icons.youtube className="stroke-1 text-gray-500" />
-                  Video
+                  <Icons.youtube className="stroke-1 text-gray-500 dark:text-white" />
+                  วิดีโอ
                 </div>
                 <ul className="list-inside list-disc">
-                  <li>Video1</li>
-                  <li>Video2</li>
+                  <li>วิดีโอ1</li>
+                  <li>วิดีโอ2</li>
                 </ul>
               </div>
               <div className="mt-2 text-sm text-gray-300">
                 <div className="flex gap-2">
-                  <Icons.text className="stroke-1 text-gray-500" />
+                  <Icons.text className="stroke-1 text-gray-500 dark:text-white" />
                   Document
                 </div>
                 <ul className="list-inside list-disc">

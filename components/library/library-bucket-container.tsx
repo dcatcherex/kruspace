@@ -30,14 +30,14 @@ const LibraryBucketContainer = ({
             </div>
             <p className="text-sm text-gray-300">GPT 3.5 Turbo</p>
           </div>
-          <DialogDetail card={card} currentCard={currentCard} />
+          <DialogDetail card={card} currentCard={currentCard}  />
         </div>
         <div className="flex items-center justify-between gap-2">
-          <div className="relative mt-4 w-full rounded-md border-[1px] bg-white shadow-sm ">
+          <div className="relative mt-4 w-full rounded-md border-[1px] bg-white shadow-sm dark:bg-black ">
             <div className="flex items-center">
               <Icons.pluscircle className="h-10 w-10 fill-slate-500 pl-2 text-white hover:fill-sky-500" />
               <input
-                className=" w-full rounded-none border-x-0 border-input pl-2"
+                className=" w-full rounded-none border-x-0 border-input pl-2 dark:bg-black"
                 placeholder="สอบถาม ขอคำแนะนำ"
               />
             </div>

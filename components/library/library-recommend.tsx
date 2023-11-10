@@ -23,9 +23,9 @@ type GetContentByLanguageFn = (
   };
 
 type LibraryRecommendProps = {
-    language: "TH" | "EN" | "JP" | "CN";
-  bookmarkedItems: Array<number | null>;
-  handleBookmark: (item: number) => void;
+    language?: "TH" | "EN" | "JP" | "CN";
+  bookmarkedItems?: Array<number | null>;
+  handleBookmark?: (item: number) => void;
   setCurrentCard: React.Dispatch<React.SetStateAction<number>>;
   getContentByLanguage: GetContentByLanguageFn;
   card: CardDataType[];
@@ -34,7 +34,7 @@ type LibraryRecommendProps = {
 
 const LibraryRecommend = ({
     card,
-    language,
+    language = "TH",
     bookmarkedItems,
     handleBookmark,
     getContentByLanguage,
@@ -44,7 +44,7 @@ const LibraryRecommend = ({
 :LibraryRecommendProps) => {
   return (
     <section>
-      <div className=" my-4 min-h-[200px] rounded-lg border-2 border-dashed bg-slate-500/50">
+      <div className=" my-4 min-h-[200px] rounded-lg  ">
         <div className="flex items-center gap-2">
           <div className="p-4">Recommend:</div>
           <div className="rounded-full border-[1px] p-1 px-2 hover:cursor-pointer hover:bg-sky-500 hover:text-white">
@@ -65,9 +65,7 @@ const LibraryRecommend = ({
         <li
           key={item.id}
           onClick={() => setCurrentCard(item.id)}
-          className={`col-span-1 flex flex-col rounded-md border-[1px] bg-white shadow-sm transition duration-150 ease-in-out hover:cursor-pointer hover:ring-4 active:bg-sky-100 ${
-            bookmarkedItems.includes(item.id) ? "ring-4 ring-yellow-500" : ""
-          } dark:bg-black`}
+          className={`col-span-1 flex flex-col rounded-md border-[1px] bg-white shadow-sm transition duration-150 ease-in-out hover:cursor-pointer hover:ring-4 active:bg-sky-100 dark:bg-black`}
         >
           <div className="">
             <div
@@ -130,10 +128,8 @@ const LibraryRecommend = ({
                     </p>
                   </div>
                   <Icons.bookmark
-                    className={`h-5 w-5 stroke-yellow-500 hover:fill-yellow-700 ${
-                      bookmarkedItems.includes(item.id) ? "fill-yellow-500" : ""
-                    }`}
-                    onClick={() => handleBookmark(item.id)}
+                    className={`h-5 w-5 stroke-yellow-500 hover:fill-yellow-700 `}
+                   
                   />
                 </div>
               </div>

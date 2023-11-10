@@ -47,6 +47,8 @@ import {
     ArrowDownAZIcon,
     XCircleIcon,
     GraduationCapIcon,
+    UsersIcon,
+    LinkIcon,
   } from "lucide-react"
 
   
@@ -103,7 +105,9 @@ import {
     fileplus: FilePlusIcon,
     clock: AlarmClockIcon,
     xcircle: XCircleIcon,
-    school: GraduationCapIcon
+    school: GraduationCapIcon,
+    users: UsersIcon,
+    link:LinkIcon,
     
     
   }

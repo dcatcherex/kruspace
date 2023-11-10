@@ -7,6 +7,8 @@ import { Icons } from "@/components/icons";
 import { toast } from "sonner";
 import { CardDataType } from "@/types/type";
 
+import { handleBookmark } from "@/lib/bookmarkHandler";
+
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import LibraryBucketContainer from "@/components/library/library-bucket-container";
 import LibrarySheetChat from "@/components/library/library-sheet-chat";
@@ -16,7 +18,7 @@ import LibraryRecommend from "@/components/library/library-recommend";
 const Library = () => {
   const [currentCard, setCurrentCard] = useState(1);
   const [bookmarkedItems, setBookmarkedItems] = useState<number[]>([]);
-  const [language, setLanguage] = useState<"TH" | "EN" | "JP">("EN");
+  const [language, setLanguage] = useState<"TH" | "EN" | "JP">("TH");
 
   // Add the bookmarked item to the list
   const handleBookmark = (itemId: number) => {
@@ -88,16 +90,18 @@ const Library = () => {
   return (
     <div className="bg-slate-50 dark:bg-black md:p-4  ">
       <div className="container"></div>
-      <h3>bookmarked: {bookmarkedItems.join(" ,")}</h3>
-      <Button onClick={toggleLanguage}>{language}</Button>
-      <Button onClick={() => toast("This is a sonner toast")}>
-        toast Language
+      {/* <h3>bookmarked: {bookmarkedItems.join(" ,")}</h3> */}
+      <Button onClick={toggleLanguage} className="fixed">
+        {language}
       </Button>
+      {/* <Button onClick={() => toast("This is a sonner toast")}>
+        toast Language
+      </Button> */}
+      {/* <div>currentCard: {currentCard}</div> */}
       {/* <div className="w-full bg-sky-400 text-center">เลือกหมวดหมู่</div> */}
-      <div>currentCard: {currentCard}</div>
       <LibrarySheetChat card={card} currentCard={currentCard} />
 
-      <div className="container flex">
+      <div className="container relative flex">
         <Tabs defaultValue="ทั้งหมด" className=" p-4 md:container md:p-0">
           <TabsList className="sticky top-20 z-50 hidden md:block">
             <TabsTrigger value="ทั้งหมด">ทั้งหมด</TabsTrigger>
@@ -130,14 +134,14 @@ const Library = () => {
             </TabsTrigger>
           </TabsList>
           <TabsContent value="ทั้งหมด">
-            <LibraryRecommend
+            {/* <LibraryRecommend
               bookmarkedItems={bookmarkedItems}
               card={card.slice(0, 5)}
               getContentByLanguage={getContentByLanguage}
               handleBookmark={handleBookmark}
               language={language}
               setCurrentCard={setCurrentCard}
-            />
+            /> */}
             <div className="flex">
               <TeachingCard
                 card={card}
@@ -151,24 +155,64 @@ const Library = () => {
             </div>
           </TabsContent>
           <TabsContent value="วิธีการสอน">
-            <TeachingCard card={methodData} />
+            <TeachingCard
+              card={methodData}
+              bookmarkedItems={bookmarkedItems}
+              handleBookmark={handleBookmark}
+              setBookmarkedItems={setBookmarkedItems}
+              setCurrentCard={setCurrentCard}
+              getContentByLanguage={getContentByLanguage}
+              language={language}
+            />
           </TabsContent>
           <TabsContent value="เทคนิคการสอน">
-            <TeachingCard card={techniqueData} />
+            <TeachingCard
+              card={techniqueData}
+              bookmarkedItems={bookmarkedItems}
+              handleBookmark={handleBookmark}
+              setBookmarkedItems={setBookmarkedItems}
+              setCurrentCard={setCurrentCard}
+              getContentByLanguage={getContentByLanguage}
+              language={language}
+            />
           </TabsContent>
           <TabsContent value="วัด/ประเมินผล">
-            <TeachingCard card={evaluationData} />
+            <TeachingCard
+              card={evaluationData}
+              bookmarkedItems={bookmarkedItems}
+              handleBookmark={handleBookmark}
+              setBookmarkedItems={setBookmarkedItems}
+              setCurrentCard={setCurrentCard}
+              getContentByLanguage={getContentByLanguage}
+              language={language}
+            />
           </TabsContent>
           <TabsContent value="จัดห้องเรียน">
-            <TeachingCard card={arrangementData} />
+            <TeachingCard
+              card={arrangementData}
+              bookmarkedItems={bookmarkedItems}
+              handleBookmark={handleBookmark}
+              setBookmarkedItems={setBookmarkedItems}
+              setCurrentCard={setCurrentCard}
+              getContentByLanguage={getContentByLanguage}
+              language={language}
+            />
           </TabsContent>
           <TabsContent value="รูปแบบการสอน">
-            <TeachingCard card={frameworkData} />
+            <TeachingCard
+              card={frameworkData}
+              bookmarkedItems={bookmarkedItems}
+              handleBookmark={handleBookmark}
+              setBookmarkedItems={setBookmarkedItems}
+              setCurrentCard={setCurrentCard}
+              getContentByLanguage={getContentByLanguage}
+              language={language}
+            />
           </TabsContent>
           <TabsContent value="password">Change your password here.</TabsContent>
         </Tabs>
-        <div className="sticky top-20 max-w-[300px] md:block">
-          <LibraryBucketContainer card={card} currentCard={currentCard} />
+        <div className=" max-w-[300px] md:block">
+          <LibraryBucketContainer card={card} currentCard={currentCard - 1} />
         </div>
       </div>
     </div>

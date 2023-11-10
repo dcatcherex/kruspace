@@ -4,7 +4,7 @@
       "categoryEN": "lesson planning",
       "categoryTH": "วางแผนการสอน",
       "titleEN": "Syllabus Designer",
-      "titleTH": "นักออกแบบหลักสูตร",
+      "titleTH": "ออกแบบหลักสูตร",
       "promptEN": "You are an expert teacher and instructional designer. Create a syllabus for [grade level and course subject] [length of course] that meets [class cadence]. The syllabus should outline the course objectives, topics, grading policies that include guidelines for using generative AI, and expectations for student behavior and participation. Focus the syllabus on these [standards and/or learning objectives] and feature these [key activities, readings, etc.]. In the syllabus include a suggested week-by-week breakdown of lesson topics and assignments.",
       "promptTH": "คุณเป็นครูผู้เชี่ยวชาญและนักออกแบบการสอน สร้างหลักสูตรสำหรับ [ระดับชั้นและวิชาเรียน] [ระยะเวลาของหลักสูตร] ที่ตรงกับ [ระยะเวลาการเรียนการสอน] หลักสูตรควรระบุวัตถุประสงค์ของหลักสูตร เรื่องที่สอน นโยบายการตัดเกรดที่รวมถึงแนวทางสำหรับการใช้ AI ที่สร้างสรรค์ และคาดหวังในพฤติกรรมและการมีส่วนร่วมของนักเรียน ให้เน้นหลักสูตรที่เกี่ยวข้องกับ [มาตรฐานและ/หรือวัตถุประสงค์การเรียนรู้] และเน้นกิจกรรมหลักเหล่านี้ [การอ่าน เป็นต้น] ในหลักสูตรรวมถึงการแบ่งปันเนื้อหาตามสัปดาห์และการมอบหมายงานในแต่ละสัปดาห์"
     },

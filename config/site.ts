@@ -16,6 +16,10 @@ export const siteConfig = {
       href: "/library",
     },
     {
+      title: "ชุดไอเดียการสอน",
+      href: "/ideaset",
+    },
+    {
       title: "AI เพื่อการศึกษา",
       href: "/ai",
     },
