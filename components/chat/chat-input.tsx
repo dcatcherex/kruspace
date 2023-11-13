@@ -32,12 +32,6 @@ const ChatInput = () => {
   const updateIntroActive = useChatStore((state) => state.updateIntroActive);
   const companion = useChatStore((state) => state.companion);
 
-  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const finalInput = prompt + input;
-
-    handleSubmit(finalInput);
-  };
 
   return (
     <section className="">
