@@ -18,6 +18,7 @@ const CreateCard = () => {
         </h1>
         <Icons.plus className="mx-auto h-20 w-20 align-middle text-slate-300" />
       </footer>
+
     </section>
   );
 }
