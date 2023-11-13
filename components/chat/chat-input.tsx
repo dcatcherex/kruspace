@@ -46,8 +46,7 @@ const ChatInput = () => {
                   <Image
                     className="mx-auto mb-2"
                     src={
-                      companionData.find((item) => item.titleTH === companion)
-                        ?.image
+                      companionData.find((item) => item.titleTH === companion)?.image || 'default_image_path'
                     }
                     alt={companion}
                     width={40}
