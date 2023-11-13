@@ -30,8 +30,6 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Select } from "../ui/select";
-import ChatPromptContainer from "./chat-prompt-container";
-import ChatEdlevelContainer from "./chat-edlevel-container";
 
 const formSchema = z.object({
   prompt: z.string().min(2, {
@@ -88,7 +86,6 @@ const ChatInput = () => {
                 align="start"
                 className="h-[600px] min-w-[600px] overflow-auto  "
               >
-                <ChatPromptContainer />
               </PopoverContent>
             </Popover>
           </div>
@@ -103,7 +100,6 @@ const ChatInput = () => {
                 align="start"
                 className="h-[600px] min-w-[600px] overflow-auto  "
               >
-                <ChatEdlevelContainer />
               </PopoverContent>
             </Popover>
           </div>
