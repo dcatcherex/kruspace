@@ -37,7 +37,7 @@ const ChatTopMenu = () => {
                 <Image
                   src={
                     companionData.find((item) => item.titleTH === companion)
-                      ?.image
+                      ?.image || "default_image_path"
                   }
                   alt={companion}
                   width={40}
@@ -91,9 +91,9 @@ const ChatTopMenu = () => {
         <Button
           variant="outline"
           size="sm"
-          className="inline-flex items-center gap-2 rounded-md border-[1px] bg-yellow-500 dark:bg-black p-2 "
+          className="inline-flex items-center gap-2 rounded-md border-[1px] bg-yellow-500 p-2 dark:bg-black "
         >
-          <Icons.gem className="h-5 w-5 fill-white dark:fill-black stroke-1" />
+          <Icons.gem className="h-5 w-5 fill-white stroke-1 dark:fill-black" />
         </Button>
       </div>
     </nav>

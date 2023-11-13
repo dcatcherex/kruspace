@@ -20,6 +20,7 @@ import {
 import { Input } from "@/components/ui/input";
 
 const formSchema = z.object({
+  category: z.string().min(3, { message: "Too short" }),
   title: z.string().min(3, { message: "Too short" }),
   description: z.string().min(3, { message: "Too short" }),
   example: z.string(),
