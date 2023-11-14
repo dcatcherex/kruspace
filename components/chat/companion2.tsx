@@ -39,7 +39,7 @@ const Companion2 = () => {
                     src={
                       companionData.find(
                         (item) => item.titleTH === companion2
-                      )?.image
+                      )?.image || "default_image_path"
                     }
                     alt=""
                     width={60}
