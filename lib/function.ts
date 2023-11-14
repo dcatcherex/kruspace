@@ -5,19 +5,22 @@ import { CardDataType } from "@/types/type";
 
 
 
-export const toggleLanguage = (setLanguage:"TH" | "EN" | "JP" | "CN") => {
-  setLanguage((prevLanguage:"TH" | "EN" | "JP" | "CN") => {
-    switch (prevLanguage) {
-      case "TH":
-        return "EN";
-      case "EN":
-        return "JP";
-      case "JP":
-        return "TH";
-      default:
-        return "EN";
-    }
-  });
+export const toggleLanguage = (setLanguage: (lang: "TH" | "EN" | "JP" | "CN") => void, prevLanguage: "TH" | "EN" | "JP" | "CN") => {
+  let newLanguage: "TH" | "EN" | "JP" | "CN";
+  switch (prevLanguage) {
+    case "TH":
+      newLanguage = "EN";
+      break;
+    case "EN":
+      newLanguage = "JP";
+      break;
+    case "JP":
+      newLanguage = "TH";
+      break;
+    default:
+      newLanguage = "EN";
+  }
+  setLanguage(newLanguage);
 };
 
 export const getContentByLanguage = (
